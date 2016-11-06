@@ -2,4 +2,4 @@
 --------------
 [caicaibrid.top](http://caicaibrid.top)
 
-![caicaibrid.top](http://caicaibrid.top/img/fuck.jpg)
+<img src="http://caicaibrid.top/img/fuck.jpg" width="100%"/>
