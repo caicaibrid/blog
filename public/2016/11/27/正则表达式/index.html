@@ -84,22 +84,28 @@
 
 
 
-<meta name="description" content="apply call bind 用法apply call bind 都是用来改变上下文的this指向的
-不同点call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。
-例子1234567891011var obj = &amp;#123;  a: 1,  b: 2,  getCount: function(c, d) &amp;#123;    return t">
+<meta name="description" content="元字符([{+*?.$^|
+字符类
+ 简单类
+
+原则上正则的一个字符对应一个字符，我们可以用[]把它们括起来，让[　]这个整体对应一个字符。123/caicai/.test(&amp;quot;caicai&amp;quot;) //true/[ca]i/.test(&amp;quot;caicai&amp;quot;) //true&amp;quot;caicai&amp;quot;.match(/[ca]i/) // [&amp;quot;ai&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="apply_call_bind用法">
-<meta property="og:url" content="http://yoursite.com/2016/09/05/apply-call-bind用法/index.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2016/11/27/正则表达式/index.html">
 <meta property="og:site_name" content="菜菜鸟">
-<meta property="og:description" content="apply call bind 用法apply call bind 都是用来改变上下文的this指向的
-不同点call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。
-例子1234567891011var obj = &amp;#123;  a: 1,  b: 2,  getCount: function(c, d) &amp;#123;    return t">
-<meta property="og:updated_time" content="2016-11-05T13:16:47.188Z">
+<meta property="og:description" content="元字符([{+*?.$^|
+字符类
+ 简单类
+
+原则上正则的一个字符对应一个字符，我们可以用[]把它们括起来，让[　]这个整体对应一个字符。123/caicai/.test(&amp;quot;caicai&amp;quot;) //true/[ca]i/.test(&amp;quot;caicai&amp;quot;) //true&amp;quot;caicai&amp;quot;.match(/[ca]i/) // [&amp;quot;ai&amp;">
+<meta property="og:updated_time" content="2017-02-28T13:37:44.176Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="apply_call_bind用法">
-<meta name="twitter:description" content="apply call bind 用法apply call bind 都是用来改变上下文的this指向的
-不同点call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。
-例子1234567891011var obj = &amp;#123;  a: 1,  b: 2,  getCount: function(c, d) &amp;#123;    return t">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="元字符([{+*?.$^|
+字符类
+ 简单类
+
+原则上正则的一个字符对应一个字符，我们可以用[]把它们括起来，让[　]这个整体对应一个字符。123/caicai/.test(&amp;quot;caicai&amp;quot;) //true/[ca]i/.test(&amp;quot;caicai&amp;quot;) //true&amp;quot;caicai&amp;quot;.match(/[ca]i/) // [&amp;quot;ai&amp;">
 
 
 
@@ -120,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/09/05/apply-call-bind用法/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/27/正则表达式/"/>
 
-  <title> apply_call_bind用法 | 菜菜鸟 </title>
+  <title> 正则表达式 | 菜菜鸟 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -272,7 +278,7 @@
             
             
               
-                apply_call_bind用法
+                正则表达式
               
             
           </h1>
@@ -284,8 +290,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-05T21:14:19+08:00" content="2016-09-05">
-              2016-09-05
+            <time itemprop="dateCreated" datetime="2016-11-27T21:06:33+08:00" content="2016-11-27">
+              2016-11-27
             </time>
           </span>
 
@@ -314,8 +320,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/05/apply-call-bind用法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/05/apply-call-bind用法/" itemprop="commentsCount"></span>
+                <a href="/2016/11/27/正则表达式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/27/正则表达式/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -338,16 +344,25 @@
       
 
       
-        <h1 id="apply-call-bind-用法"><a href="#apply-call-bind-用法" class="headerlink" title="apply call bind 用法"></a>apply call bind 用法</h1><p>apply call bind 都是用来改变上下文的this指向的</p>
-<h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><p>call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。</p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">  a: 1,</div><div class="line">  b: 2,</div><div class="line">  getCount: function(c, d) &#123;</div><div class="line">    return this.a + this.b + c + d;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">window.a = window.b = 0;</div><div class="line">console.log(obj.getCount(3, 4));  // 10</div><div class="line">var func = obj.getCount;</div><div class="line">console.log(func(3, 4)); //7</div></pre></td></tr></table></figure>
-<p>上面为何会这样？因为func在上下文中的this是window，bind的存在正是为了改变this指向获取想要的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">  a: 1,</div><div class="line">  b: 2,</div><div class="line">  getCount: function(c, d) &#123;</div><div class="line">    return this.a + this.b + c + d;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">window.a = window.b = 0;</div><div class="line">var func = obj.getCount.bind(obj);</div><div class="line">console.log(func(3, 4));  // 10</div></pre></td></tr></table></figure></p>
-<ul>
-<li>[x] 上面说明：bind是function的一个函数扩展方法，bind以后代码重新绑定了func内部的this指向 <code>（getCount中的this-&gt;bind的obj）</code></li>
-</ul>
-<h2 id="兼容写法"><a href="#兼容写法" class="headerlink" title="兼容写法"></a>兼容写法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">  a: 1,</div><div class="line">  b: 2,</div><div class="line">  getCount: function(c, d) &#123;</div><div class="line">    return this.a + this.b + c + d;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">Function.prototype.bind = Function.prototype.bind || function(context) &#123;</div><div class="line">  var that = this;</div><div class="line">  return function() &#123;</div><div class="line">    // console.log(arguments); // console [3,4] if ie&lt;6-8&gt;</div><div class="line">    return that.apply(context, arguments);</div><div class="line"></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">window.a = window.b = 0;</div><div class="line">var func = obj.getCount.bind(obj);</div><div class="line">console.log(func(3, 4));  // 10</div></pre></td></tr></table></figure>
-<p>其实在我看来bind的核心是返回一个未执行的方法，如果直接使用apply或者call：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var ans = obj.getCount.call(obj,3,4);</div><div class="line">console.log(ans); // 10</div><div class="line">或</div><div class="line">var ans = obj.getCount.apply(obj, [3, 4]);</div><div class="line">console.log(ans); // 10</div></pre></td></tr></table></figure></p>
-<p>无法使用简写的func函数构造，所以用bind传递this指向，再返回一个未执行的方法，实现方式相当巧妙。</p>
+        <hr>
+<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p>([{+*?.$^|</p>
+<h2 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h2><blockquote>
+<p> 简单类</p>
+</blockquote>
+<p>原则上正则的一个字符对应一个字符，我们可以用[]把它们括起来，让[　]这个整体对应<strong><em>一个字符</em></strong>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/caicai/.test(&quot;caicai&quot;) //true</div><div class="line">/[ca]i/.test(&quot;caicai&quot;) //true</div><div class="line">&quot;caicai&quot;.match(/[ca]i/) // [&quot;ai&quot;] 因此说明匹配不了cai整个字符，只能匹配［］中的一个字符和外边的ｉ想对应</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>预定义类</p>
+</blockquote>
+<p>还是在那个中括号里面做文章，不过它好像已经走到尽头了。由于是中括号的马甲，因此它们还是对应一个字符。</p>
+<table><tr><td>字符</td><td>等同于</td><td>描述</td></tr><tr><td>.</td><td>[^\n\r]</td><td>一个除了换行和回车外的所有字符</td></tr><tr><td>\d</td><td>[0-9]</td><td>一个数字字符</td></tr><tr><td>\D</td><td>[^0-9]</td><td>一个非数字字符</td></tr><tr><td>\w</td><td>[a-zA-Z0-9<em>]</em></td><td>一个单词字符(所有的字母)</td></tr><tr><td>\W</td><td>[^a-zA-Z0-9]</td><td>一个非单词字符</td></tr><tr><td>\s</td><td>[\t\n\x0B\f\r]</td><td>一个空白字符</td></tr><tr><td>\S</td><td>[^\t\n\x0B\f\r]</td><td>一个非空白字符</td></tr></table>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">alert(/\d/.test(&quot;3&quot;))//true</div><div class="line">alert(/\d/.test(&quot;w&quot;))//false</div><div class="line">alert(/\D/.test(&quot;w&quot;))//true</div><div class="line">alert(/\w/.test(&quot;w&quot;))//true</div><div class="line">alert(/\w/.test(&quot;菜&quot;))//false</div><div class="line">alert(/\W/.test(&quot;菜&quot;))//true</div><div class="line">alert(/\s/.test(&quot; &quot;))//true</div><div class="line">alert(/\S/.test(&quot; &quot;))//false</div><div class="line">alert(/\S/.test(&quot;菜菜&quot;))//true</div><div class="line">alert(/./.test(&quot;菜&quot;))//true</div><div class="line">alert(/./.test(&quot;  &quot;))//true</div><div class="line">var a = &quot;\n\</div><div class="line">      &quot;</div><div class="line">alert(/./.test(a))//true</div><div class="line">/[\u4e00-\u9fa5]/用于匹配单个汉字。</div><div class="line">/[\u4e00-\u9fa5]&#123;4&#125;/.test(&quot;菜菜菜鸟&quot;)　//true</div></pre></td></tr></table></figure>
+<h2 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h2><table><thead><tr><td>代码</td><td>类型</td><td>描述</td></tr></thead><tbody><tr><td>?</td><td>软性量词</td><td>出现零次或一次</td></tr><tr><td>*</td><td>软性量词</td><td>出现零次或多次(任意次)</td></tr><tr><td>+</td><td>软性量词</td><td>出现一次或多次（至少一次）</td></tr><tr><td>{n}</td><td>硬性量词</td><td>对应零次或者n次</td></tr><tr><td>{n,m}</td><td>软性量词</td><td>至少出现n次但不超过m次</td></tr><tr><td>{n,}</td><td>软性量词</td><td>至少出现n次(+的升级版)</td></tr></tbody></table>
+
+<h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><p>到目前为止，我们只能一个字符到匹配，虽然量词的出现，能帮助我们处理一排密紧密相连的同类型字符。但这是不够的，下面该轮到小括号出场了，<strong><em>中括号表示范围内选择［］，大括号表示重复次数｛｝。小括号允许我们重复多个字符（）</em></strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/(cai)&#123;2&#125;/.test(&quot;caicai&quot;) //true</div><div class="line">/13(\d)(\d&#123;8&#125;)/.test(&quot;13595687859&quot;) //true</div><div class="line">//RegExp.$n　n为匹配最近的n个正则表达式的匹配结果,以上面电话号码为例:$1=(\d) $2=(\d&#123;8&#125;)</div><div class="line">console.log(RegExp.$1) //会匹配到上面的第一个正则　此例为５　</div><div class="line">console.log(RegExp.$2) //会匹配到上面的第二个正则　此例为95687859</div></pre></td></tr></table></figure>
+<p>继续在分组上做文章。在分组中插入管道符（“|”），把它划分为两个或多个候多项。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var reg = /(red|black|yellow)!!/;</div><div class="line">console.log(reg.test(&quot;red!!&quot;))//true</div><div class="line">console.log(reg.test(&quot;black!!&quot;))//true</div><div class="line">console.log(reg.test(&quot;yellow!!&quot;))//true</div><div class="line">//将＜＞括号和里面的都替换为空</div><div class="line">var html = &quot;&lt;p&gt;&lt;a href=&apos;http://www.cnblogs.com/rubylouvre/&apos;&gt;caicai&lt;/a&gt;by &lt;em&gt;asas&lt;/em&gt;&lt;/p&gt;&quot;;</div><div class="line">var text = html.replace(/&lt;(.)*?&gt;/g, &quot;&quot;);</div><div class="line">console.log(text) //caicai asas</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -400,16 +415,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/15/module-exports和exports的区别/" rel="next" title="module.exports和exports的区别">
-                <i class="fa fa-chevron-left"></i> module.exports和exports的区别
+              <a href="/2016/11/23/dom/" rel="next" title="dom">
+                <i class="fa fa-chevron-left"></i> dom
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/06/hexo部署出现404找不到js的解决方案/" rel="prev" title="hexo部署出现404找不到js的解决方案">
-                hexo部署出现404找不到js的解决方案 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/21/跨域/" rel="prev" title="跨域">
+                跨域 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -459,8 +474,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/05/apply-call-bind用法/"
-           data-title="apply_call_bind用法" data-url="http://yoursite.com/2016/09/05/apply-call-bind用法/">
+      <div class="ds-thread" data-thread-key="2016/11/27/正则表达式/"
+           data-title="正则表达式" data-url="http://yoursite.com/2016/11/27/正则表达式/">
       </div>
     
   </div>
@@ -577,7 +592,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#apply-call-bind-用法"><span class="nav-number">1.</span> <span class="nav-text">apply call bind 用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不同点"><span class="nav-number">1.1.</span> <span class="nav-text">不同点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子"><span class="nav-number">1.2.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兼容写法"><span class="nav-number">1.3.</span> <span class="nav-text">兼容写法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#元字符"><span class="nav-number">1.</span> <span class="nav-text">元字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符类"><span class="nav-number">2.</span> <span class="nav-text">字符类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#量词"><span class="nav-number">3.</span> <span class="nav-text">量词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组"><span class="nav-number">4.</span> <span class="nav-text">分组</span></a></li></ol></div>
             
           </div>
         </section>
