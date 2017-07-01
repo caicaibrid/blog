@@ -1,0 +1,762 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Sass," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="选择器嵌套假设我们有一段这样的结构：
+1234567891011121314151617181920212223&amp;lt;header&amp;gt;    &amp;lt;nav&amp;gt;        &amp;lt;a href=&quot;#&quot;&amp;gt;Home&amp;lt;/a&amp;gt;        &amp;lt;a href=&quot;#&quot;&amp;gt;About&amp;lt;/a&amp;gt;        &amp;lt;a href=&quot;#&quot;&amp;gt;Blog&amp;lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass基本用法">
+<meta property="og:url" content="http://yoursite.com/2017/07/01/sass基本用法/index.html">
+<meta property="og:site_name" content="菜菜鸟">
+<meta property="og:description" content="选择器嵌套假设我们有一段这样的结构：
+1234567891011121314151617181920212223&amp;lt;header&amp;gt;    &amp;lt;nav&amp;gt;        &amp;lt;a href=&quot;#&quot;&amp;gt;Home&amp;lt;/a&amp;gt;        &amp;lt;a href=&quot;#&quot;&amp;gt;About&amp;lt;/a&amp;gt;        &amp;lt;a href=&quot;#&quot;&amp;gt;Blog&amp;lt;">
+<meta property="og:image" content="http://yoursite.com/img/scss.jpg">
+<meta property="og:updated_time" content="2017-07-01T09:56:39.456Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sass基本用法">
+<meta name="twitter:description" content="选择器嵌套假设我们有一段这样的结构：
+1234567891011121314151617181920212223&amp;lt;header&amp;gt;    &amp;lt;nav&amp;gt;        &amp;lt;a href=&quot;#&quot;&amp;gt;Home&amp;lt;/a&amp;gt;        &amp;lt;a href=&quot;#&quot;&amp;gt;About&amp;lt;/a&amp;gt;        &amp;lt;a href=&quot;#&quot;&amp;gt;Blog&amp;lt;">
+<meta name="twitter:image" content="http://yoursite.com/img/scss.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6333732715359110000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/01/sass基本用法/"/>
+
+  <title> sass基本用法 | 菜菜鸟 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f7cde75cb798c6c3214ac4877d7de304";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">菜菜鸟</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">菜菜鸟</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                sass基本用法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-07-01T15:06:31+08:00" content="2017-07-01">
+              2017-07-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Sass/" itemprop="url" rel="index">
+                    <span itemprop="name">Sass</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/07/01/sass基本用法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/01/sass基本用法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="选择器嵌套"><a href="#选择器嵌套" class="headerlink" title="选择器嵌套"></a>选择器嵌套</h2><p>假设我们有一段这样的结构：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;header&gt;</div><div class="line">    &lt;nav&gt;</div><div class="line">        &lt;a href="#"&gt;Home&lt;/a&gt;</div><div class="line">        &lt;a href="#"&gt;About&lt;/a&gt;</div><div class="line">        &lt;a href="#"&gt;Blog&lt;/a&gt;</div><div class="line">    &lt;/nav&gt;</div><div class="line">&lt;header&gt;</div><div class="line">/*css写法*/</div><div class="line">nav a &#123;</div><div class="line">  color:red;</div><div class="line">&#125;</div><div class="line">header nav a &#123;</div><div class="line">  color:green;</div><div class="line">&#125;</div><div class="line">/*scss写法*/</div><div class="line">nav &#123;</div><div class="line">  a &#123;</div><div class="line">    color: red;</div><div class="line">    header &amp; &#123;</div><div class="line">      color:green;</div><div class="line">    &#125;</div><div class="line">  &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="属性嵌套"><a href="#属性嵌套" class="headerlink" title="属性嵌套"></a>属性嵌套</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*css写法*/</span></div><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">    <span class="attribute">border-top</span>: <span class="number">1px</span> solid red;</div><div class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid green;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*scss写法*/</span></div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">border</span>:&#123;</div><div class="line">        top: <span class="number">1px</span> solid red;</div><div class="line">        <span class="attribute">bottom</span>:<span class="number">1px</span> solid green;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="伪类嵌套"><a href="#伪类嵌套" class="headerlink" title="伪类嵌套"></a>伪类嵌套</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/*css写法*/</div><div class="line">.clearfix:before, .clearfix:after &#123;</div><div class="line">  content: "";</div><div class="line">  display: table;</div><div class="line">&#125;</div><div class="line">.clearfix:after &#123;</div><div class="line">  clear: both;</div><div class="line">  overflow: hidden;</div><div class="line">&#125;</div><div class="line">/*scss写法*/</div><div class="line">.clearfix &#123;</div><div class="line">    &amp;:before,&amp;:after&#123;</div><div class="line">        content: "";</div><div class="line">        display: table;</div><div class="line">    &#125;</div><div class="line">    &amp;:after&#123;</div><div class="line">        overflow: hidden;</div><div class="line">        clear: both;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="混合宏-mixin"><a href="#混合宏-mixin" class="headerlink" title="混合宏  @mixin"></a>混合宏  @mixin</h2><ul>
+<li>优点:将共用的代码块定义为宏，直接引用</li>
+<li>缺点:会生成冗余的代码块，不会合并在一起<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">/*声明混合宏*/</div><div class="line">@mixin border-radius($raidus:5px)&#123; </div><div class="line">    //单个参数加默认值($radius:5px) </div><div class="line">    //多个参数用逗号隔开($radius,$width,$height)</div><div class="line">    //多个参数还可以用[...]表示($shadows...)</div><div class="line">    border-radius: $radius;</div><div class="line">&#125;</div><div class="line">/*调用混合宏*/</div><div class="line">div&#123;</div><div class="line">    @include border-radius(10px);</div><div class="line">&#125;</div><div class="line">/*多个参数使用...为参数*/</div><div class="line">@mixin box-shadow($shadows...)&#123;</div><div class="line">  @if length($shadows) &gt;= 1 &#123;</div><div class="line">    -webkit-box-shadow: $shadows;</div><div class="line">    box-shadow: $shadows;</div><div class="line">  &#125; @else &#123;</div><div class="line">    $shadows: 0 0 2px rgba(#000,.25); // 默认参数  如果没有传 就用这个  传了就用传过来的参数</div><div class="line">    -webkit-box-shadow: $shadow;</div><div class="line">    box-shadow: $shadow;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">/*调用宏*/</div><div class="line">.box &#123;</div><div class="line">  @include box-shadow(0 0 1px rgba(#000,.5),0 0 2px rgba(#000,.2));</div><div class="line">&#125;</div><div class="line">/*编译结果*/</div><div class="line">.box &#123;</div><div class="line">  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);</div><div class="line">  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="继承-extend-可以将公用的代码合并在一起"><a href="#继承-extend-可以将公用的代码合并在一起" class="headerlink" title="继承 @extend 可以将公用的代码合并在一起"></a>继承 @extend 可以将公用的代码合并在一起</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">/*scss写法*/</div><div class="line">.btn &#123;</div><div class="line">  border: 1px solid #ccc;</div><div class="line">  padding: 6px 10px;</div><div class="line">  font-size: 14px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.btn-primary &#123;</div><div class="line">  background-color: #f36;</div><div class="line">  color: #fff;</div><div class="line">  @extend .btn;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.btn-second &#123;</div><div class="line">  background-color: orange;</div><div class="line">  color: #fff;</div><div class="line">  @extend .btn;</div><div class="line">&#125;</div><div class="line">/*编译结果*/</div><div class="line">.btn, .btn-primary, .btn-second &#123;</div><div class="line">  border: 1px solid #ccc;</div><div class="line">  padding: 6px 10px;</div><div class="line">  font-size: 14px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.btn-primary &#123;</div><div class="line">  background-color: #f36;</div><div class="line">  color: #fff;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.btn-second &#123;</div><div class="line">  background-clor: orange;</div><div class="line">  color: #fff;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="占位符-placeholder-编译出来的代码会将相同的代码合并在一起"><a href="#占位符-placeholder-编译出来的代码会将相同的代码合并在一起" class="headerlink" title="占位符 %placeholder 编译出来的代码会将相同的代码合并在一起"></a>占位符 %placeholder 编译出来的代码会将相同的代码合并在一起</h2><ul>
+<li>%placeholder 功能是一个很强大，很实用的一个功能，<br>他可以取代以前 CSS 中的基类造成的代码冗余的情形,<br>因为 %placeholder 声明的代码，如果不被 @extend 调用的话，<br>不会产生任何代码。因此，需要配合@extend使用<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">/*占位符代码*/</div><div class="line">%mt5 &#123;</div><div class="line">  margin-top: 5px;</div><div class="line">&#125;</div><div class="line">%pt5&#123;</div><div class="line">  padding-top: 5px;</div><div class="line">&#125;</div><div class="line">/*继承占位符*/</div><div class="line">.btn &#123;</div><div class="line">  @extend %mt5;</div><div class="line">  @extend %pt5;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.block &#123;</div><div class="line">  @extend %mt5;</div><div class="line"></div><div class="line">  span &#123;</div><div class="line">    @extend %pt5;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">/*编译结果*/</div><div class="line">.btn, .block &#123;</div><div class="line">  margin-top: 5px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.btn, .block span &#123;</div><div class="line">  padding-top: 5px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="混合宏-VS-继承-VS-占位符"><a href="#混合宏-VS-继承-VS-占位符" class="headerlink" title="混合宏 VS 继承 VS 占位符"></a>混合宏 VS 继承 VS 占位符</h2><p><img src="/img/scss.jpg" alt=""></p>
+<h2 id="插值-为了使让变量和属性工作的很完美"><a href="#插值-为了使让变量和属性工作的很完美" class="headerlink" title="插值#{} 为了使让变量和属性工作的很完美"></a>插值#{} 为了使让变量和属性工作的很完美</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">/*scss*/</div><div class="line">$properties: (margin, padding);</div><div class="line">@mixin set-value($side, $value) &#123;</div><div class="line">    @each $prop in $properties &#123;</div><div class="line">        #&#123;$prop&#125;-#&#123;$side&#125;: $value;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">.login-box &#123;</div><div class="line">    @include set-value(top, 14px);</div><div class="line">&#125;</div><div class="line"></div><div class="line">@mixin generate-sizes($class, $small, $medium, $big) &#123;</div><div class="line">    .#&#123;$class&#125;-small &#123; font-size: $small; &#125;</div><div class="line">    .#&#123;$class&#125;-medium &#123; font-size: $medium; &#125;</div><div class="line">    .#&#123;$class&#125;-big &#123; font-size: $big; &#125;</div><div class="line">&#125;</div><div class="line">@include generate-sizes("header-text", 12px, 20px, 40px);</div><div class="line"></div><div class="line"></div><div class="line">/*编译结果*/</div><div class="line">.login-box &#123;</div><div class="line">    margin-top: 14px;</div><div class="line">    padding-top: 14px;</div><div class="line">&#125;</div><div class="line">.header-text-small &#123; font-size: 12px; &#125;</div><div class="line">.header-text-medium &#123; font-size: 20px; &#125;</div><div class="line">.header-text-big &#123; font-size: 40px; &#125;</div></pre></td></tr></table></figure>
+<h2 id="scss中的注释"><a href="#scss中的注释" class="headerlink" title="scss中的注释"></a>scss中的注释</h2><p>1、类似 CSS 的注释方式，使用 “/<em> “开头，结属使用 “</em>/ “</p>
+<p>2、类似 JavaScript 的注释方式，使用”//“</p>
+<p style="color:red">区别</p>
+
+<p>前者会在编译出来的 CSS 显示，后者在编译出来的 CSS 中不会显示，来看一个示例：</p>
+<h2 id="Sass运算"><a href="#Sass运算" class="headerlink" title="Sass运算"></a>Sass运算</h2><ul>
+<li><p>加法运算 单位必须相同</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span> + <span class="number">100px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>减法运算 单位必须相同</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span> - <span class="number">10px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>乘法运算 单位必须相同且数值只能有一个单位</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">/*scss写法*/</div><div class="line">body&#123;</div><div class="line">     width: 10px * 3;</div><div class="line">&#125;</div><div class="line">$list: twitter,facebook,github,weibo;</div><div class="line"></div><div class="line">@for $i from 1 through length($list)&#123;</div><div class="line">  .icon-#&#123;nth($list,$i)&#125;&#123;</div><div class="line">    background-postion: 0 - 20px * $i;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">/*编译结果*/</div><div class="line">body&#123;</div><div class="line">    width: 30px;</div><div class="line">&#125;</div><div class="line">.icon-twitter &#123;</div><div class="line">  background-postion: -20px; &#125;</div><div class="line">.icon-facebook &#123;</div><div class="line">  background-postion: -40px; &#125;</div><div class="line">.icon-github &#123;</div><div class="line">  background-postion: -60px; &#125;</div><div class="line">.icon-weibo &#123;</div><div class="line">  background-postion: -80px; &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>除法运算</p>
+  <p style="color:red">“/“ 符号被当作除法运算符时有以下几种情况：</p>
+
+<p>  •    如果数值或它的任意部分是存储在一个变量中或是函数的返回值。</p>
+<p>  •    如果数值被圆括号包围。</p>
+<p>  •    如果数值是另一个数学表达式的一部分。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  font: 10px/8px;             // 纯 CSS，不是除法运算</div><div class="line">  $width: 1000px;</div><div class="line">  width: $width/2;            // 使用了变量，是除法运算</div><div class="line">  width: round(1.5)/2;        // 使用了函数，是除法运算</div><div class="line">  height: (500px/2);          // 使用了圆括号，是除法运算</div><div class="line">  margin-left: 5px + 8px/2px; // 使用了加（+）号，是除法运算</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作!!!</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wx.jpg" alt="菜菜鸟 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/zfb.jpg" alt="菜菜鸟 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Sass/" rel="tag">#Sass</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/15/mysql/" rel="next" title="Mysql 简易学习">
+                <i class="fa fa-chevron-left"></i> Mysql 简易学习
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/01/sass控制命令/" rel="prev" title="sass控制命令">
+                sass控制命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/07/01/sass基本用法/"
+           data-title="sass基本用法" data-url="http://yoursite.com/2017/07/01/sass基本用法/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/head.gif"
+               alt="菜菜鸟" />
+          <p class="site-author-name" itemprop="name">菜菜鸟</p>
+          <p class="site-description motion-element" itemprop="description">前端开发<br/>越努力，越幸运</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://github.com/caicaibrid/" title="Github" target="_blank">Github</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://littlevegetablebird.top/" title="小菜鸟" target="_blank">小菜鸟</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.jisuhuoxian.com/" title="极速火线" target="_blank">极速火线</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.newborn-town.com/" title="赤子城" target="_blank">赤子城</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器嵌套"><span class="nav-number">1.</span> <span class="nav-text">选择器嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性嵌套"><span class="nav-number">2.</span> <span class="nav-text">属性嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪类嵌套"><span class="nav-number">3.</span> <span class="nav-text">伪类嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#混合宏-mixin"><span class="nav-number">4.</span> <span class="nav-text">混合宏  @mixin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继承-extend-可以将公用的代码合并在一起"><span class="nav-number">5.</span> <span class="nav-text">继承 @extend 可以将公用的代码合并在一起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#占位符-placeholder-编译出来的代码会将相同的代码合并在一起"><span class="nav-number">6.</span> <span class="nav-text">占位符 %placeholder 编译出来的代码会将相同的代码合并在一起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#混合宏-VS-继承-VS-占位符"><span class="nav-number">7.</span> <span class="nav-text">混合宏 VS 继承 VS 占位符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插值-为了使让变量和属性工作的很完美"><span class="nav-number">8.</span> <span class="nav-text">插值#{} 为了使让变量和属性工作的很完美</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scss中的注释"><span class="nav-number">9.</span> <span class="nav-text">scss中的注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sass运算"><span class="nav-number">10.</span> <span class="nav-text">Sass运算</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">菜菜鸟</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+-->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"caicaibrid"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

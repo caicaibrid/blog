@@ -1,0 +1,734 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Django," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Django 学习练习项目：python django mysql 个人博客
+django 基本命令
+1.新建一个django project    django-admin.py startproject project-name //project-name项目名称
+2.新建app (模块)   python manage.py startapp app-name //一般一个项目有多个app">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django">
+<meta property="og:url" content="http://yoursite.com/2017/04/13/Django/index.html">
+<meta property="og:site_name" content="菜菜鸟">
+<meta property="og:description" content="Django 学习练习项目：python django mysql 个人博客
+django 基本命令
+1.新建一个django project    django-admin.py startproject project-name //project-name项目名称
+2.新建app (模块)   python manage.py startapp app-name //一般一个项目有多个app">
+<meta property="og:updated_time" content="2017-04-22T10:32:21.560Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Django">
+<meta name="twitter:description" content="Django 学习练习项目：python django mysql 个人博客
+django 基本命令
+1.新建一个django project    django-admin.py startproject project-name //project-name项目名称
+2.新建app (模块)   python manage.py startapp app-name //一般一个项目有多个app">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6333732715359110000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/13/Django/"/>
+
+  <title> Django | 菜菜鸟 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f7cde75cb798c6c3214ac4877d7de304";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">菜菜鸟</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">菜菜鸟</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Django
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-13T20:50:33+08:00" content="2017-04-13">
+              2017-04-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/04/13/Django/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/13/Django/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Django-学习"><a href="#Django-学习" class="headerlink" title="Django 学习"></a>Django 学习</h1><p>练习项目：<a href="https://github.com/caicaibrid/django_blog_test" target="_blank" rel="external">python django mysql 个人博客</a></p>
+<h2 id="django-基本命令"><a href="#django-基本命令" class="headerlink" title="django 基本命令"></a>django 基本命令</h2><blockquote>
+<p>1.新建一个django project<br>    django-admin.py startproject project-name //project-name项目名称</p>
+<p>2.新建app (模块)<br>   python manage.py startapp app-name //一般一个项目有多个app, 当然通用的app也可以在多个项目中使用。</p>
+</blockquote>
+<p>把 app-name 加入到 settings.INSTALLED_APPS中<br>django就会默认去寻找该模块下面的templates文件夹，可以通过render(request,’templates里的html’)直接返回</p>
+<h2 id="django-模板"><a href="#django-模板" class="headerlink" title="django 模板"></a>django 模板</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">from django.shortcuts import render //返回模板render()</div><div class="line">&#123;% block title%&#125; &#123;% endblock %&#125;</div><div class="line"></div><div class="line">&#123;% extends &apos;base.html&apos;%&#125;</div><div class="line"></div><div class="line">&#123;% include &quot;header.html&quot; %&#125;</div><div class="line"></div><div class="line">&#123;% url &quot;add2&quot; 4 5 %&#125; //add2 为路由指定的name 4 5 为参数</div><div class="line"></div><div class="line">模板上得到视图的网址 &#123;% url &apos;add2&apos; 4 5 %&#125;</div><div class="line">&lt;br&gt;</div><div class="line">获取当前的地址 &#123;&#123; request.path &#125;&#125;</div><div class="line">&lt;br&gt;</div><div class="line">获取当前的GET参数 &#123;&#123; request.GET.urlencode &#125;&#125;</div><div class="line">&lt;br&gt;</div><div class="line">获取当前的用户 &#123;&#123; request.user &#125;&#125;</div></pre></td></tr></table></figure>
+<h2 id="django-models"><a href="#django-models" class="headerlink" title="django models"></a>django models</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">python manage.py startapp modelStudy //创建一个模块modelStudy</div><div class="line">然后在该模块下面编辑models.py添加一个Peopele类</div><div class="line"></div><div class="line">class People(models.Model):</div><div class="line">    name = models.CharField(max_length=30)</div><div class="line">    age = models.IntegerField()</div><div class="line">    def __unicode__(self):</div><div class="line">        return self.name</div><div class="line"></div><div class="line">同步一下数据库（我们使用默认的数据库 SQLite3，无需配置）</div><div class="line">python manage.py syncdb # 进入 manage.py 所在的那个文件夹下输入这个命令</div><div class="line">注意：Django 1.7 及以上的版本需要用以下命令</div><div class="line">python manage.py makemigrations</div><div class="line">python manage.py migrate</div><div class="line"></div><div class="line">上面命令Django生成了一系列的表，也生成了我们新建的modelStudy_people这个表</div><div class="line"></div><div class="line">Django提供了丰富的API, 下面演示如何使用它。</div><div class="line">$ python manage.py shell</div><div class="line">&gt;&gt;&gt; from people.models import Person</div><div class="line">&gt;&gt;&gt; Person.objects.create(name=&quot;WeizhongTu&quot;, age=24)</div><div class="line">&lt;Person: Person object&gt;</div><div class="line"></div><div class="line">新建一个对象的方法有以下几种：</div><div class="line"></div><div class="line">1.People.objects.create(name=name,age=age)</div><div class="line">2.p = People(name=&quot;WZ&quot;, age=23)</div><div class="line">  p.save()</div><div class="line">3.p = People(name=&quot;TWZ&quot;)</div><div class="line">  p.age = 23</div><div class="line">  p.save()</div><div class="line">4.People.objects.get_or_create(name=&quot;WZT&quot;, age=23)</div><div class="line"></div><div class="line">这种方法是防止重复很好的方法，但是速度要相对慢些，返回一个元组，第一个为People对象，第二个为True或False, 新建时返回的是True, 已经存在时返回False.</div><div class="line"></div><div class="line">### 获取对象有以下方法：</div><div class="line"></div><div class="line">Person.objects.all()</div><div class="line"></div><div class="line">Person.objects.all()[:10] 切片操作，获取10个人，不支持负索引，切片可以节约内存</div><div class="line"></div><div class="line">Person.objects.get(name=name)</div><div class="line"></div><div class="line">get是用来获取一个对象的，如果需要获取满足条件的一些人，就要用到filter</div><div class="line"></div><div class="line">Person.objects.filter(name=&quot;abc&quot;) # 等于Person.objects.filter(name__exact=&quot;abc&quot;) 名称严格等于 &quot;abc&quot; 的人</div><div class="line"></div><div class="line">Person.objects.filter(name__iexact=&quot;abc&quot;) # 名称为 abc 但是不区分大小写，可以找到 ABC, Abc, aBC，这些都符合条件</div><div class="line"></div><div class="line">Person.objects.filter(name__contains=&quot;abc&quot;) # 名称中包含 &quot;abc&quot;的人</div><div class="line"></div><div class="line">Person.objects.filter(name__icontains=&quot;abc&quot;) #名称中包含 &quot;abc&quot;，且abc不区分大小写</div><div class="line"></div><div class="line">Person.objects.filter(name__regex=&quot;^abc&quot;) # 正则表达式查询</div><div class="line"></div><div class="line">Person.objects.filter(name__iregex=&quot;^abc&quot;)# 正则表达式不区分大小写</div><div class="line"></div><div class="line">filter是找出满足条件的，当然也有排除符合某条件的</div><div class="line"></div><div class="line">Person.objects.exclude(name__contains=&quot;WZ&quot;) # 排除包含 WZ 的Person对象</div><div class="line"></div><div class="line">Person.objects.filter(name__contains=&quot;abc&quot;).exclude(age=23) # 找出名称含有abc, 但是排除年龄是23岁的</div></pre></td></tr></table></figure>
+<h1 id="django-模板过滤器"><a href="#django-模板过滤器" class="headerlink" title="django 模板过滤器"></a>django 模板过滤器</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div></pre></td><td class="code"><pre><div class="line">一、形式：小写：  &#123;&#123; name | lower &#125;&#125;</div><div class="line"></div><div class="line">二、串联：先转义文本到HTML，再转换每行到 &lt;p&gt; 标签： &#123;&#123; my_text|escape|linebreaks &#125;&#125;</div><div class="line"></div><div class="line">三、过滤器的参数</div><div class="line"></div><div class="line">显示前30个字：&#123;&#123; bio | truncatewords:&quot;30&quot; &#125;&#125;</div><div class="line"></div><div class="line">格式化：&#123;&#123; pub_date | date:&quot;F j, Y&quot; &#125;&#125;</div><div class="line"></div><div class="line">过滤器列表：&#123;&#123; 123|add:&quot;5&quot; &#125;&#125; 给value加上一个数值</div><div class="line"></div><div class="line">&#123;&#123; &quot;AB&apos;CD&quot;|addslashes &#125;&#125;： 单引号加上转义号，一般用于输出到javascript中</div><div class="line"></div><div class="line">&#123;&#123; &quot;abcd&quot;|capfirst &#125;&#125;： 第一个字母大写</div><div class="line"></div><div class="line">&#123;&#123; &quot;abcd&quot;|center:&quot;50&quot; &#125;&#125;： 输出指定长度的字符串，并把值对中</div><div class="line"></div><div class="line">&#123;&#123; &quot;123spam456spam789&quot;|cut:&quot;spam&quot; &#125;&#125;： 查找删除指定字符串</div><div class="line"></div><div class="line">&#123;&#123; value|date:&quot;F j, Y&quot; &#125;&#125;： 格式化日期</div><div class="line"></div><div class="line">&#123;&#123; value|default:&quot;(N/A)&quot; &#125;&#125;： 值不存在，使用指定值</div><div class="line"></div><div class="line">&#123;&#123; value|default_if_none:&quot;(N/A)&quot; &#125;&#125;： 值是None，使用指定值</div><div class="line"></div><div class="line">&#123;&#123; 列表变量|dictsort:&quot;数字&quot; &#125;&#125; ：排序从小到大</div><div class="line"></div><div class="line">&#123;&#123; 列表变量|dictsortreversed:&quot;数字&quot; &#125;&#125; ：排序从大到小</div><div class="line"></div><div class="line">&#123;% if 92|divisibleby:&quot;2&quot; %&#125; ：判断是否整除指定数字</div><div class="line"></div><div class="line">&#123;&#123; string|escape &#125;&#125; ：转换为html实体</div><div class="line"></div><div class="line">&#123;&#123; 21984124|filesizeformat &#125;&#125; ：以1024为基数，计算最大值，保留1位小数，增加可读性</div><div class="line"></div><div class="line">&#123;&#123; list|first &#125;&#125; ：返回列表第一个元素</div><div class="line"></div><div class="line">&#123;&#123; &quot;ik23hr&amp;jqwh&quot;|fix_ampersands &#125;&#125;： &amp;转为&amp;amp;</div><div class="line"></div><div class="line">&#123;&#123; 13.414121241|floatformat &#125;&#125; ：保留1位小数，可为负数，几种形式</div><div class="line"></div><div class="line">&#123;&#123; 13.414121241|floatformat:&quot;2&quot; &#125;&#125;： 保留2位小数</div><div class="line"></div><div class="line">&#123;&#123; 23456 |get_digit:&quot;1&quot; &#125;&#125; ：从个位数开始截取指定位置的1个数字</div><div class="line"></div><div class="line">&#123;&#123; list|join:&quot;, &quot; &#125;&#125; ：用指定分隔符连接列表</div><div class="line"></div><div class="line">&#123;&#123; list|length &#125;&#125; ：返回列表个数</div><div class="line"></div><div class="line">&#123;% if 列表|length_is:&quot;3&quot; %&#125; ：列表个数是否指定数值</div><div class="line"></div><div class="line">&#123;&#123; &quot;ABCD&quot;|linebreaks &#125;&#125;： 用新行用&lt;p&gt; 、 &lt;br /&gt; 标记包裹</div><div class="line"></div><div class="line">&#123;&#123; &quot;ABCD&quot;|linebreaksbr &#125;&#125;： 用新行用&lt;br /&gt; 标记包裹</div><div class="line"></div><div class="line">&#123;&#123; 变量|linenumbers &#125;&#125;： 为变量中每一行加上行号</div><div class="line"></div><div class="line">&#123;&#123; &quot;abcd&quot;|ljust:&quot;50&quot; &#125;&#125;： 把字符串在指定宽度中对左，其它用空格填充</div><div class="line"></div><div class="line">&#123;&#123; &quot;ABCD&quot;|lower &#125;&#125;： 小写</div><div class="line"></div><div class="line">&#123;% for i in &quot;1abc1&quot;|make_list %&#125;ABCDE,&#123;% endfor %&#125;： 把字符串或数字的字符个数作为一个列表</div><div class="line"></div><div class="line">&#123;&#123; &quot;abcdefghijklmnopqrstuvwxyz&quot;|phone2numeric &#125;&#125;： 把字符转为可以对应的数字？？</div><div class="line"></div><div class="line">&#123;&#123; 列表或数字|pluralize &#125;&#125;： 单词的复数形式，如列表字符串个数大于1，返回s，否则返回空串</div><div class="line"></div><div class="line">&#123;&#123; 列表或数字|pluralize:&quot;es&quot; &#125;&#125;： 指定es</div><div class="line"></div><div class="line">&#123;&#123; 列表或数字|pluralize:&quot;y,ies&quot; &#125;&#125;： 指定ies替换为y</div><div class="line"></div><div class="line">&#123;&#123; object|pprint &#125;&#125;： 显示一个对象的值</div><div class="line"></div><div class="line">&#123;&#123; 列表|random &#125;&#125;： 返回列表的随机一项</div><div class="line"></div><div class="line">&#123;&#123; string|removetags:&quot;br p div&quot; &#125;&#125;： 删除字符串中指定html标记</div><div class="line"></div><div class="line">&#123;&#123; string|rjust:&quot;50&quot; &#125;&#125;： 把字符串在指定宽度中对右，其它用空格填充</div><div class="line"></div><div class="line">&#123;&#123; 列表|slice:&quot;:2&quot; &#125;&#125;： 切片</div><div class="line"></div><div class="line">&#123;&#123; string|slugify &#125;&#125;： 字符串中留下减号和下划线，其它符号删除，空格用减号替换</div><div class="line"></div><div class="line">&#123;&#123; 3|stringformat:&quot;02i&quot; &#125;&#125;： 字符串格式，使用Python的字符串格式语法</div><div class="line"></div><div class="line">&#123;&#123; &quot;E&lt;A&gt;A&lt;/A&gt;B&lt;C&gt;C&lt;/C&gt;D&quot;|striptags &#125;&#125;： 剥去[X]HTML语法标记</div><div class="line"></div><div class="line">&#123;&#123; 时间变量|time:&quot;P&quot; &#125;&#125;： 日期的时间部分格式</div><div class="line"></div><div class="line">&#123;&#123; datetime|timesince &#125;&#125;： 给定日期到现在过去了多少时间</div><div class="line"></div><div class="line">&#123;&#123; datetime|timesince:&quot;other_datetime&quot; &#125;&#125;： 两日期间过去了多少时间</div><div class="line"></div><div class="line">&#123;&#123; datetime|timeuntil &#125;&#125;： 给定日期到现在过去了多少时间，与上面的区别在于2日期的前后位置。</div><div class="line"></div><div class="line">&#123;&#123; datetime|timeuntil:&quot;other_datetime&quot; &#125;&#125;： 两日期间过去了多少时间</div><div class="line"></div><div class="line">&#123;&#123; &quot;abdsadf&quot;|title &#125;&#125;： 首字母大写</div><div class="line"></div><div class="line">&#123;&#123; &quot;A B C D E F&quot;|truncatewords:&quot;3&quot; &#125;&#125;： 截取指定个数的单词</div><div class="line"></div><div class="line">&#123;&#123; &quot;&lt;a&gt;1&lt;a&gt;1&lt;a&gt;1&lt;/a&gt;&lt;/a&gt;&lt;/a&gt;22&lt;a&gt;1&lt;/a&gt;&quot;|truncatewords_html:&quot;2&quot; &#125;&#125;： 截取指定个数的html标记，并补完整</div><div class="line"></div><div class="line">&#123;&#123; list|unordered_list &#125;&#125;：//ul 多重嵌套列表展现为html的无序列表</div><div class="line"></div><div class="line">&#123;&#123; string|upper &#125;&#125; ：全部大写</div><div class="line"></div><div class="line">&lt;a href=&quot;&#123;&#123; link|urlencode &#125;&#125;&quot;&gt;linkage&lt;/a&gt;： url编码</div><div class="line"></div><div class="line">&#123;&#123; string|urlize &#125;&#125;： 将URLs由纯文本变为可点击的链接。（没有实验成功）</div><div class="line"></div><div class="line">&#123;&#123; string|urlizetrunc:&quot;30&quot; &#125;&#125;： 同上，多个截取字符数。（同样没有实验成功）</div><div class="line"></div><div class="line">&#123;&#123; &quot;B C D E F&quot;|wordcount &#125;&#125;： 单词数</div><div class="line"></div><div class="line">&#123;&#123; &quot;a b c d e f g h i j k&quot;|wordwrap:&quot;5&quot; &#125;&#125;： 每指定数量的字符就插入回车符</div><div class="line"></div><div class="line">&#123;&#123; boolean|yesno:&quot;Yes,No,Perhaps&quot; &#125;&#125;： 对三种值的返回字符串，对应是 非空,空,None</div><div class="line"></div><div class="line">加法</div><div class="line">&#123;&#123;value|add:10&#125;&#125;</div><div class="line">note:value=5,则结果返回15</div><div class="line"></div><div class="line">减法</div><div class="line">&#123;&#123;value|add:-10&#125;&#125;</div><div class="line">note:value=5,则结果返回-5，加一个负数就是减法了</div><div class="line"></div><div class="line">乘法</div><div class="line">&#123;% widthratio 5 1 100%&#125;</div><div class="line">note:等同于：(5 / 1) * 100 ，结果返回500，withratio需要三个参数，它会使用参数1/参数2*参数3的方式进行运算，进行乘法运算，使「参数2」=1</div><div class="line"></div><div class="line">除法</div><div class="line">&#123;% widthratio 5 100 1%&#125;</div><div class="line">note:等同于：(5 / 100) * 1,则结果返回0.05,和乘法一样，使「参数3」= 1就是除法了。</div><div class="line"></div><div class="line">### 关闭自动转义</div><div class="line">&#123;% autoescape off %&#125;</div><div class="line">    &#123;&#123; ele.content |truncatewords_html:&quot;2&quot; &#125;&#125;</div><div class="line">&#123;% endautoescape %&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作!!!</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wx.jpg" alt="菜菜鸟 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/zfb.jpg" alt="菜菜鸟 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Django/" rel="tag">#Django</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/28/URL到展现页面的全过程/" rel="next" title="URL到展现页面的全过程">
+                <i class="fa fa-chevron-left"></i> URL到展现页面的全过程
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/15/mysql/" rel="prev" title="Mysql 简易学习">
+                Mysql 简易学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/13/Django/"
+           data-title="Django" data-url="http://yoursite.com/2017/04/13/Django/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/head.gif"
+               alt="菜菜鸟" />
+          <p class="site-author-name" itemprop="name">菜菜鸟</p>
+          <p class="site-description motion-element" itemprop="description">前端开发<br/>越努力，越幸运</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://github.com/caicaibrid/" title="Github" target="_blank">Github</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://littlevegetablebird.top/" title="小菜鸟" target="_blank">小菜鸟</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.jisuhuoxian.com/" title="极速火线" target="_blank">极速火线</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.newborn-town.com/" title="赤子城" target="_blank">赤子城</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Django-学习"><span class="nav-number">1.</span> <span class="nav-text">Django 学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#django-基本命令"><span class="nav-number">1.1.</span> <span class="nav-text">django 基本命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#django-模板"><span class="nav-number">1.2.</span> <span class="nav-text">django 模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#django-models"><span class="nav-number">1.3.</span> <span class="nav-text">django models</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#django-模板过滤器"><span class="nav-number">2.</span> <span class="nav-text">django 模板过滤器</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">菜菜鸟</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+-->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"caicaibrid"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
