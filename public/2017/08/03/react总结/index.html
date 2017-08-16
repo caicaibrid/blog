@@ -106,7 +106,7 @@ react 中的坑
 1). 可以通过props进行页面传值
 2). 可以通过context进行传值  (可以跨级传递数据)
 (1). 在父组件声明子">
-<meta property="og:updated_time" content="2017-08-03T10:12:27.245Z">
+<meta property="og:updated_time" content="2017-08-04T02:54:30.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react总结">
 <meta name="twitter:description" content="react 总结react-ppt下载
@@ -381,6 +381,8 @@ react 中的坑
 <p>造成死循环的原因: 该生命周期在接收到新的props会被触发,但是在这里setState的话,也会触发该生命周期,因此造成死循环</p>
 <p>解决办法: 1). 可以直接在render里进行逻辑处理</p>
 <pre><code>2). 通过 shouldComponentUpdate 生命周期进行判断是否需要触发render的更新
+
+3). 通过 componentWillReceiveProps 生命周期 (在组件接收到一个新的prop时被调用)
 </code></pre></li>
 <li><p>在项目中同时使用 antd-mobeil 和 rcTable 的时候的一些坑</p>
 <p> 1). 可以滚动的 rcTable 嵌套在 tab 里面时,会造成 rcTable 的滚动条失效 </p>
@@ -404,7 +406,10 @@ react 中的坑
 </li>
 </ol>
 <ol>
-<li>refs 可以通过设置 ref 属性获取对应的dom结构 this.refs.属性值</li>
+<li><p>refs 可以通过设置 ref 属性获取对应的dom结构 this.refs.属性值</p>
+</li>
+<li><p>全局获取store 引入store.js (import store from ‘@/store/store.js’) 通过 store.getState() 获取对应的store信息</p>
+</li>
 </ol>
 
       
@@ -465,6 +470,10 @@ react 中的坑
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/06/TypeScript/" rel="prev" title="TypeScript">
+                TypeScript <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -559,7 +568,7 @@ react 中的坑
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -567,7 +576,7 @@ react 中的坑
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -576,7 +585,7 @@ react 中的坑
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
