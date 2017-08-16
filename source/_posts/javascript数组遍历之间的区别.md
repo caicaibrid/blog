@@ -90,6 +90,18 @@ Array.prototype.map.call(str, function(x) {
 //'54321'
 ```
 
+## find()
+
+find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined,返回符合条件的数组的值
+
+```javascript 1.8
+function isBigEnough(element) {
+  return element >= 15;
+}
+
+[12, 5, 8, 130, 44].find(isBigEnough); // 130
+```
+
 ## entries()
 
 entries() 方法返回一个新的Array Iterator对象，该对象包含数组中每个索引的键/值对。
