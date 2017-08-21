@@ -147,3 +147,8 @@ tags:
 6. refs 可以通过设置 ref 属性获取对应的dom结构 this.refs.属性值
 
 7. 全局获取store 引入store.js (import store from '@/store/store.js') 通过 store.getState() 获取对应的store信息
+
+
+## 参考链接
+
+[react环境搭建](/file/react.txt)

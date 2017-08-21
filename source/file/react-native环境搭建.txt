@@ -1,0 +1,92 @@
+1.Chocolatey
+
+安装Chocolatey命令如下:(管理员模式的命令窗口)
+
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+
+安装完毕运行choco验证是否安装成功,出现版本号表示安装成功
+
+Chocolatey是一个Windows上的包管理器，类似于linux上的yum和 apt-get
+
+2.choco install chocolateygui  安装图形界面
+
+3.Set-ExecutionPolicy -ExecutionPolicy RemoteSigned (无法加载文件 ，因为在此系统上禁止运行脚本)
+
+以上参考链接 http://blog.csdn.net/u011054333/article/details/51484943
+
+4.npm install -g yarn react-native-cli  (Yarn是Facebook提供的替代npm的工具，可以加速node模块的下载。React Native的命令行工具用于执行创建、初始化、更新项目、运行打包服务（packager）等任务)
+
+5.Android Studio安装  按照react-native的文档安装
+	
+Android Studio需要Java Development Kit [JDK] 1.8或更高版本 
+
+运行命令 choco install jdk8  
+
+javac -version 查看当前安装的JDK版本(必须为1.8以上)
+
+https://developer.android.google.cn/studio/install.html 安装 android studio
+
+Android Studio包含了运行和测试React Native应用所需的Android SDK和模拟器。
+
+http://reactnative.cn/docs/0.46/getting-started.html#content
+
+第一次安装Android studio时候弹出unable to access android sdk add-on list原因是你电脑没有SDK而且你下载的android studio又是不带SDK的；
+
+解决方法：在自己安装的目录下找到：bin\idea.properties打开这个文件末尾添加一行
+disable.android.first.run=true
+
+就行了
+
+安装过程中,不让勾选 HAXM
+
+HAXM(使用 Intel HAXM 为 Android 模拟器加速，媲美真机)
+
+http://www.cnblogs.com/beginor/archive/2013/01/13/2858228.html  
+
+
+http://bbs.reactnative.cn/topic/130/%E6%96%B0%E6%89%8B%E6%8F%90%E9%97%AE%E5%89%8D%E5%85%88%E6%9D%A5%E8%BF%99%E9%87%8C%E7%9C%8B%E7%9C%8B-react-native%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98
+
+
+
+坑
+
+react native 错误unable to load script form assets解决
+
+1. http://blog.csdn.net/u013179982/article/details/73741958
+
+apk的安装：INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES
+
+在安装APK文件时出现类似INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES的提示，这样的问题主要是签名冲突造成的，比如你使用了ADB的debug权限签名，但后来使用标准sign签名后再安装同一个文件会出现这样的错误提示，解决的方法只有卸载原有版本再进行安装
+
+
+navigation 
+
+https://reactnavigation.org/docs/intro/
+
+
+打包apk
+
+生成一个签名密钥 
+
+keytool -genkey -v -keystore caicai1205.keystore -alias caicai -keyalg RSA -keysize 2048 -validity 10000
+
+密码 caicai1205
+
+设置gradle变量
+
+全局设置  找到.gradle 
+
+
+react-native start 启动服务器
+
+react-native run-android 在模拟器运行
+
+adb devices 查看当前模拟器设备
+
+
+
+
+
+
+
+
