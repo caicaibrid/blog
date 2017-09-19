@@ -2,147 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b272dead-8320-4c62-be97-325ef4d4b0a5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/07/23/MVC的理解/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/07/23/javascript排序/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/07/28/hexo常用命令/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/08/01/ubuntu中的命令/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/08/15/module-exports和exports的区别/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/09/05/apply-call-bind用法/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/11/06/hexo部署出现404找不到js的解决方案/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/11/23/dom/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/11/27/正则表达式/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/12/21/跨域/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2016/12/28/URL到展现页面的全过程/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/04/13/Django/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/04/15/mysql/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/07/01/sass中的Map/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/07/01/sass中的规则/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/07/01/sass函数/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/07/01/sass基本用法/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/07/01/sass控制命令/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/08/03/es6-async解析/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/08/03/react总结/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/08/06/TypeScript/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/2017/08/16/javascript数组遍历之间的区别/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/CNAME" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/README.MDOWN" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/about/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2016/07/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2016/08/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2016/09/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2016/11/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2016/12/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2016/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2016/page/2/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2017/04/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2017/07/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2017/08/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2017/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/2017/page/2/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/page/2/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/page/3/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/categories/ES6/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/categories/Javascript/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/categories/MVC/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/categories/Mysql/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/categories/Python/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/categories/Sass/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/categories/TypeScript/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/categories/hexo/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/categories/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/categories/ubuntu/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/file/react.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/avatar.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/cc-by-nc-nd.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/cc-by-nc-sa.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/cc-by-nc.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/cc-by-nd.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/cc-by-sa.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/cc-by.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/cc-zero.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/head.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/placeholder.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/quote-l.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/quote-r.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/searchicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/fuck.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/react.ppt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/scss.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/src/affix.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/src/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/src/hook-duoshuo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/src/motion.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/src/post-details.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/src/schemes/pisces.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/src/scrollspy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/src/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/fancybox_loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/fancybox_loading@2x.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/fancybox_overlay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/fancybox_sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/fancybox_sprite@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/helpers/fancybox_buttons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/helpers/jquery.fancybox-buttons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/helpers/jquery.fancybox-buttons.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/helpers/jquery.fancybox-media.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/helpers/jquery.fancybox-thumbs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/helpers/jquery.fancybox-thumbs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/jquery.fancybox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/jquery.fancybox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fancybox/source/jquery.fancybox.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fastclick/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fastclick/README.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fastclick/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fastclick/lib/fastclick.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/fastclick/lib/fastclick.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/HELP-US-OUT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/css/font-awesome.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/jquery/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/jquery_lazyload/CONTRIBUTING.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/jquery_lazyload/README.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/jquery_lazyload/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/jquery_lazyload/jquery.lazyload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/jquery_lazyload/jquery.scrollstop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/ua-parser-js/dist/ua-parser.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/ua-parser-js/dist/ua-parser.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/velocity/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/velocity/velocity.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/velocity/velocity.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/velocity/velocity.ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/velocity/velocity.ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/page/2/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/page/3/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tags/Django/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tags/ES6/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tags/Javascript/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tags/MVC/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tags/Mysql/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tags/Sass/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tags/TypeScript/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tags/hexo/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tags/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tags/ubuntu/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/head.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/wx.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/zfb.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.deploy_git" afterPath="$PROJECT_DIR$/.deploy_git" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/js高程-第三版-兼容问题和注意事项.md" afterPath="$PROJECT_DIR$/source/_posts/js高程-第三版-兼容问题和注意事项.md" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -169,22 +30,40 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/js高程-第三版-兼容问题和注意事项.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="337">
-                <caret line="365" column="1" lean-forward="true" selection-start-line="365" selection-start-column="1" selection-end-line="365" selection-end-column="1" />
+              <first_editor relative-caret-position="235">
+                <caret line="382" column="0" lean-forward="true" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
                 <folding>
-                  <marker date="1505725260044" expanded="true" signature="723:821" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="734:756" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="767:788" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="798:819" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="5480:5508" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="5547:5569" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="5591:5613" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="5687:5709" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="5786:5820" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="5840:5864" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="6092:6116" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="6155:6177" ph="{...}" />
-                  <marker date="1505725260044" expanded="true" signature="6198:6248" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="723:821" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="734:756" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="767:788" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="798:819" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="5480:5508" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="5547:5569" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="5591:5613" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="5687:5709" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="5786:5820" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="5840:5864" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="6092:6116" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="6155:6177" ph="{...}" />
+                  <marker date="1505812577777" expanded="true" signature="6198:6248" ph="{...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="javascript内存泄漏.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/javascript内存泄漏.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="484">
+                <caret line="37" column="7" lean-forward="false" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+                <folding>
+                  <marker date="1505812385491" expanded="true" signature="1154:1263" ph="{...}" />
+                  <marker date="1505812385491" expanded="true" signature="1228:1261" ph="{...}" />
+                  <marker date="1505812385491" expanded="true" signature="1301:1425" ph="{...}" />
+                  <marker date="1505812385491" expanded="true" signature="1375:1408" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -273,6 +152,7 @@
         <option value="$PROJECT_DIR$/source/_posts/javascript数组遍历之间的区别.md" />
         <option value="$PROJECT_DIR$/source/_posts/react总结.md" />
         <option value="$PROJECT_DIR$/source/_posts/js高程-第三版-兼容问题.md" />
+        <option value="$PROJECT_DIR$/source/_posts/javascript内存泄漏.md" />
         <option value="$PROJECT_DIR$/source/_posts/js高程-第三版-兼容问题和注意事项.md" />
       </list>
     </option>
@@ -307,8 +187,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -361,7 +241,7 @@
     <property name="nodejs_interpreter_path" value="D:/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="G:/chinaventure/tz_zh_basic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="D:\nodejs\node.exe" />
@@ -506,11 +386,12 @@
       <workItem from="1503622793494" duration="205000" />
       <workItem from="1505714684023" duration="2863000" />
       <workItem from="1505724639433" duration="1307000" />
+      <workItem from="1505811108682" duration="2068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112634000" />
+    <option name="totallyTimeSpent" value="114702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -519,12 +400,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -558,13 +439,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/next/.javascript_ignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/next/.editorconfig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -672,17 +546,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/跨域/index.md" />
     <entry file="file://$PROJECT_DIR$/source/_posts/module-exports和exports的区别.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="63" column="3" lean-forward="false" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="63" column="3" lean-forward="false" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -734,17 +608,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/categories/index.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -786,17 +660,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/hexo常用命令.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="337">
             <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -887,6 +761,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/apply-call-bind用法.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-1107">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="66">
@@ -895,24 +774,19 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-1107">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/tags/index.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -978,25 +852,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/javascript内存泄漏.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="484">
+            <caret line="37" column="7" lean-forward="false" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+            <folding>
+              <marker date="1505812385491" expanded="true" signature="1154:1263" ph="{...}" />
+              <marker date="1505812385491" expanded="true" signature="1228:1261" ph="{...}" />
+              <marker date="1505812385491" expanded="true" signature="1301:1425" ph="{...}" />
+              <marker date="1505812385491" expanded="true" signature="1375:1408" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/js高程-第三版-兼容问题和注意事项.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="337">
-            <caret line="365" column="1" lean-forward="true" selection-start-line="365" selection-start-column="1" selection-end-line="365" selection-end-column="1" />
+          <first_editor relative-caret-position="235">
+            <caret line="382" column="0" lean-forward="true" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
             <folding>
-              <marker date="1505725260044" expanded="true" signature="723:821" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="734:756" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="767:788" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="798:819" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="5480:5508" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="5547:5569" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="5591:5613" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="5687:5709" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="5786:5820" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="5840:5864" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="6092:6116" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="6155:6177" ph="{...}" />
-              <marker date="1505725260044" expanded="true" signature="6198:6248" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="723:821" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="734:756" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="767:788" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="798:819" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="5480:5508" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="5547:5569" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="5591:5613" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="5687:5709" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="5786:5820" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="5840:5864" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="6092:6116" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="6155:6177" ph="{...}" />
+              <marker date="1505812577777" expanded="true" signature="6198:6248" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />

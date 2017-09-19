@@ -84,22 +84,19 @@
 
 
 
-<meta name="description" content="对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
-jsonp跨域
-jsonp 是最常用的一种解决跨域的方式">
+<meta name="description" content="内存泄漏简介(先来堆废话)内存泄漏（Memory Leak）是指程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。
+内存泄漏缺陷具有隐蔽性、积累性的特征，比其他内存非法访问错误更难检测。因为内存泄漏的产生原因是内存块未被释放，属于遗漏型缺陷而不是过错型缺陷。此外，内存泄漏通常不会直接产生可观察的错误症状，而是逐渐积累，降低系统">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跨域">
-<meta property="og:url" content="http://yoursite.com/2016/12/21/跨域/index.html">
+<meta property="og:title" content="javascript内存泄漏">
+<meta property="og:url" content="http://yoursite.com/2017/08/24/javascript内存泄漏/index.html">
 <meta property="og:site_name" content="菜菜鸟">
-<meta property="og:description" content="对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
-jsonp跨域
-jsonp 是最常用的一种解决跨域的方式">
-<meta property="og:updated_time" content="2017-02-28T14:39:40.043Z">
+<meta property="og:description" content="内存泄漏简介(先来堆废话)内存泄漏（Memory Leak）是指程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。
+内存泄漏缺陷具有隐蔽性、积累性的特征，比其他内存非法访问错误更难检测。因为内存泄漏的产生原因是内存块未被释放，属于遗漏型缺陷而不是过错型缺陷。此外，内存泄漏通常不会直接产生可观察的错误症状，而是逐渐积累，降低系统">
+<meta property="og:updated_time" content="2017-09-19T09:13:05.491Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跨域">
-<meta name="twitter:description" content="对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
-jsonp跨域
-jsonp 是最常用的一种解决跨域的方式">
+<meta name="twitter:title" content="javascript内存泄漏">
+<meta name="twitter:description" content="内存泄漏简介(先来堆废话)内存泄漏（Memory Leak）是指程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。
+内存泄漏缺陷具有隐蔽性、积累性的特征，比其他内存非法访问错误更难检测。因为内存泄漏的产生原因是内存块未被释放，属于遗漏型缺陷而不是过错型缺陷。此外，内存泄漏通常不会直接产生可观察的错误症状，而是逐渐积累，降低系统">
 
 
 
@@ -120,9 +117,9 @@ jsonp 是最常用的一种解决跨域的方式">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/21/跨域/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/24/javascript内存泄漏/"/>
 
-  <title> 跨域 | 菜菜鸟 </title>
+  <title> javascript内存泄漏 | 菜菜鸟 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -272,7 +269,7 @@ jsonp 是最常用的一种解决跨域的方式">
             
             
               
-                跨域
+                javascript内存泄漏
               
             
           </h1>
@@ -284,8 +281,8 @@ jsonp 是最常用的一种解决跨域的方式">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-21T22:58:34+08:00" content="2016-12-21">
-              2016-12-21
+            <time itemprop="dateCreated" datetime="2017-08-24T10:01:38+08:00" content="2017-08-24">
+              2017-08-24
             </time>
           </span>
 
@@ -314,8 +311,8 @@ jsonp 是最常用的一种解决跨域的方式">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/21/跨域/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/21/跨域/" itemprop="commentsCount"></span>
+                <a href="/2017/08/24/javascript内存泄漏/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/24/javascript内存泄漏/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -338,11 +335,27 @@ jsonp 是最常用的一种解决跨域的方式">
       
 
       
-        <p>对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。<br>它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。</p>
-<h2 id="jsonp跨域"><a href="#jsonp跨域" class="headerlink" title="jsonp跨域"></a>jsonp跨域</h2><hr>
-<p>jsonp 是最常用的一种解决跨域的方式，但是只能发送get请求，并且需要前端和服务端限制好格式，写法相当丑陋，下面介绍下jsonp的用法：</p>
-<p>前端：<br>首先全局编写一个函数，记住这个函数名字，并且这个函数接受一个参数，这个参数就是服务端返回给前端的数据，函数体就是处理返回给前端数据的具体实现。<br>然后动态生成一个script 标签，src为：请求资源的地址＋获取函数的字段名＋回调函数名称，这里的获取函数的字段名是要和服务端约定好的，是为了让服务端拿到回调函数名称。（如：www.xxx.com?callbackName=resolveJson）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//前端全局函数</div><div class="line">function resolveJosn(result) &#123;</div><div class="line">	console.log(result.name);</div><div class="line">&#125;</div><div class="line">//访问后台代码</div><div class="line">var jsonpScript= document.createElement(&quot;script&quot;);</div><div class="line">jsonpScript.type = &quot;text/javascript&quot;;</div><div class="line">jsonpScript.src = &quot;http://www.xxx.com?callbackName=resolveJson&quot;;</div><div class="line">document.getElementsByTagName(&quot;head&quot;)[0].appendChild(jsonpScript);</div></pre></td></tr></table></figure></p>
-<p>服务端<br>在接受到浏览器端 script的请求之后，从url的query的callbackName获取到回调函数的名字，例子中是resolveJson。<br>然后动态生成一段javascript片段去给这个函数传入参数执行这个函数。比如：<br>resolveJson({name: ‘xxx’});<br>执行服务端返回这个 script 之后，浏览器端获取到 script 资源，然后会立即执行这个 javascript，也就是上面那个片段。这样就能根据之前写好的回调函数处理这些数据了。</p>
+        <h1 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h1><h2 id="简介-先来堆废话"><a href="#简介-先来堆废话" class="headerlink" title="简介(先来堆废话)"></a>简介(先来堆废话)</h2><p>内存泄漏（Memory Leak）是指程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。</p>
+<p>内存泄漏缺陷具有隐蔽性、积累性的特征，比其他内存非法访问错误更难检测。因为内存泄漏的产生原因是内存块未被释放，属于遗漏型缺陷而不是过错型缺陷。此外，内存泄漏通常不会直接产生可观察的错误症状，而是逐渐积累，降低系统整体性能，极端的情况下可能使系统崩溃。</p>
+<p>随着计算机应用需求的日益增加，应用程序的设计与开发也相应的日趋复杂，开发人员在程序实现的过程中处理的变量也大量增加，如何有效进行内存分配和释放，防止内存泄漏的问题变得越来越突出。例如服务器应用软件，需要长时间的运行，不断的处理由客户端发来的请求，如果没有有效的内存管理，每处理一次请求信息就有一定的内存泄漏。这样不仅影响到服务器的性能，还可能造成整个系统的崩溃。因此，内存管理成为软件设计开发人员在设计中考虑的主要方面.</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ol>
+<li>常发性内存泄漏</li>
+</ol>
+<p>发生内存泄漏的代码会被多次执行到，每次被执行时都会导致一块内存泄漏。</p>
+<ol>
+<li>偶发性内存泄漏</li>
+</ol>
+<p>发生内存泄漏的代码只有在某些特定环境或操作过程下才会发生。常发性和偶发性是相对的。对于特定的环境，偶发性的也许就变成了常发性的。所以测试环境和测试方法对检测内存泄漏至关重要。</p>
+<ol>
+<li>一次性内存泄漏</li>
+</ol>
+<p>发生内存泄漏的代码只会被执行一次，或者由于算法上的缺陷，导致总会有一块且仅有一块内存发生泄漏。</p>
+<ol>
+<li>隐式内存泄漏</li>
+</ol>
+<p>程序在运行过程中不停的分配内存，但是直到结束的时候才释放内存。严格的说这里并没有发生内存泄漏，因为最终程序释放了所有申请的内存。但是对于一个服务器程序，需要运行几天，几周甚至几个月，不及时释放内存也可能导致最终耗尽系统的所有内存。所以，我们称这类内存泄漏为隐式内存泄漏。从用户使用程序的角度来看，内存泄漏本身不会产生什么危害，作为一般的用户，根本感觉不到内存泄漏的存在。真正有危害的是内存泄漏的堆积，这会最终耗尽系统所有的内存。从这个角度来说，一次性内存泄漏并没有什么危害，因为它不会堆积，而隐式内存泄漏危害性则非常大，因为较之于常发性和偶发性内存泄漏它更难被检测到。</p>
+<p>-[x] <span style="color:red">总而言之,就是没有及时的释放内存</span></p>
+<h2 id="简单例子"><a href="#简单例子" class="headerlink" title="简单例子"></a>简单例子</h2><figure class="highlight javascript"><figcaption><span>1.8</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> dom = <span class="built_in">document</span>.getElementById(<span class="string">"dom"</span>);</div><div class="line">  dom.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">      <span class="built_in">console</span>.log(dom.id)</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//以上代码在执行完以后不会被垃圾回收机制清除</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> dom = <span class="built_in">document</span>.getElementById(<span class="string">"dom"</span>);</div><div class="line">  dom.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">      <span class="built_in">console</span>.log(dom.id)</div><div class="line">   &#125;</div><div class="line">   dom = <span class="literal">null</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//以上就会动态的销毁,从而减少其引用次数</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -395,17 +408,13 @@ jsonp 是最常用的一种解决跨域的方式">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/27/正则表达式/" rel="next" title="正则表达式">
-                <i class="fa fa-chevron-left"></i> 正则表达式
+              <a href="/2017/08/24/js高程-第三版-兼容问题和注意事项/" rel="next" title="js高程(第三版)兼容问题和注意事项">
+                <i class="fa fa-chevron-left"></i> js高程(第三版)兼容问题和注意事项
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/28/URL到展现页面的全过程/" rel="prev" title="URL到展现页面的全过程">
-                URL到展现页面的全过程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -454,8 +463,8 @@ jsonp 是最常用的一种解决跨域的方式">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/21/跨域/"
-           data-title="跨域" data-url="http://yoursite.com/2016/12/21/跨域/">
+      <div class="ds-thread" data-thread-key="2017/08/24/javascript内存泄漏/"
+           data-title="javascript内存泄漏" data-url="http://yoursite.com/2017/08/24/javascript内存泄漏/">
       </div>
     
   </div>
@@ -572,7 +581,7 @@ jsonp 是最常用的一种解决跨域的方式">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jsonp跨域"><span class="nav-number">1.</span> <span class="nav-text">jsonp跨域</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#内存泄漏"><span class="nav-number">1.</span> <span class="nav-text">内存泄漏</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介-先来堆废话"><span class="nav-number">1.1.</span> <span class="nav-text">简介(先来堆废话)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">1.2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单例子"><span class="nav-number">1.3.</span> <span class="nav-text">简单例子</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
