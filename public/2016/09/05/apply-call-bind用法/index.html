@@ -84,22 +84,18 @@
 
 
 
-<meta name="description" content="apply call bind 用法apply call bind 都是用来改变上下文的this指向的
-不同点call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。
-例子1234567891011var obj = &amp;#123;  a: 1,  b: 2,  getCount: function(c, d) &amp;#123;    return t">
+<meta name="description" content="apply call bind 用法apply call bind 都是用来改变上下文的this指向的 不同点call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。 例子1234567891011var obj = &amp;#123;  a: 1,  b: 2,  getCount: function(c, d) &amp;#123;    return t">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="apply_call_bind用法">
 <meta property="og:url" content="http://yoursite.com/2016/09/05/apply-call-bind用法/index.html">
 <meta property="og:site_name" content="菜菜鸟">
-<meta property="og:description" content="apply call bind 用法apply call bind 都是用来改变上下文的this指向的
-不同点call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。
-例子1234567891011var obj = &amp;#123;  a: 1,  b: 2,  getCount: function(c, d) &amp;#123;    return t">
-<meta property="og:updated_time" content="2016-11-05T13:16:47.188Z">
+<meta property="og:description" content="apply call bind 用法apply call bind 都是用来改变上下文的this指向的 不同点call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。 例子1234567891011var obj = &amp;#123;  a: 1,  b: 2,  getCount: function(c, d) &amp;#123;    return t">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-11-05T13:16:47.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="apply_call_bind用法">
-<meta name="twitter:description" content="apply call bind 用法apply call bind 都是用来改变上下文的this指向的
-不同点call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。
-例子1234567891011var obj = &amp;#123;  a: 1,  b: 2,  getCount: function(c, d) &amp;#123;    return t">
+<meta name="twitter:description" content="apply call bind 用法apply call bind 都是用来改变上下文的this指向的 不同点call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。 例子1234567891011var obj = &amp;#123;  a: 1,  b: 2,  getCount: function(c, d) &amp;#123;    return t">
 
 
 
@@ -340,13 +336,13 @@
       
         <h1 id="apply-call-bind-用法"><a href="#apply-call-bind-用法" class="headerlink" title="apply call bind 用法"></a>apply call bind 用法</h1><p>apply call bind 都是用来改变上下文的this指向的</p>
 <h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><p>call和apply一样，直接引用在方法上，而bind绑定this后返回一个方法，但内部核心还是apply。</p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">  a: 1,</div><div class="line">  b: 2,</div><div class="line">  getCount: function(c, d) &#123;</div><div class="line">    return this.a + this.b + c + d;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">window.a = window.b = 0;</div><div class="line">console.log(obj.getCount(3, 4));  // 10</div><div class="line">var func = obj.getCount;</div><div class="line">console.log(func(3, 4)); //7</div></pre></td></tr></table></figure>
-<p>上面为何会这样？因为func在上下文中的this是window，bind的存在正是为了改变this指向获取想要的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">  a: 1,</div><div class="line">  b: 2,</div><div class="line">  getCount: function(c, d) &#123;</div><div class="line">    return this.a + this.b + c + d;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">window.a = window.b = 0;</div><div class="line">var func = obj.getCount.bind(obj);</div><div class="line">console.log(func(3, 4));  // 10</div></pre></td></tr></table></figure></p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">  a: 1,</span><br><span class="line">  b: 2,</span><br><span class="line">  getCount: function(c, d) &#123;</span><br><span class="line">    return this.a + this.b + c + d;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">window.a = window.b = 0;</span><br><span class="line">console.log(obj.getCount(3, 4));  // 10</span><br><span class="line">var func = obj.getCount;</span><br><span class="line">console.log(func(3, 4)); //7</span><br></pre></td></tr></table></figure>
+<p>上面为何会这样？因为func在上下文中的this是window，bind的存在正是为了改变this指向获取想要的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">  a: 1,</span><br><span class="line">  b: 2,</span><br><span class="line">  getCount: function(c, d) &#123;</span><br><span class="line">    return this.a + this.b + c + d;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">window.a = window.b = 0;</span><br><span class="line">var func = obj.getCount.bind(obj);</span><br><span class="line">console.log(func(3, 4));  // 10</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>[x] 上面说明：bind是function的一个函数扩展方法，bind以后代码重新绑定了func内部的this指向 <code>（getCount中的this-&gt;bind的obj）</code></li>
 </ul>
-<h2 id="兼容写法"><a href="#兼容写法" class="headerlink" title="兼容写法"></a>兼容写法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">  a: 1,</div><div class="line">  b: 2,</div><div class="line">  getCount: function(c, d) &#123;</div><div class="line">    return this.a + this.b + c + d;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">Function.prototype.bind = Function.prototype.bind || function(context) &#123;</div><div class="line">  var that = this;</div><div class="line">  return function() &#123;</div><div class="line">    // console.log(arguments); // console [3,4] if ie&lt;6-8&gt;</div><div class="line">    return that.apply(context, arguments);</div><div class="line"></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">window.a = window.b = 0;</div><div class="line">var func = obj.getCount.bind(obj);</div><div class="line">console.log(func(3, 4));  // 10</div></pre></td></tr></table></figure>
-<p>其实在我看来bind的核心是返回一个未执行的方法，如果直接使用apply或者call：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var ans = obj.getCount.call(obj,3,4);</div><div class="line">console.log(ans); // 10</div><div class="line">或</div><div class="line">var ans = obj.getCount.apply(obj, [3, 4]);</div><div class="line">console.log(ans); // 10</div></pre></td></tr></table></figure></p>
+<h2 id="兼容写法"><a href="#兼容写法" class="headerlink" title="兼容写法"></a>兼容写法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">  a: 1,</span><br><span class="line">  b: 2,</span><br><span class="line">  getCount: function(c, d) &#123;</span><br><span class="line">    return this.a + this.b + c + d;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Function.prototype.bind = Function.prototype.bind || function(context) &#123;</span><br><span class="line">  var that = this;</span><br><span class="line">  return function() &#123;</span><br><span class="line">    // console.log(arguments); // console [3,4] if ie&lt;6-8&gt;</span><br><span class="line">    return that.apply(context, arguments);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">window.a = window.b = 0;</span><br><span class="line">var func = obj.getCount.bind(obj);</span><br><span class="line">console.log(func(3, 4));  // 10</span><br></pre></td></tr></table></figure>
+<p>其实在我看来bind的核心是返回一个未执行的方法，如果直接使用apply或者call：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var ans = obj.getCount.call(obj,3,4);</span><br><span class="line">console.log(ans); // 10</span><br><span class="line">或</span><br><span class="line">var ans = obj.getCount.apply(obj, [3, 4]);</span><br><span class="line">console.log(ans); // 10</span><br></pre></td></tr></table></figure></p>
 <p>无法使用简写的func函数构造，所以用bind传递this指向，再返回一个未执行的方法，实现方式相当巧妙。</p>
 
       
@@ -505,7 +501,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -513,7 +509,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -522,7 +518,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -577,7 +573,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#apply-call-bind-用法"><span class="nav-number">1.</span> <span class="nav-text">apply call bind 用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不同点"><span class="nav-number">1.1.</span> <span class="nav-text">不同点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子"><span class="nav-number">1.2.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兼容写法"><span class="nav-number">1.3.</span> <span class="nav-text">兼容写法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#apply-call-bind-用法"><span class="nav-number">1.</span> <span class="nav-text"><a href="#apply-call-bind-&#x7528;&#x6CD5;" class="headerlink" title="apply call bind &#x7528;&#x6CD5;"></a>apply call bind &#x7528;&#x6CD5;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不同点"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#&#x4E0D;&#x540C;&#x70B9;" class="headerlink" title="&#x4E0D;&#x540C;&#x70B9;"></a>&#x4E0D;&#x540C;&#x70B9;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#&#x4F8B;&#x5B50;" class="headerlink" title="&#x4F8B;&#x5B50;"></a>&#x4F8B;&#x5B50;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兼容写法"><span class="nav-number">1.3.</span> <span class="nav-text"><a href="#&#x517C;&#x5BB9;&#x5199;&#x6CD5;" class="headerlink" title="&#x517C;&#x5BB9;&#x5199;&#x6CD5;"></a>&#x517C;&#x5BB9;&#x5199;&#x6CD5;</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -596,7 +592,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

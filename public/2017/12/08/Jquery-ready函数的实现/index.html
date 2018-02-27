@@ -84,52 +84,18 @@
 
 
 
-<meta name="description" content="ready和onload函数的区别
-运行时间
-
-onload函数必须等到页面里所有东西加载完,ready函数则为渲染完dom结构就会执行
-
-编写个数
-
-window.onload只能写一个(写多个的话,只会执行一个)$(document).ready()可以写多个 
-
-简化写法
-
-window.onload没有简写,$(document).ready()可以简写为$(function(){})
-怎">
+<meta name="description" content="ready和onload函数的区别 运行时间  onload函数必须等到页面里所有东西加载完,ready函数则为渲染完dom结构就会执行  编写个数  window.onload只能写一个(写多个的话,只会执行一个)$(document).ready()可以写多个   简化写法  window.onload没有简写,$(document).ready()可以简写为$(function(){}) 怎">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jquery ready函数的实现">
 <meta property="og:url" content="http://yoursite.com/2017/12/08/Jquery-ready函数的实现/index.html">
 <meta property="og:site_name" content="菜菜鸟">
-<meta property="og:description" content="ready和onload函数的区别
-运行时间
-
-onload函数必须等到页面里所有东西加载完,ready函数则为渲染完dom结构就会执行
-
-编写个数
-
-window.onload只能写一个(写多个的话,只会执行一个)$(document).ready()可以写多个 
-
-简化写法
-
-window.onload没有简写,$(document).ready()可以简写为$(function(){})
-怎">
+<meta property="og:description" content="ready和onload函数的区别 运行时间  onload函数必须等到页面里所有东西加载完,ready函数则为渲染完dom结构就会执行  编写个数  window.onload只能写一个(写多个的话,只会执行一个)$(document).ready()可以写多个   简化写法  window.onload没有简写,$(document).ready()可以简写为$(function(){}) 怎">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-08T02:12:40.860Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jquery ready函数的实现">
-<meta name="twitter:description" content="ready和onload函数的区别
-运行时间
-
-onload函数必须等到页面里所有东西加载完,ready函数则为渲染完dom结构就会执行
-
-编写个数
-
-window.onload只能写一个(写多个的话,只会执行一个)$(document).ready()可以写多个 
-
-简化写法
-
-window.onload没有简写,$(document).ready()可以简写为$(function(){})
-怎">
+<meta name="twitter:description" content="ready和onload函数的区别 运行时间  onload函数必须等到页面里所有东西加载完,ready函数则为渲染完dom结构就会执行  编写个数  window.onload只能写一个(写多个的话,只会执行一个)$(document).ready()可以写多个   简化写法  window.onload没有简写,$(document).ready()可以简写为$(function(){}) 怎">
 
 
 
@@ -382,7 +348,7 @@ window.onload没有简写,$(document).ready()可以简写为$(function(){})
 <p>window.onload没有简写,$(document).ready()可以简写为$(function(){})</p>
 <h2 id="怎样用javascript实现jquery的ready函数呢"><a href="#怎样用javascript实现jquery的ready函数呢" class="headerlink" title="怎样用javascript实现jquery的ready函数呢?"></a>怎样用javascript实现jquery的ready函数呢?</h2><p>标准浏览器可以监听DOMContentLoaded,ie浏览器可以监听onreadystatechange</p>
 <p>具体代码实现:</p>
-<figure class="highlight javascript"><figcaption><span>1.8</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ready</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span>(<span class="built_in">document</span>.addEventListener)&#123;</div><div class="line">      <span class="built_in">document</span>.addEventListener(<span class="string">"DOMContentLoaded"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">document</span>.removeEventListener(<span class="string">"DOMContentLoaded"</span>,<span class="built_in">arguments</span>.callee,<span class="literal">false</span>);</div><div class="line">        callback();</div><div class="line">      &#125;)</div><div class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">document</span>.attanchEvent)&#123;</div><div class="line">       <span class="built_in">document</span>.attanchEvent(<span class="string">"onreadystatechange"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">         <span class="keyword">if</span>(<span class="built_in">document</span>.readyState === <span class="string">"complete"</span>)&#123;</div><div class="line">             <span class="built_in">document</span>.detanchEvent(<span class="string">"DOMContentLoaded"</span>,<span class="built_in">arguments</span>.callee);</div><div class="line">             callback();</div><div class="line">         &#125;</div><div class="line">       &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>1.8</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ready</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">document</span>.addEventListener)&#123;</span><br><span class="line">      <span class="built_in">document</span>.addEventListener(<span class="string">"DOMContentLoaded"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">document</span>.removeEventListener(<span class="string">"DOMContentLoaded"</span>,<span class="built_in">arguments</span>.callee,<span class="literal">false</span>);</span><br><span class="line">        callback();</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">document</span>.attanchEvent)&#123;</span><br><span class="line">       <span class="built_in">document</span>.attanchEvent(<span class="string">"onreadystatechange"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">         <span class="keyword">if</span>(<span class="built_in">document</span>.readyState === <span class="string">"complete"</span>)&#123;</span><br><span class="line">             <span class="built_in">document</span>.detanchEvent(<span class="string">"DOMContentLoaded"</span>,<span class="built_in">arguments</span>.callee);</span><br><span class="line">             callback();</span><br><span class="line">         &#125;</span><br><span class="line">       &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -441,6 +407,10 @@ window.onload没有简写,$(document).ready()可以简写为$(function(){})
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/11/nodeJS开发指南/" rel="prev" title="nodeJS开发指南">
+                nodeJS开发指南 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -535,7 +505,7 @@ window.onload没有简写,$(document).ready()可以简写为$(function(){})
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -543,7 +513,7 @@ window.onload没有简写,$(document).ready()可以简写为$(function(){})
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -552,7 +522,7 @@ window.onload没有简写,$(document).ready()可以简写为$(function(){})
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -607,7 +577,7 @@ window.onload没有简写,$(document).ready()可以简写为$(function(){})
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ready和onload函数的区别"><span class="nav-number">1.</span> <span class="nav-text">ready和onload函数的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎样用javascript实现jquery的ready函数呢"><span class="nav-number">2.</span> <span class="nav-text">怎样用javascript实现jquery的ready函数呢?</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ready和onload函数的区别"><span class="nav-number">1.</span> <span class="nav-text"><a href="#ready&#x548C;onload&#x51FD;&#x6570;&#x7684;&#x533A;&#x522B;" class="headerlink" title="ready&#x548C;onload&#x51FD;&#x6570;&#x7684;&#x533A;&#x522B;"></a>ready&#x548C;onload&#x51FD;&#x6570;&#x7684;&#x533A;&#x522B;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎样用javascript实现jquery的ready函数呢"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x600E;&#x6837;&#x7528;javascript&#x5B9E;&#x73B0;jquery&#x7684;ready&#x51FD;&#x6570;&#x5462;" class="headerlink" title="&#x600E;&#x6837;&#x7528;javascript&#x5B9E;&#x73B0;jquery&#x7684;ready&#x51FD;&#x6570;&#x5462;?"></a>&#x600E;&#x6837;&#x7528;javascript&#x5B9E;&#x73B0;jquery&#x7684;ready&#x51FD;&#x6570;&#x5462;?</span></a></li></ol></div>
             
           </div>
         </section>
@@ -626,7 +596,7 @@ window.onload没有简写,$(document).ready()可以简写为$(function(){})
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

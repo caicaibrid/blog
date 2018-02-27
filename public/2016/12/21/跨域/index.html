@@ -84,22 +84,18 @@
 
 
 
-<meta name="description" content="对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
-jsonp跨域
-jsonp 是最常用的一种解决跨域的方式">
+<meta name="description" content="对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。 jsonp跨域 jsonp 是最常用的一种解决跨域的方式">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="跨域">
 <meta property="og:url" content="http://yoursite.com/2016/12/21/跨域/index.html">
 <meta property="og:site_name" content="菜菜鸟">
-<meta property="og:description" content="对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
-jsonp跨域
-jsonp 是最常用的一种解决跨域的方式">
-<meta property="og:updated_time" content="2017-02-28T14:39:40.043Z">
+<meta property="og:description" content="对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。 jsonp跨域 jsonp 是最常用的一种解决跨域的方式">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-02-28T14:39:40.044Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域">
-<meta name="twitter:description" content="对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
-jsonp跨域
-jsonp 是最常用的一种解决跨域的方式">
+<meta name="twitter:description" content="对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。 jsonp跨域 jsonp 是最常用的一种解决跨域的方式">
 
 
 
@@ -341,7 +337,7 @@ jsonp 是最常用的一种解决跨域的方式">
         <p>对于web开发来讲，由于浏览器的同源策略，我们需要经常使用一些hack的方法去跨域获取资源，但是hack的方法总归是hack。直到W3C出了一个标准－CORS－”跨域资源共享”（Cross-origin resource sharing）。<br>它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。</p>
 <h2 id="jsonp跨域"><a href="#jsonp跨域" class="headerlink" title="jsonp跨域"></a>jsonp跨域</h2><hr>
 <p>jsonp 是最常用的一种解决跨域的方式，但是只能发送get请求，并且需要前端和服务端限制好格式，写法相当丑陋，下面介绍下jsonp的用法：</p>
-<p>前端：<br>首先全局编写一个函数，记住这个函数名字，并且这个函数接受一个参数，这个参数就是服务端返回给前端的数据，函数体就是处理返回给前端数据的具体实现。<br>然后动态生成一个script 标签，src为：请求资源的地址＋获取函数的字段名＋回调函数名称，这里的获取函数的字段名是要和服务端约定好的，是为了让服务端拿到回调函数名称。（如：www.xxx.com?callbackName=resolveJson）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//前端全局函数</div><div class="line">function resolveJosn(result) &#123;</div><div class="line">	console.log(result.name);</div><div class="line">&#125;</div><div class="line">//访问后台代码</div><div class="line">var jsonpScript= document.createElement(&quot;script&quot;);</div><div class="line">jsonpScript.type = &quot;text/javascript&quot;;</div><div class="line">jsonpScript.src = &quot;http://www.xxx.com?callbackName=resolveJson&quot;;</div><div class="line">document.getElementsByTagName(&quot;head&quot;)[0].appendChild(jsonpScript);</div></pre></td></tr></table></figure></p>
+<p>前端：<br>首先全局编写一个函数，记住这个函数名字，并且这个函数接受一个参数，这个参数就是服务端返回给前端的数据，函数体就是处理返回给前端数据的具体实现。<br>然后动态生成一个script 标签，src为：请求资源的地址＋获取函数的字段名＋回调函数名称，这里的获取函数的字段名是要和服务端约定好的，是为了让服务端拿到回调函数名称。（如：www.xxx.com?callbackName=resolveJson）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//前端全局函数</span><br><span class="line">function resolveJosn(result) &#123;</span><br><span class="line">	console.log(result.name);</span><br><span class="line">&#125;</span><br><span class="line">//访问后台代码</span><br><span class="line">var jsonpScript= document.createElement(&quot;script&quot;);</span><br><span class="line">jsonpScript.type = &quot;text/javascript&quot;;</span><br><span class="line">jsonpScript.src = &quot;http://www.xxx.com?callbackName=resolveJson&quot;;</span><br><span class="line">document.getElementsByTagName(&quot;head&quot;)[0].appendChild(jsonpScript);</span><br></pre></td></tr></table></figure></p>
 <p>服务端<br>在接受到浏览器端 script的请求之后，从url的query的callbackName获取到回调函数的名字，例子中是resolveJson。<br>然后动态生成一段javascript片段去给这个函数传入参数执行这个函数。比如：<br>resolveJson({name: ‘xxx’});<br>执行服务端返回这个 script 之后，浏览器端获取到 script 资源，然后会立即执行这个 javascript，也就是上面那个片段。这样就能根据之前写好的回调函数处理这些数据了。</p>
 
       
@@ -500,7 +496,7 @@ jsonp 是最常用的一种解决跨域的方式">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -508,7 +504,7 @@ jsonp 是最常用的一种解决跨域的方式">
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -517,7 +513,7 @@ jsonp 是最常用的一种解决跨域的方式">
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -572,7 +568,7 @@ jsonp 是最常用的一种解决跨域的方式">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jsonp跨域"><span class="nav-number">1.</span> <span class="nav-text">jsonp跨域</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jsonp跨域"><span class="nav-number">1.</span> <span class="nav-text"><a href="#jsonp&#x8DE8;&#x57DF;" class="headerlink" title="jsonp&#x8DE8;&#x57DF;"></a>jsonp&#x8DE8;&#x57DF;</span></a></li></ol></div>
             
           </div>
         </section>
@@ -591,7 +587,7 @@ jsonp 是最常用的一种解决跨域的方式">
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

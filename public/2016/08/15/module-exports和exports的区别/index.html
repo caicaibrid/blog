@@ -84,19 +84,18 @@
 
 
 
-<meta name="description" content="module.exports和exports的区别一直很困扰我,看过几次也一直忘记，今天在学习nodeJs时，又看到这两个玩意,看到这里又困惑了，于是专门花了一点时间又研究了下这两个玩意，顿时茅塞顿开，以此笔记来见证我的理解，废话不多说了，也不会说。。。看下面的代码吧！！！
-module.exports和exports的区别node 控制台直接打印console.log(module)123456">
+<meta name="description" content="module.exports和exports的区别一直很困扰我,看过几次也一直忘记，今天在学习nodeJs时，又看到这两个玩意,看到这里又困惑了，于是专门花了一点时间又研究了下这两个玩意，顿时茅塞顿开，以此笔记来见证我的理解，废话不多说了，也不会说。。。看下面的代码吧！！！ module.exports和exports的区别node 控制台直接打印console.log(module)123456">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="module.exports和exports的区别">
 <meta property="og:url" content="http://yoursite.com/2016/08/15/module-exports和exports的区别/index.html">
 <meta property="og:site_name" content="菜菜鸟">
-<meta property="og:description" content="module.exports和exports的区别一直很困扰我,看过几次也一直忘记，今天在学习nodeJs时，又看到这两个玩意,看到这里又困惑了，于是专门花了一点时间又研究了下这两个玩意，顿时茅塞顿开，以此笔记来见证我的理解，废话不多说了，也不会说。。。看下面的代码吧！！！
-module.exports和exports的区别node 控制台直接打印console.log(module)123456">
-<meta property="og:updated_time" content="2016-11-05T13:32:45.731Z">
+<meta property="og:description" content="module.exports和exports的区别一直很困扰我,看过几次也一直忘记，今天在学习nodeJs时，又看到这两个玩意,看到这里又困惑了，于是专门花了一点时间又研究了下这两个玩意，顿时茅塞顿开，以此笔记来见证我的理解，废话不多说了，也不会说。。。看下面的代码吧！！！ module.exports和exports的区别node 控制台直接打印console.log(module)123456">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-11-05T13:32:45.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="module.exports和exports的区别">
-<meta name="twitter:description" content="module.exports和exports的区别一直很困扰我,看过几次也一直忘记，今天在学习nodeJs时，又看到这两个玩意,看到这里又困惑了，于是专门花了一点时间又研究了下这两个玩意，顿时茅塞顿开，以此笔记来见证我的理解，废话不多说了，也不会说。。。看下面的代码吧！！！
-module.exports和exports的区别node 控制台直接打印console.log(module)123456">
+<meta name="twitter:description" content="module.exports和exports的区别一直很困扰我,看过几次也一直忘记，今天在学习nodeJs时，又看到这两个玩意,看到这里又困惑了，于是专门花了一点时间又研究了下这两个玩意，顿时茅塞顿开，以此笔记来见证我的理解，废话不多说了，也不会说。。。看下面的代码吧！！！ module.exports和exports的区别node 控制台直接打印console.log(module)123456">
 
 
 
@@ -336,9 +335,9 @@ module.exports和exports的区别node 控制台直接打印console.log(module)12
 
       
         <p>module.exports和exports的区别一直很困扰我,看过几次也一直忘记，今天在学习nodeJs时，又看到这两个玩意,看到这里又困惑了，于是专门花了一点时间又研究了下这两个玩意，顿时茅塞顿开，以此笔记来见证我的理解，废话不多说了，也不会说。。。看下面的代码吧！！！</p>
-<h1 id="module-exports和exports的区别"><a href="#module-exports和exports的区别" class="headerlink" title="module.exports和exports的区别"></a>module.exports和exports的区别</h1><h2 id="node-控制台直接打印console-log-module"><a href="#node-控制台直接打印console-log-module" class="headerlink" title="node 控制台直接打印console.log(module)"></a>node 控制台直接打印console.log(module)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">id</span>: <span class="string">'.'</span>,</div><div class="line">  <span class="attr">exports</span>: &#123;&#125;,</div><div class="line">  <span class="attr">parent</span>: <span class="literal">null</span>,</div><div class="line">  <span class="attr">filename</span>: <span class="string">'/home/sa/Desktop/node_study/module/module.js'</span>,</div><div class="line">  <span class="attr">loaded</span>: <span class="literal">false</span>,</div><div class="line">  <span class="attr">children</span>: [],</div><div class="line">  <span class="attr">paths</span>:[ <span class="string">'/home/sa/Desktop/node_study/module/node_modules'</span>,</div><div class="line">     <span class="string">'/home/sa/Desktop/node_study/node_modules'</span>,</div><div class="line">     <span class="string">'/home/sa/Desktop/node_modules'</span>,</div><div class="line">     <span class="string">'/home/sa/node_modules'</span>,</div><div class="line">     <span class="string">'/home/node_modules'</span>]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<h2 id="node-控制台直接打印console-log-exports"><a href="#node-控制台直接打印console-log-exports" class="headerlink" title="node 控制台直接打印console.log(exports)"></a>node 控制台直接打印console.log(exports)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#125;</div></pre></td></tr></table></figure>
-<h2 id="在来看个例子"><a href="#在来看个例子" class="headerlink" title="在来看个例子"></a>在来看个例子</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123; <span class="attr">name</span> : <span class="number">1</span> &#125;;</div><div class="line"><span class="keyword">var</span> b = a;</div><div class="line"><span class="built_in">console</span>.log(a) <span class="comment">//&#123;name:1&#125;</span></div><div class="line"><span class="built_in">console</span>.log(b) <span class="comment">//&#123;name:1&#125;</span></div><div class="line"></div><div class="line">b.name = <span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log(a) <span class="comment">//&#123;name:2&#125;</span></div><div class="line"><span class="built_in">console</span>.log(b) <span class="comment">//&#123;name:2&#125;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> b = &#123;<span class="attr">name</span>:<span class="number">3</span>&#125;;</div><div class="line"><span class="built_in">console</span>.log(a) <span class="comment">//&#123;name:2&#125;</span></div><div class="line"><span class="built_in">console</span>.log(b) <span class="comment">//&#123;name:3&#125;</span></div></pre></td></tr></table></figure>
+<h1 id="module-exports和exports的区别"><a href="#module-exports和exports的区别" class="headerlink" title="module.exports和exports的区别"></a>module.exports和exports的区别</h1><h2 id="node-控制台直接打印console-log-module"><a href="#node-控制台直接打印console-log-module" class="headerlink" title="node 控制台直接打印console.log(module)"></a>node 控制台直接打印console.log(module)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  id: <span class="string">'.'</span>,</span><br><span class="line">  exports: &#123;&#125;,</span><br><span class="line">  parent: <span class="literal">null</span>,</span><br><span class="line">  filename: <span class="string">'/home/sa/Desktop/node_study/module/module.js'</span>,</span><br><span class="line">  loaded: <span class="literal">false</span>,</span><br><span class="line">  children: [],</span><br><span class="line">  paths:[ <span class="string">'/home/sa/Desktop/node_study/module/node_modules'</span>,</span><br><span class="line">     <span class="string">'/home/sa/Desktop/node_study/node_modules'</span>,</span><br><span class="line">     <span class="string">'/home/sa/Desktop/node_modules'</span>,</span><br><span class="line">     <span class="string">'/home/sa/node_modules'</span>,</span><br><span class="line">     <span class="string">'/home/node_modules'</span>]</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="node-控制台直接打印console-log-exports"><a href="#node-控制台直接打印console-log-exports" class="headerlink" title="node 控制台直接打印console.log(exports)"></a>node 控制台直接打印console.log(exports)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="在来看个例子"><a href="#在来看个例子" class="headerlink" title="在来看个例子"></a>在来看个例子</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123; <span class="attr">name</span> : <span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">//&#123;name:1&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">//&#123;name:1&#125;</span></span><br><span class="line"></span><br><span class="line">b.name = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">//&#123;name:2&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">//&#123;name:2&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = &#123;<span class="attr">name</span>:<span class="number">3</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">//&#123;name:2&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">//&#123;name:3&#125;</span></span><br></pre></td></tr></table></figure>
 <p>解释：a 是一个对象，b 是对 a 的引用，即 a 和 b 指向同一块内存，所以前两个输出一样。当对 b 作修改时，即 a 和 b 指向同一块内存地址的内容发生了改变，所以 a 也会体现出来，所以第三四个输出一样。当 b 被覆盖时，b 指向了一块新的内存，a 还是指向原来的内存，所以最后两个输出不一样。<br><br><br>明白了上述例子后，我们只需知道三点就知道 exports 和 module.exports 的区别了：</p>
 <blockquote>
 <ul>
@@ -512,7 +511,7 @@ module.exports和exports的区别node 控制台直接打印console.log(module)12
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -520,7 +519,7 @@ module.exports和exports的区别node 控制台直接打印console.log(module)12
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -529,7 +528,7 @@ module.exports和exports的区别node 控制台直接打印console.log(module)12
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -584,7 +583,7 @@ module.exports和exports的区别node 控制台直接打印console.log(module)12
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#module-exports和exports的区别"><span class="nav-number">1.</span> <span class="nav-text">module.exports和exports的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node-控制台直接打印console-log-module"><span class="nav-number">1.1.</span> <span class="nav-text">node 控制台直接打印console.log(module)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node-控制台直接打印console-log-exports"><span class="nav-number">1.2.</span> <span class="nav-text">node 控制台直接打印console.log(exports)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在来看个例子"><span class="nav-number">1.3.</span> <span class="nav-text">在来看个例子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结论"><span class="nav-number">2.</span> <span class="nav-text">结论</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#module-exports和exports的区别"><span class="nav-number">1.</span> <span class="nav-text"><a href="#module-exports&#x548C;exports&#x7684;&#x533A;&#x522B;" class="headerlink" title="module.exports&#x548C;exports&#x7684;&#x533A;&#x522B;"></a>module.exports&#x548C;exports&#x7684;&#x533A;&#x522B;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node-控制台直接打印console-log-module"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#node-&#x63A7;&#x5236;&#x53F0;&#x76F4;&#x63A5;&#x6253;&#x5370;console-log-module" class="headerlink" title="node &#x63A7;&#x5236;&#x53F0;&#x76F4;&#x63A5;&#x6253;&#x5370;console.log(module)"></a>node &#x63A7;&#x5236;&#x53F0;&#x76F4;&#x63A5;&#x6253;&#x5370;console.log(module)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node-控制台直接打印console-log-exports"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#node-&#x63A7;&#x5236;&#x53F0;&#x76F4;&#x63A5;&#x6253;&#x5370;console-log-exports" class="headerlink" title="node &#x63A7;&#x5236;&#x53F0;&#x76F4;&#x63A5;&#x6253;&#x5370;console.log(exports)"></a>node &#x63A7;&#x5236;&#x53F0;&#x76F4;&#x63A5;&#x6253;&#x5370;console.log(exports)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在来看个例子"><span class="nav-number">1.3.</span> <span class="nav-text"><a href="#&#x5728;&#x6765;&#x770B;&#x4E2A;&#x4F8B;&#x5B50;" class="headerlink" title="&#x5728;&#x6765;&#x770B;&#x4E2A;&#x4F8B;&#x5B50;"></a>&#x5728;&#x6765;&#x770B;&#x4E2A;&#x4F8B;&#x5B50;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结论"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x7ED3;&#x8BBA;" class="headerlink" title="&#x7ED3;&#x8BBA;"></a>&#x7ED3;&#x8BBA;</span></a></li></ol></div>
             
           </div>
         </section>
@@ -603,7 +602,7 @@ module.exports和exports的区别node 控制台直接打印console.log(module)12
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

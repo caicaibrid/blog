@@ -84,31 +84,18 @@
 
 
 
-<meta name="description" content="scss控制命令
-
-@if
-
-
-123456789101112131415161718192021222324252627/*scss写法*/@mixin blockOrHidden($boolean:true) &amp;#123;  @if $boolean &amp;#123;      @debug &quot;$boolean is #&amp;#123;$boolean&amp;#125;&quot;;      display: bl">
+<meta name="description" content="scss控制命令  @if   123456789101112131415161718192021222324252627/*scss写法*/@mixin blockOrHidden($boolean:true) &amp;#123;  @if $boolean &amp;#123;      @debug &quot;$boolean is #&amp;#123;$boolean&amp;#125;&quot;;      display: bl">
+<meta name="keywords" content="Sass">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sass控制命令">
 <meta property="og:url" content="http://yoursite.com/2017/07/01/sass控制命令/index.html">
 <meta property="og:site_name" content="菜菜鸟">
-<meta property="og:description" content="scss控制命令
-
-@if
-
-
-123456789101112131415161718192021222324252627/*scss写法*/@mixin blockOrHidden($boolean:true) &amp;#123;  @if $boolean &amp;#123;      @debug &quot;$boolean is #&amp;#123;$boolean&amp;#125;&quot;;      display: bl">
-<meta property="og:updated_time" content="2017-07-01T10:21:00.578Z">
+<meta property="og:description" content="scss控制命令  @if   123456789101112131415161718192021222324252627/*scss写法*/@mixin blockOrHidden($boolean:true) &amp;#123;  @if $boolean &amp;#123;      @debug &quot;$boolean is #&amp;#123;$boolean&amp;#125;&quot;;      display: bl">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-01T10:21:00.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sass控制命令">
-<meta name="twitter:description" content="scss控制命令
-
-@if
-
-
-123456789101112131415161718192021222324252627/*scss写法*/@mixin blockOrHidden($boolean:true) &amp;#123;  @if $boolean &amp;#123;      @debug &quot;$boolean is #&amp;#123;$boolean&amp;#125;&quot;;      display: bl">
+<meta name="twitter:description" content="scss控制命令  @if   123456789101112131415161718192021222324252627/*scss写法*/@mixin blockOrHidden($boolean:true) &amp;#123;  @if $boolean &amp;#123;      @debug &quot;$boolean is #&amp;#123;$boolean&amp;#125;&quot;;      display: bl">
 
 
 
@@ -352,8 +339,8 @@
 <li>@if</li>
 </ul>
 </blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">/*scss写法*/</div><div class="line">@mixin blockOrHidden($boolean:true) &#123;</div><div class="line">  @if $boolean &#123;</div><div class="line">      @debug "$boolean is #&#123;$boolean&#125;";</div><div class="line">      display: block;</div><div class="line">    &#125;</div><div class="line">  @else &#123;</div><div class="line">      @debug "$boolean is #&#123;$boolean&#125;";</div><div class="line">      display: none;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.block &#123;</div><div class="line">  @include blockOrHidden;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.hidden&#123;</div><div class="line">  @include blockOrHidden(false);</div><div class="line">&#125;</div><div class="line">/*编译结果*/</div><div class="line">.block &#123;</div><div class="line">  display: block;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.hidden &#123;</div><div class="line">  display: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">/*scss写法*/</div><div class="line">$num:10;</div><div class="line"></div><div class="line">@mixin size($num)&#123;</div><div class="line">    @if $num &gt; 5  and $num &lt; 8&#123;</div><div class="line">        width:$num * 10px;</div><div class="line">    &#125;</div><div class="line">    @else if $num &lt; 5&#123;</div><div class="line">        width:$num * $num * 10px;</div><div class="line">    &#125;</div><div class="line">    @else&#123;</div><div class="line">        width:#&#123;$num&#125;px</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">body&#123;</div><div class="line">    //@include size(7) </div><div class="line">    //@include size(10)</div><div class="line">    @include size(3)</div><div class="line">&#125;</div><div class="line">/*编译结果*/</div><div class="line">body&#123;</div><div class="line">    //width:70px;</div><div class="line">    //width:10px;</div><div class="line">    width:90px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*scss写法*/</span></span><br><span class="line">@<span class="keyword">mixin</span> blockOrHidden($boolean:true) &#123;</span><br><span class="line">  @<span class="keyword">if</span> $boolean &#123;</span><br><span class="line">      @<span class="keyword">debug</span> <span class="string">"$boolean is #&#123;$boolean&#125;"</span>;</span><br><span class="line">      <span class="selector-tag">display</span>: <span class="selector-tag">block</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  @<span class="keyword">else</span> &#123;</span><br><span class="line">      @<span class="keyword">debug</span> <span class="string">"$boolean is #&#123;$boolean&#125;"</span>;</span><br><span class="line">      <span class="selector-tag">display</span>: <span class="selector-tag">none</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.block</span> &#123;</span><br><span class="line">  @include blockOrHidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hidden</span>&#123;</span><br><span class="line">  @include blockOrHidden(false);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.block</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hidden</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*scss写法*/</span></span><br><span class="line">$num:10;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> size($num)&#123;</span><br><span class="line">    @<span class="keyword">if</span> $num &gt; <span class="number">5</span>  and $num &lt; <span class="number">8</span>&#123;</span><br><span class="line">        width:$num * 10px;</span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">else</span> if $num &lt; <span class="number">5</span>&#123;</span><br><span class="line">        width:$num * $num * 10px;</span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">else</span>&#123;</span><br><span class="line">        width:#&#123;$num&#125;px</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    //@include size(7) </span><br><span class="line">    //@include size(10)</span><br><span class="line">    @<span class="keyword">include</span> size(<span class="number">3</span>)</span><br><span class="line">&#125;</span><br><span class="line">/*编译结果*/</span><br><span class="line">body&#123;</span><br><span class="line">    //width:70px;</span><br><span class="line">    //width:10px;</span><br><span class="line">    <span class="selector-tag">width</span><span class="selector-pseudo">:90px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
 <li>@for </li>
@@ -363,20 +350,20 @@
 <p>2.@for $i from <start> to <end></end></start></p>
 <p>$i 表示变量 start 表示起始值 end 表示结束值</p>
 <p>两个的区别是关键字 through 表示包括 end 这个数，而 to 则不包括 end 这个数</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">$col:8.33%;</div><div class="line">//through</div><div class="line">@for $i from  1 through 2 &#123;</div><div class="line">    .col-xs-#&#123;$i&#125; &#123;</div><div class="line">        width: $i * $col;</div><div class="line">    &#125;</div><div class="line">&#125; </div><div class="line"></div><div class="line"></div><div class="line">//to</div><div class="line">@for $i from  1 to 2 &#123;</div><div class="line">    .col-md-#&#123;$i&#125; &#123;</div><div class="line">        width: $i * $col;</div><div class="line">    &#125;</div><div class="line">&#125; </div><div class="line">/*编译结果*/</div><div class="line">.col-xs-1 &#123;</div><div class="line">  width: 8.33%; &#125;</div><div class="line">.col-xs-2 &#123;</div><div class="line">  width: 16.66%; &#125;</div><div class="line">.col-md-1 &#123;</div><div class="line">  width: 8.33%; &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$col:8.33%;</span><br><span class="line">//through</span><br><span class="line">@<span class="keyword">for</span> $i from  <span class="number">1</span> through <span class="number">2</span> &#123;</span><br><span class="line">    .col-xs-#&#123;$i&#125; &#123;</span><br><span class="line">        width: $i * $col;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//to</span><br><span class="line">@<span class="keyword">for</span> $i from  <span class="number">1</span> to <span class="number">2</span> &#123;</span><br><span class="line">    .col-md-#&#123;$i&#125; &#123;</span><br><span class="line">        width: $i * $col;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.col-xs-1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8.33%</span>; &#125;</span><br><span class="line"><span class="selector-class">.col-xs-2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">16.66%</span>; &#125;</span><br><span class="line"><span class="selector-class">.col-md-1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8.33%</span>; &#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
 <li>@while </li>
 </ul>
 </blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">$types: 4;</div><div class="line">$type-width: 20px;</div><div class="line"></div><div class="line">@while $types &gt; 0 &#123;</div><div class="line">    .while-#&#123;$types&#125; &#123;</div><div class="line">        width: $type-width + $types;</div><div class="line">    &#125;</div><div class="line">    $types: $types - 1;</div><div class="line">&#125;</div><div class="line">/*编译结果*/</div><div class="line">.while-4 &#123;</div><div class="line">  width: 24px;</div><div class="line">&#125;</div><div class="line">.while-3 &#123;</div><div class="line">  width: 23px;</div><div class="line">&#125;</div><div class="line">.while-2 &#123;</div><div class="line">  width: 22px;</div><div class="line">&#125;</div><div class="line">.while-1 &#123;</div><div class="line">  width: 21px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$types: 4;</span><br><span class="line">$type-width: 20px;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">while</span> $types &gt; <span class="number">0</span> &#123;</span><br><span class="line">    .while-#&#123;$types&#125; &#123;</span><br><span class="line">        width: $type-width + $types;</span><br><span class="line">    &#125;</span><br><span class="line">    $types: $types - 1;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.while-4</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">24px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.while-3</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">23px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.while-2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">22px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.while-1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">21px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
 <li>@each </li>
 </ul>
 </blockquote>
 <p>@each $var in <list></list></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">$list: adam john wynn mason kuroir;</div><div class="line">@mixin author-images &#123;</div><div class="line">    @each $author in $list &#123;</div><div class="line">        .photo-#&#123;$author&#125; &#123;</div><div class="line">            background: url("/images/avatars/#&#123;$author&#125;.png") no-repeat;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.author-bio &#123;</div><div class="line">    @include author-images;</div><div class="line">&#125;</div><div class="line">/*编译结果*/</div><div class="line">.author-bio .photo-adam &#123;</div><div class="line">  background: url("/images/avatars/adam.png") no-repeat; &#125;</div><div class="line">.author-bio .photo-john &#123;</div><div class="line">  background: url("/images/avatars/john.png") no-repeat; &#125;</div><div class="line">.author-bio .photo-wynn &#123;</div><div class="line">  background: url("/images/avatars/wynn.png") no-repeat; &#125;</div><div class="line">.author-bio .photo-mason &#123;</div><div class="line">  background: url("/images/avatars/mason.png") no-repeat; &#125;</div><div class="line">.author-bio .photo-kuroir &#123;</div><div class="line">  background: url("/images/avatars/kuroir.png") no-repeat; &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$list: adam john wynn mason kuroir;</span><br><span class="line">@<span class="keyword">mixin</span> author-images &#123;</span><br><span class="line">    @<span class="keyword">each</span> $author in $list &#123;</span><br><span class="line">        .photo-#&#123;$author&#125; &#123;</span><br><span class="line">            background: url("/images/avatars/#&#123;$author&#125;.png") no-repeat;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.author-bio</span> &#123;</span><br><span class="line">    @include author-images;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*编译结果*/</span></span><br><span class="line"><span class="selector-class">.author-bio</span> <span class="selector-class">.photo-adam</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"/images/avatars/adam.png"</span>) no-repeat; &#125;</span><br><span class="line"><span class="selector-class">.author-bio</span> <span class="selector-class">.photo-john</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"/images/avatars/john.png"</span>) no-repeat; &#125;</span><br><span class="line"><span class="selector-class">.author-bio</span> <span class="selector-class">.photo-wynn</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"/images/avatars/wynn.png"</span>) no-repeat; &#125;</span><br><span class="line"><span class="selector-class">.author-bio</span> <span class="selector-class">.photo-mason</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"/images/avatars/mason.png"</span>) no-repeat; &#125;</span><br><span class="line"><span class="selector-class">.author-bio</span> <span class="selector-class">.photo-kuroir</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"/images/avatars/kuroir.png"</span>) no-repeat; &#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -429,16 +416,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/01/sass基本用法/" rel="next" title="sass基本用法">
-                <i class="fa fa-chevron-left"></i> sass基本用法
+              <a href="/2017/04/15/mysql/" rel="next" title="Mysql 简易学习">
+                <i class="fa fa-chevron-left"></i> Mysql 简易学习
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/01/sass函数/" rel="prev" title="sass函数">
-                sass函数 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/01/sass基本用法/" rel="prev" title="sass基本用法">
+                sass基本用法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -534,7 +521,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -542,7 +529,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -551,7 +538,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -606,7 +593,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#scss控制命令"><span class="nav-number">1.</span> <span class="nav-text">scss控制命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#scss控制命令"><span class="nav-number">1.</span> <span class="nav-text"><a href="#scss&#x63A7;&#x5236;&#x547D;&#x4EE4;" class="headerlink" title="scss&#x63A7;&#x5236;&#x547D;&#x4EE4;"></a>scss&#x63A7;&#x5236;&#x547D;&#x4EE4;</span></a></li></ol></div>
             
           </div>
         </section>
@@ -625,7 +612,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
