@@ -1,0 +1,781 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NodeJS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="nodeJS创建服务器1.81234567var http = require(&quot;http&quot;);http.createServer(function(req, res) &amp;#123;res.writeHead(200, &amp;#123;&apos;Content-Type&apos;: &apos;text/html&apos;&amp;#125;);res.write(&apos;&amp;lt;h1&amp;gt;Node.js&amp;lt;/h1&amp;gt;&apos;);res.end">
+<meta name="keywords" content="NodeJS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodeJS开发指南">
+<meta property="og:url" content="http://yoursite.com/2017/12/11/nodeJS开发指南/index.html">
+<meta property="og:site_name" content="菜菜鸟">
+<meta property="og:description" content="nodeJS创建服务器1.81234567var http = require(&quot;http&quot;);http.createServer(function(req, res) &amp;#123;res.writeHead(200, &amp;#123;&apos;Content-Type&apos;: &apos;text/html&apos;&amp;#125;);res.write(&apos;&amp;lt;h1&amp;gt;Node.js&amp;lt;/h1&amp;gt;&apos;);res.end">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://caicaibrid.github.io/img/debug.png">
+<meta property="og:updated_time" content="2017-12-11T09:05:41.746Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nodeJS开发指南">
+<meta name="twitter:description" content="nodeJS创建服务器1.81234567var http = require(&quot;http&quot;);http.createServer(function(req, res) &amp;#123;res.writeHead(200, &amp;#123;&apos;Content-Type&apos;: &apos;text/html&apos;&amp;#125;);res.write(&apos;&amp;lt;h1&amp;gt;Node.js&amp;lt;/h1&amp;gt;&apos;);res.end">
+<meta name="twitter:image" content="http://caicaibrid.github.io/img/debug.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6333732715359110000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/11/nodeJS开发指南/"/>
+
+  <title> nodeJS开发指南 | 菜菜鸟 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f7cde75cb798c6c3214ac4877d7de304";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">菜菜鸟</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">菜菜鸟</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                nodeJS开发指南
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-12-11T14:43:54+08:00" content="2017-12-11">
+              2017-12-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/NodeJS/" itemprop="url" rel="index">
+                    <span itemprop="name">NodeJS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/12/11/nodeJS开发指南/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/11/nodeJS开发指南/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="nodeJS创建服务器"><a href="#nodeJS创建服务器" class="headerlink" title="nodeJS创建服务器"></a>nodeJS创建服务器</h1><figure class="highlight javascript"><figcaption><span>1.8</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">res.writeHead(<span class="number">200</span>, &#123;<span class="string">'Content-Type'</span>: <span class="string">'text/html'</span>&#125;);</span><br><span class="line">res.write(<span class="string">'&lt;h1&gt;Node.js&lt;/h1&gt;'</span>);</span><br><span class="line">res.end(<span class="string">'&lt;p&gt;Hello World&lt;/p&gt;'</span>);</span><br><span class="line">&#125;).listen(<span class="number">3000</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"HTTP server is listening at port 3000."</span>);</span><br></pre></td></tr></table></figure>
+<p>可以利用supervisor进行实时监控代码的修改 </p>
+<h1 id="异步式I-O与事件编程"><a href="#异步式I-O与事件编程" class="headerlink" title="异步式I/O与事件编程"></a>异步式I/O与事件编程</h1><h2 id="阻塞"><a href="#阻塞" class="headerlink" title="阻塞"></a>阻塞</h2><p>线程在执行中如果遇到磁盘的读写和网络通信通常需要耗费较长时间,这时操作系统会剥夺该线程的CPU控制权,使其暂停执行,同时,将资源让给其它的工作线程,<br>这种线程调度即为阻塞.</p>
+<h2 id="同步式I-O和阻塞式I-O"><a href="#同步式I-O和阻塞式I-O" class="headerlink" title="同步式I/O和阻塞式I/O"></a>同步式I/O和阻塞式I/O</h2><p>在阻塞的基础上,当I/O操作完毕时,操作系统将这个线程的阻塞解除,恢复其对CPU的控制权,另其继续执行</p>
+<h2 id="非阻塞式的I-O和异步式的I-O"><a href="#非阻塞式的I-O和异步式的I-O" class="headerlink" title="非阻塞式的I/O和异步式的I/O"></a>非阻塞式的I/O和异步式的I/O</h2><p>针对所有的I/O操作不采用阻塞的策略,当线程遇到I/O操作时,不会以阻塞的方式等待I/O操作的完成或数据的返回,只是将I/O操作请求发送给操作系统,继续执行<br>下一条语句,当操作系统完成I/O操作时,以事件的形式通知I/O操作的线程,线程会在特定的时间处理这个事件。<br>为了处理异步 I/O，线程必须有事件循环，不断地检查有没有未处理的事件，依次予以处理。</p>
+<h2 id="为什么-Node-js-使用了单线程、非阻塞的事件编程模式"><a href="#为什么-Node-js-使用了单线程、非阻塞的事件编程模式" class="headerlink" title="为什么 Node.js 使用了单线程、非阻塞的事件编程模式"></a>为什么 Node.js 使用了单线程、非阻塞的事件编程模式</h2><p>阻塞模式下，一个线程只能处理一项任务，要想提高吞吐量必须通过多线程。而非阻塞模式下，一个线程永远在执行计算操作，这个线程所使用的 CPU 核心利用率永远是 100%，<br>I/O 以事件的方式通知。在阻塞模式下，多线程往往能提高系统吞吐量，因为一个线程阻塞时还有其他线程在工作，多线程可以让 CPU 资源不被阻塞中的线程浪费。而在非阻塞模式<br>下，线程不会被 I/O 阻塞，永远在利用 CPU。多线程带来的好处仅仅是在多核 CPU 的情况下利用更多的核，而Node.js的单线程也能带来同样的好处</p>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>NodeJS中的异步I/O操作在完成时都会发送一个事件到事件队列(都是通过一个事件去触发的回调函数)</p>
+<h2 id="NodeJS的事件循环机制"><a href="#NodeJS的事件循环机制" class="headerlink" title="NodeJS的事件循环机制"></a>NodeJS的事件循环机制</h2><p>Node.js 程序由事件循环开始，到事件循环结束，所有的逻辑都是事件的回调函数，所以 Node.js 始终在事件循环中，程序入口就是<br>事件循环第一个事件的回调函数。事件的回调函数在执行的过程中，可能会发出 I/O 请求或直接发射（emit）事件，执行完毕后再返回事件循环，事件循环会检查事件队列中有没有未<br>处理的事件，直到程序结束。</p>
+<h2 id="包和模块"><a href="#包和模块" class="headerlink" title="包和模块"></a>包和模块</h2><p>模块即为平常自己写的js代码,然后通过exports或者module.export导出的</p>
+<p>包在模块的基础上更抽象一点,可以理解为实现了某个功能模块的集合</p>
+<h3 id="创建包"><a href="#创建包" class="headerlink" title="创建包"></a>创建包</h3><p>NodeJS的包是一个目录,其中包含一个JSON格式的包说明文件(package.json),严格符合CommonJS规范的包应该包括以下内容</p>
+<ul>
+<li><p>package.json  必须在包的根目录下</p>
+</li>
+<li><p>bin目录        二进制文件</p>
+</li>
+<li><p>lib目录        JavaScript文件</p>
+</li>
+<li><p>DOC目录        文档目录</p>
+</li>
+<li><p>Test目录        测试目录</p>
+</li>
+</ul>
+<p>-[ ]  简单的包 </p>
+<p>创建一个目录,在该目录下创建一个js文件,这种方法就将一个目录封装为一个模块,就是所谓的包(因为就是一个目录)</p>
+<figure class="highlight javascript"><figcaption><span>1.8</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个somepackage 目录</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//在该目录下创建一个index.js文件 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// somepackage/index.js</span></span><br><span class="line">exports.hello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hello.'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 然后在包外建立一个js文件 getsomepackage.js文件 ,引入刚才建立的包</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> hello = <span class="built_in">require</span>(<span class="string">"./somepackage"</span>).hello;</span><br><span class="line">hello() <span class="comment">// Hello.</span></span><br></pre></td></tr></table></figure>
+<p>-[ ]  package.json</p>
+<p>在前面例子中的somepackage目录下创建一个package.json文件,然后将index.js改名为interface.js</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"main"</span>:<span class="string">"./lib/interface.js"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>继续调用这个包,依然可以访问,因为Node.js 在调用某个包时，会首先检查包中 package.json 文件的 main 字段，将其作为<br>包的接口模块，如果 package.json 或 main 字段不存在，会尝试寻找 index.js 或 index.node 作为包的接口。</p>
+<h3 id="NodeJS包管理器"><a href="#NodeJS包管理器" class="headerlink" title="NodeJS包管理器"></a>NodeJS包管理器</h3><ol>
+<li><p>获取包 </p>
+<p> npm install [packageName]</p>
+</li>
+<li><p>全局包和本地包 </p>
+<p> 全局包  npm install -g [packageName]</p>
+<p> 本地包  npm install 安装到跟目录下的node_modules</p>
+</li>
+<li><p>创建全局链接</p>
+<p> 全局—&gt;本地</p>
+<p> 安装一个包为全局的  npm install -g [packageName]</p>
+<p> 如果想在项目下使用这个包,即可使用 npm link [packageName]</p>
+<p> 本地—&gt;全局</p>
+<p> 在项目的根目录下(package.json所在的目录),运行npm link [packageName] 即可</p>
+</li>
+<li><p>包的发布</p>
+<p> 1) 通过npm init 命令根据交互式回答完成package.json文件,创建一个入口文件,这样就生成了一个包</p>
+<p> 2) 创建一个帐号,用于维护自己的包 npm adduser 根据提示输入自己的用户名 密码 邮箱 </p>
+<p> 3) 通过npm whoami 检测是否拿到了帐号</p>
+<p> 4) 然后在根目录下运行npm publish 然后就发布成功了</p>
+<p> 5) 如果你的包将来有更新,请修改version字段,然后重新npm publish就可以了</p>
+<p> 6) 卸载包 npm unpublish</p>
+</li>
+</ol>
+<h3 id="NodeJS代码调试"><a href="#NodeJS代码调试" class="headerlink" title="NodeJS代码调试"></a>NodeJS代码调试</h3><pre><code>1) 利用node debug  xxx.js 进行调试 
+
+2) node --debug-drk[=port] xxx.js进行调试  //这个会暂停js代码执行
+
+2) 利用node-inspector 调试NodeJS
+
+全局安装 npm install node-inspector -g 
+
+然后在终端中通过 node --debug-brk=5858 xxx.js 
+
+命令行启动 node-inspector 
+
+在窗口中输入 localhost:8080/debug?port=5858
+</code></pre><p><img src="http://caicaibrid.github.io/img/debug.png" width="100%"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作!!!</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wx.jpg" alt="菜菜鸟 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/zfb.jpg" alt="菜菜鸟 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/08/Jquery-ready函数的实现/" rel="next" title="Jquery ready函数的实现">
+                <i class="fa fa-chevron-left"></i> Jquery ready函数的实现
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/15/mongoDB/" rel="prev" title="mongoDB">
+                mongoDB <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/12/11/nodeJS开发指南/"
+           data-title="nodeJS开发指南" data-url="http://yoursite.com/2017/12/11/nodeJS开发指南/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/head.gif"
+               alt="菜菜鸟" />
+          <p class="site-author-name" itemprop="name">菜菜鸟</p>
+          <p class="site-description motion-element" itemprop="description">前端开发<br/>越努力，越幸运</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://github.com/caicaibrid/" title="Github" target="_blank">Github</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.baidu.com" title="百度" target="_blank">百度</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nodeJS创建服务器"><span class="nav-number">1.</span> <span class="nav-text"><a href="#nodeJS&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;" class="headerlink" title="nodeJS&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;"></a>nodeJS&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步式I-O与事件编程"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x5F02;&#x6B65;&#x5F0F;I-O&#x4E0E;&#x4E8B;&#x4EF6;&#x7F16;&#x7A0B;" class="headerlink" title="&#x5F02;&#x6B65;&#x5F0F;I/O&#x4E0E;&#x4E8B;&#x4EF6;&#x7F16;&#x7A0B;"></a>&#x5F02;&#x6B65;&#x5F0F;I/O&#x4E0E;&#x4E8B;&#x4EF6;&#x7F16;&#x7A0B;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#阻塞"><span class="nav-number">2.1.</span> <span class="nav-text"><a href="#&#x963B;&#x585E;" class="headerlink" title="&#x963B;&#x585E;"></a>&#x963B;&#x585E;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步式I-O和阻塞式I-O"><span class="nav-number">2.2.</span> <span class="nav-text"><a href="#&#x540C;&#x6B65;&#x5F0F;I-O&#x548C;&#x963B;&#x585E;&#x5F0F;I-O" class="headerlink" title="&#x540C;&#x6B65;&#x5F0F;I/O&#x548C;&#x963B;&#x585E;&#x5F0F;I/O"></a>&#x540C;&#x6B65;&#x5F0F;I/O&#x548C;&#x963B;&#x585E;&#x5F0F;I/O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非阻塞式的I-O和异步式的I-O"><span class="nav-number">2.3.</span> <span class="nav-text"><a href="#&#x975E;&#x963B;&#x585E;&#x5F0F;&#x7684;I-O&#x548C;&#x5F02;&#x6B65;&#x5F0F;&#x7684;I-O" class="headerlink" title="&#x975E;&#x963B;&#x585E;&#x5F0F;&#x7684;I/O&#x548C;&#x5F02;&#x6B65;&#x5F0F;&#x7684;I/O"></a>&#x975E;&#x963B;&#x585E;&#x5F0F;&#x7684;I/O&#x548C;&#x5F02;&#x6B65;&#x5F0F;&#x7684;I/O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么-Node-js-使用了单线程、非阻塞的事件编程模式"><span class="nav-number">2.4.</span> <span class="nav-text"><a href="#&#x4E3A;&#x4EC0;&#x4E48;-Node-js-&#x4F7F;&#x7528;&#x4E86;&#x5355;&#x7EBF;&#x7A0B;&#x3001;&#x975E;&#x963B;&#x585E;&#x7684;&#x4E8B;&#x4EF6;&#x7F16;&#x7A0B;&#x6A21;&#x5F0F;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48; Node.js &#x4F7F;&#x7528;&#x4E86;&#x5355;&#x7EBF;&#x7A0B;&#x3001;&#x975E;&#x963B;&#x585E;&#x7684;&#x4E8B;&#x4EF6;&#x7F16;&#x7A0B;&#x6A21;&#x5F0F;"></a>&#x4E3A;&#x4EC0;&#x4E48; Node.js &#x4F7F;&#x7528;&#x4E86;&#x5355;&#x7EBF;&#x7A0B;&#x3001;&#x975E;&#x963B;&#x585E;&#x7684;&#x4E8B;&#x4EF6;&#x7F16;&#x7A0B;&#x6A21;&#x5F0F;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">2.5.</span> <span class="nav-text"><a href="#&#x4E8B;&#x4EF6;" class="headerlink" title="&#x4E8B;&#x4EF6;"></a>&#x4E8B;&#x4EF6;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJS的事件循环机制"><span class="nav-number">2.6.</span> <span class="nav-text"><a href="#NodeJS&#x7684;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x673A;&#x5236;" class="headerlink" title="NodeJS&#x7684;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x673A;&#x5236;"></a>NodeJS&#x7684;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x673A;&#x5236;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包和模块"><span class="nav-number">2.7.</span> <span class="nav-text"><a href="#&#x5305;&#x548C;&#x6A21;&#x5757;" class="headerlink" title="&#x5305;&#x548C;&#x6A21;&#x5757;"></a>&#x5305;&#x548C;&#x6A21;&#x5757;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建包"><span class="nav-number">2.7.1.</span> <span class="nav-text"><a href="#&#x521B;&#x5EFA;&#x5305;" class="headerlink" title="&#x521B;&#x5EFA;&#x5305;"></a>&#x521B;&#x5EFA;&#x5305;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NodeJS包管理器"><span class="nav-number">2.7.2.</span> <span class="nav-text"><a href="#NodeJS&#x5305;&#x7BA1;&#x7406;&#x5668;" class="headerlink" title="NodeJS&#x5305;&#x7BA1;&#x7406;&#x5668;"></a>NodeJS&#x5305;&#x7BA1;&#x7406;&#x5668;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NodeJS代码调试"><span class="nav-number">2.7.3.</span> <span class="nav-text"><a href="#NodeJS&#x4EE3;&#x7801;&#x8C03;&#x8BD5;" class="headerlink" title="NodeJS&#x4EE3;&#x7801;&#x8C03;&#x8BD5;"></a>NodeJS&#x4EE3;&#x7801;&#x8C03;&#x8BD5;</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">菜菜鸟</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+-->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"caicaibrid"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

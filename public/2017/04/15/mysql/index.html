@@ -1,0 +1,768 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Mysql," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="mysql 连接到mysql服务器1mysql -u user -p password 管理MySQL的命令  SHOW DATABASES; 列出 MySQL 数据库管理系统的数据库列表。  SHOW TABLES;显示指定数据库的所有表，使用该命令前需要使用 use 命令来选择要操作的数据库。 SHOW COLUMNS FROM 数据表;显示数据表的属性，属性类型，主键信息 ，是否为 NULL">
+<meta name="keywords" content="Mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mysql 简易学习">
+<meta property="og:url" content="http://yoursite.com/2017/04/15/mysql/index.html">
+<meta property="og:site_name" content="菜菜鸟">
+<meta property="og:description" content="mysql 连接到mysql服务器1mysql -u user -p password 管理MySQL的命令  SHOW DATABASES; 列出 MySQL 数据库管理系统的数据库列表。  SHOW TABLES;显示指定数据库的所有表，使用该命令前需要使用 use 命令来选择要操作的数据库。 SHOW COLUMNS FROM 数据表;显示数据表的属性，属性类型，主键信息 ，是否为 NULL">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-04-22T10:15:08.707Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mysql 简易学习">
+<meta name="twitter:description" content="mysql 连接到mysql服务器1mysql -u user -p password 管理MySQL的命令  SHOW DATABASES; 列出 MySQL 数据库管理系统的数据库列表。  SHOW TABLES;显示指定数据库的所有表，使用该命令前需要使用 use 命令来选择要操作的数据库。 SHOW COLUMNS FROM 数据表;显示数据表的属性，属性类型，主键信息 ，是否为 NULL">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6333732715359110000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/15/mysql/"/>
+
+  <title> Mysql 简易学习 | 菜菜鸟 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f7cde75cb798c6c3214ac4877d7de304";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">菜菜鸟</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">菜菜鸟</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Mysql 简易学习
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-15T15:20:33+08:00" content="2017-04-15">
+              2017-04-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">Mysql</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/04/15/mysql/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/15/mysql/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="mysql-连接到mysql服务器"><a href="#mysql-连接到mysql服务器" class="headerlink" title="mysql 连接到mysql服务器"></a>mysql 连接到mysql服务器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u user -p password</span><br></pre></td></tr></table></figure>
+<h2 id="管理MySQL的命令"><a href="#管理MySQL的命令" class="headerlink" title="管理MySQL的命令"></a>管理MySQL的命令</h2><blockquote>
+<ul>
+<li>SHOW DATABASES; 列出 MySQL 数据库管理系统的数据库列表。 </li>
+<li>SHOW TABLES;显示指定数据库的所有表，使用该命令前需要使用 use 命令来选择要操作的数据库。</li>
+<li>SHOW COLUMNS FROM 数据表;显示数据表的属性，属性类型，主键信息 ，是否为 NULL，默认值等其他信息。</li>
+<li>SHOW INDEX FROM 数据表;显示数据表的详细索引信息，包括PRIMARY KEY（主键）。</li>
+<li>USE 数据库名；选择要操作的Mysql数据库，使用该命令后所有Mysql命令都只针对该数据库。</li>
+</ul>
+</blockquote>
+<h2 id="MySQL-创建数据库"><a href="#MySQL-创建数据库" class="headerlink" title="MySQL 创建数据库"></a>MySQL 创建数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database 数据库名;</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-删除数据库"><a href="#MySQL-删除数据库" class="headerlink" title="MySQL 删除数据库"></a>MySQL 删除数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database 数据库名;</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-创建数据表"><a href="#MySQL-创建数据表" class="headerlink" title="MySQL 创建数据表"></a>MySQL 创建数据表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">crate table tablename(</span><br><span class="line">  id int not null auto_increment,</span><br><span class="line">  name varchar(80) not null,</span><br><span class="line">  primary key(id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-删除数据表"><a href="#MySQL-删除数据表" class="headerlink" title="MySQL 删除数据表"></a>MySQL 删除数据表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table tablename;</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-清空数据表"><a href="#MySQL-清空数据表" class="headerlink" title="MySQL 清空数据表"></a>MySQL 清空数据表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate 数据库名;</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-插入数据"><a href="#MySQL-插入数据" class="headerlink" title="MySQL 插入数据"></a>MySQL 插入数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into tablename (field1, field2,...fieldN ) VALUES ( value1, value2,...valueN );</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-where-子句"><a href="#MySQL-where-子句" class="headerlink" title="MySQL where 子句"></a>MySQL where 子句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT field1, field2,...fieldN FROM table_name1, table_name2... </span><br><span class="line">[WHERE condition1 [AND [OR]] condition2.....</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-UPDATE-查询"><a href="#MySQL-UPDATE-查询" class="headerlink" title="MySQL UPDATE 查询"></a>MySQL UPDATE 查询</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE table_name SET field1=new-value1, field2=new-value2 [WHERE Clause]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>你可以同时更新一个或多个字段。</li>
+<li>你可以在 WHERE 子句中指定任何条件。</li>
+<li>你可以在一个单独表中同时更新数据。</li>
+</ul>
+</blockquote>
+<h2 id="MySQL-DELETE-语句"><a href="#MySQL-DELETE-语句" class="headerlink" title="MySQL DELETE 语句"></a>MySQL DELETE 语句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM table_name [WHERE Clause]</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-LIKE-子句"><a href="#MySQL-LIKE-子句" class="headerlink" title="MySQL LIKE 子句"></a>MySQL LIKE 子句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT field1, field2,...fieldN from table_name1, table_name2... </span><br><span class="line">WHERE field1 LIKE condition1 [AND [OR]] filed2 = &apos;somevalue&apos;</span><br><span class="line"></span><br><span class="line">select name from user where name like &quot;%cai%&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-UNION-操作符"><a href="#MySQL-UNION-操作符" class="headerlink" title="MySQL UNION 操作符"></a>MySQL UNION 操作符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">MySQL UNION 操作符用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中。多个 SELECT 语句会删除重复的数据。</span><br><span class="line">SELECT expression1, expression2, ... expression_n </span><br><span class="line">FROM tables [WHERE conditions]</span><br><span class="line">UNION [ALL | DISTINCT]</span><br><span class="line"></span><br><span class="line">SELECT expression1, expression2, ... expression_n FROM tables [WHERE conditions];</span><br><span class="line"></span><br><span class="line">SELECT country FROM Websites UNION SELECT country FROM apps ORDER BY country;</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-排序"><a href="#MySQL-排序" class="headerlink" title="MySQL 排序"></a>MySQL 排序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT field1, field2,...fieldN </span><br><span class="line">from table_name1, table_name2... </span><br><span class="line">ORDER BY field1, [field2...] [ASC [DESC]]</span><br><span class="line"></span><br><span class="line">select * from user order by name asc</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-GROUP-BY-语句"><a href="#MySQL-GROUP-BY-语句" class="headerlink" title="MySQL GROUP BY 语句"></a>MySQL GROUP BY 语句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name, function(column_name)</span><br><span class="line">FROM table_name</span><br><span class="line">WHERE column_name operator value</span><br><span class="line">GROUP BY column_name;</span><br><span class="line"></span><br><span class="line">mysql&gt; select * from user;</span><br><span class="line">+----+---------+------------+</span><br><span class="line">| id | name    | time_count |</span><br><span class="line">+----+---------+------------+</span><br><span class="line">|  1 | caicai2 |          1 |</span><br><span class="line">|  2 | caicai3 |          2 |</span><br><span class="line">|  3 | caicai3 |          3 |</span><br><span class="line">|  5 | caicai5 |          5 |</span><br><span class="line">|  6 | caicai5 |          5 |</span><br><span class="line">+----+---------+------------+</span><br><span class="line"></span><br><span class="line">mysql&gt; select name,sum(time_count) from user group by name;　name字段对应的名字出现的总次数的和</span><br><span class="line">+---------+-----------------+</span><br><span class="line">| name    | sum(time_count) |</span><br><span class="line">+---------+-----------------+</span><br><span class="line">| caicai2 |               1 |</span><br><span class="line">| caicai3 |               5 |</span><br><span class="line">| caicai5 |              10 |</span><br><span class="line">+---------+-----------------+</span><br><span class="line"></span><br><span class="line">mysql&gt; select name,count(time_count) from user group by name;　name字段对应的名字出现的次数　</span><br><span class="line">+---------+-------------------+</span><br><span class="line">| name    | count(time_count) |</span><br><span class="line">+---------+-------------------+</span><br><span class="line">| caicai2 |                 1 |</span><br><span class="line">| caicai3 |                 2 |</span><br><span class="line">| caicai5 |                 2 |</span><br><span class="line">+---------+-------------------+</span><br></pre></td></tr></table></figure>
+<h2 id="Mysql-连接的使用"><a href="#Mysql-连接的使用" class="headerlink" title="Mysql 连接的使用"></a>Mysql 连接的使用</h2><blockquote>
+<ul>
+<li>INNER JOIN（内连接,或等值连接）：获取两个表中字段匹配关系的记录。</li>
+<li>LEFT JOIN（左连接）：获取左表所有记录，即使右表没有对应匹配的记录。</li>
+<li>RIGHT JOIN（右连接）： 与 LEFT JOIN 相反，用于获取右表所有记录，即使左表没有对应匹配的记录。</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT * FROM tcount_tbl;</span><br><span class="line">+-----------------+----------------+</span><br><span class="line">| runoob_author | runoob_count |</span><br><span class="line">+-----------------+----------------+</span><br><span class="line">| mahran          |             20 |</span><br><span class="line">| mahnaz          |           NULL |</span><br><span class="line">| Jen             |           NULL |</span><br><span class="line">| Gill            |             20 |</span><br><span class="line">| John Poul       |              1 |</span><br><span class="line">| Sanjay          |              1 |</span><br><span class="line">+-----------------+----------------+</span><br><span class="line">mysql&gt; SELECT * from runoob_tbl;</span><br><span class="line">+-------------+----------------+-----------------+-----------------+</span><br><span class="line">| runoob_id | runoob_title | runoob_author | submission_date |</span><br><span class="line">+-------------+----------------+-----------------+-----------------+</span><br><span class="line">|           1 | Learn PHP      | John Poul       | 2007-05-24      |</span><br><span class="line">|           2 | Learn MySQL    | Abdul S         | 2007-05-24      |</span><br><span class="line">|           3 | JAVA Tutorial  | Sanjay          | 2007-05-06      |</span><br><span class="line">+-------------+----------------+-----------------+-----------------+</span><br></pre></td></tr></table></figure>
+<h3 id="内连接-INNER-JOIN"><a href="#内连接-INNER-JOIN" class="headerlink" title="内连接 INNER JOIN"></a>内连接 INNER JOIN</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT a.runoob_id, a.runoob_author, b.runoob_count </span><br><span class="line">FROM runoob_tbl a </span><br><span class="line">INNER JOIN tcount_tbl b </span><br><span class="line">ON a.runoob_author = b.runoob_author;</span><br><span class="line"></span><br><span class="line">+-----------+---------------+--------------+</span><br><span class="line">| runoob_id | runoob_author | runoob_count |</span><br><span class="line">+-----------+---------------+--------------+</span><br><span class="line">|         1 | John Poul     |            1 |</span><br><span class="line">|         3 | Sanjay        |            1 |</span><br><span class="line">+-----------+---------------+--------------+</span><br><span class="line">等价于</span><br><span class="line">mysql&gt; SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a, tcount_tbl b WHERE a.runoob_author = b.runoob_author;</span><br><span class="line">+-------------+-----------------+----------------+</span><br><span class="line">| runoob_id | runoob_author | runoob_count |</span><br><span class="line">+-------------+-----------------+----------------+</span><br><span class="line">|           1 | John Poul       |              1 |</span><br><span class="line">|           3 | Sanjay          |              1 |</span><br><span class="line">+-------------+-----------------+----------------+</span><br></pre></td></tr></table></figure>
+<h3 id="左连接-LEFT-JOIN"><a href="#左连接-LEFT-JOIN" class="headerlink" title="左连接 LEFT JOIN"></a>左连接 LEFT JOIN</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a LEFT JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;</span><br><span class="line">+-------------+-----------------+----------------+</span><br><span class="line">| runoob_id | runoob_author | runoob_count |</span><br><span class="line">+-------------+-----------------+----------------+</span><br><span class="line">|           1 | John Poul       |              1 |</span><br><span class="line">|           2 | Abdul S         |           NULL |</span><br><span class="line">|           3 | Sanjay          |              1 |</span><br><span class="line">+-------------+-----------------+----------------+</span><br><span class="line">LEFT JOIN，该语句会读取左边的数据表runoob_tbl的所有选取的字段数据，即便在右侧表tcount_tbl中没有对应的runoob_author字段值</span><br></pre></td></tr></table></figure>
+<h3 id="右连接-RIGHT-JOIN"><a href="#右连接-RIGHT-JOIN" class="headerlink" title="右连接 RIGHT JOIN"></a>右连接 RIGHT JOIN</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT b.runoob_id, b.runoob_author, a.runoob_count FROM tcount_tbl a LEFT JOIN runoob_tbl b ON a.runoob_author = b.runoob_author;</span><br><span class="line">+-------------+-----------------+----------------+</span><br><span class="line">| runoob_id | runoob_author | runoob_count |</span><br><span class="line">+-------------+-----------------+----------------+</span><br><span class="line">|           1 | John Poul       |              1 |</span><br><span class="line">|           2 | Abdul S         |           NULL |</span><br><span class="line">|           3 | Sanjay          |              1 |</span><br><span class="line">+-------------+-----------------+----------------+</span><br><span class="line">RIGHT JOIN，该语句会读取右边的数据表 runoob_tbl 的所有选取的字段数据，即便在左侧表tcount_tbl中没有对应的runoob_author字段值。</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-NULL-值处理"><a href="#MySQL-NULL-值处理" class="headerlink" title="MySQL NULL 值处理"></a>MySQL NULL 值处理</h2><blockquote>
+<ul>
+<li>is null 　查询包括null的数据　</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT * FROM tcount_tbl WHERE runoob_count IS NULL;</span><br><span class="line">+-----------------+----------------+</span><br><span class="line">| runoob_author | runoob_count |</span><br><span class="line">+-----------------+----------------+</span><br><span class="line">| mahnaz          |           NULL |</span><br><span class="line">| Jen             |           NULL |</span><br><span class="line">+-----------------+----------------+</span><br><span class="line">mysql&gt; SELECT * FROM tcount_tbl WHERE runoob_count = NULL;</span><br><span class="line">Empty set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>is not null 查询不包括null的数据</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT * from tcount_tbl </span><br><span class="line">       WHERE runoob_count IS NOT NULL;</span><br><span class="line">+-----------------+----------------+</span><br><span class="line">| runoob_author | runoob_count |</span><br><span class="line">+-----------------+----------------+</span><br><span class="line">| mahran          |             20 |</span><br><span class="line">| Gill            |             20 |</span><br><span class="line">+-----------------+----------------+</span><br><span class="line">mysql&gt; SELECT * FROM tcount_tbl WHERE runoob_count != NULL;</span><br><span class="line">Empty set (0.01 sec)</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-正则表达式-REGEXP"><a href="#MySQL-正则表达式-REGEXP" class="headerlink" title="MySQL 正则表达式 REGEXP"></a>MySQL 正则表达式 REGEXP</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">查找name字段中以&apos;st&apos;为开头的所有数据：</span><br><span class="line">mysql&gt; SELECT name FROM person_tbl WHERE name REGEXP &apos;^st&apos;;</span><br><span class="line">查找name字段中以&apos;ok&apos;为结尾的所有数据：</span><br><span class="line">mysql&gt; SELECT name FROM person_tbl WHERE name REGEXP &apos;ok$&apos;;</span><br><span class="line">查找name字段中包含&apos;mar&apos;字符串的所有数据：</span><br><span class="line">mysql&gt; SELECT name FROM person_tbl WHERE name REGEXP &apos;mar&apos;;</span><br><span class="line">查找name字段中以元音字符开头或以&apos;ok&apos;字符串结尾的所有数据：</span><br><span class="line">mysql&gt; SELECT name FROM person_tbl WHERE name REGEXP &apos;^[aeiou]|ok$&apos;;</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-ALTER命令"><a href="#MySQL-ALTER命令" class="headerlink" title="MySQL ALTER命令"></a>MySQL ALTER命令</h2><h3 id="删除，添加字段"><a href="#删除，添加字段" class="headerlink" title="删除，添加字段"></a>删除，添加字段</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER TABLE testalter_tbl  DROP i; 删除表的ｉ字段</span><br><span class="line">mysql&gt; ALTER TABLE testalter_tbl ADD i INT;　添加表的ｉ字段并且为int型</span><br></pre></td></tr></table></figure>
+<h3 id="修改字段类型及名称-在ALTER命令中使用-MODIFY-或-CHANGE-子句-。"><a href="#修改字段类型及名称-在ALTER命令中使用-MODIFY-或-CHANGE-子句-。" class="headerlink" title="修改字段类型及名称 在ALTER命令中使用 MODIFY 或 CHANGE 子句 。"></a>修改字段类型及名称 在ALTER命令中使用 MODIFY 或 CHANGE 子句 。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER TABLE testalter_tbl MODIFY c CHAR(10); 把字段 c 的类型从 CHAR(1) 改为 CHAR(10)</span><br><span class="line"></span><br><span class="line">mysql&gt; ALTER TABLE testalter_tbl CHANGE j j INT; </span><br><span class="line">使用 CHANGE 子句, 语法有很大的不同。 在 CHANGE 关键字之后，紧跟着的是你要修改的字段名，然后指定新字段名及类型。</span><br></pre></td></tr></table></figure>
+<h3 id="修改表名"><a href="#修改表名" class="headerlink" title="修改表名"></a>修改表名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE testalter_tbl RENAME TO alter_tbl; 将数据表 testalter_tbl 重命名为 alter_tbl</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作!!!</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wx.jpg" alt="菜菜鸟 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/zfb.jpg" alt="菜菜鸟 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mysql/" rel="tag">#Mysql</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/13/Django/" rel="next" title="Django">
+                <i class="fa fa-chevron-left"></i> Django
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/01/sass基本用法/" rel="prev" title="sass基本用法">
+                sass基本用法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/15/mysql/"
+           data-title="Mysql 简易学习" data-url="http://yoursite.com/2017/04/15/mysql/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/head.gif"
+               alt="菜菜鸟" />
+          <p class="site-author-name" itemprop="name">菜菜鸟</p>
+          <p class="site-description motion-element" itemprop="description">前端开发<br/>越努力，越幸运</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://github.com/caicaibrid/" title="Github" target="_blank">Github</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.baidu.com" title="百度" target="_blank">百度</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql-连接到mysql服务器"><span class="nav-number">1.</span> <span class="nav-text"><a href="#mysql-&#x8FDE;&#x63A5;&#x5230;mysql&#x670D;&#x52A1;&#x5668;" class="headerlink" title="mysql &#x8FDE;&#x63A5;&#x5230;mysql&#x670D;&#x52A1;&#x5668;"></a>mysql &#x8FDE;&#x63A5;&#x5230;mysql&#x670D;&#x52A1;&#x5668;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理MySQL的命令"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x7BA1;&#x7406;MySQL&#x7684;&#x547D;&#x4EE4;" class="headerlink" title="&#x7BA1;&#x7406;MySQL&#x7684;&#x547D;&#x4EE4;"></a>&#x7BA1;&#x7406;MySQL&#x7684;&#x547D;&#x4EE4;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-创建数据库"><span class="nav-number">3.</span> <span class="nav-text"><a href="#MySQL-&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;" class="headerlink" title="MySQL &#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;"></a>MySQL &#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-删除数据库"><span class="nav-number">4.</span> <span class="nav-text"><a href="#MySQL-&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;" class="headerlink" title="MySQL &#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;"></a>MySQL &#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-创建数据表"><span class="nav-number">5.</span> <span class="nav-text"><a href="#MySQL-&#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868;" class="headerlink" title="MySQL &#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868;"></a>MySQL &#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-删除数据表"><span class="nav-number">6.</span> <span class="nav-text"><a href="#MySQL-&#x5220;&#x9664;&#x6570;&#x636E;&#x8868;" class="headerlink" title="MySQL &#x5220;&#x9664;&#x6570;&#x636E;&#x8868;"></a>MySQL &#x5220;&#x9664;&#x6570;&#x636E;&#x8868;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-清空数据表"><span class="nav-number">7.</span> <span class="nav-text"><a href="#MySQL-&#x6E05;&#x7A7A;&#x6570;&#x636E;&#x8868;" class="headerlink" title="MySQL &#x6E05;&#x7A7A;&#x6570;&#x636E;&#x8868;"></a>MySQL &#x6E05;&#x7A7A;&#x6570;&#x636E;&#x8868;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-插入数据"><span class="nav-number">8.</span> <span class="nav-text"><a href="#MySQL-&#x63D2;&#x5165;&#x6570;&#x636E;" class="headerlink" title="MySQL &#x63D2;&#x5165;&#x6570;&#x636E;"></a>MySQL &#x63D2;&#x5165;&#x6570;&#x636E;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-where-子句"><span class="nav-number">9.</span> <span class="nav-text"><a href="#MySQL-where-&#x5B50;&#x53E5;" class="headerlink" title="MySQL where &#x5B50;&#x53E5;"></a>MySQL where &#x5B50;&#x53E5;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-UPDATE-查询"><span class="nav-number">10.</span> <span class="nav-text"><a href="#MySQL-UPDATE-&#x67E5;&#x8BE2;" class="headerlink" title="MySQL UPDATE &#x67E5;&#x8BE2;"></a>MySQL UPDATE &#x67E5;&#x8BE2;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-DELETE-语句"><span class="nav-number">11.</span> <span class="nav-text"><a href="#MySQL-DELETE-&#x8BED;&#x53E5;" class="headerlink" title="MySQL DELETE &#x8BED;&#x53E5;"></a>MySQL DELETE &#x8BED;&#x53E5;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-LIKE-子句"><span class="nav-number">12.</span> <span class="nav-text"><a href="#MySQL-LIKE-&#x5B50;&#x53E5;" class="headerlink" title="MySQL LIKE &#x5B50;&#x53E5;"></a>MySQL LIKE &#x5B50;&#x53E5;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-UNION-操作符"><span class="nav-number">13.</span> <span class="nav-text"><a href="#MySQL-UNION-&#x64CD;&#x4F5C;&#x7B26;" class="headerlink" title="MySQL UNION &#x64CD;&#x4F5C;&#x7B26;"></a>MySQL UNION &#x64CD;&#x4F5C;&#x7B26;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-排序"><span class="nav-number">14.</span> <span class="nav-text"><a href="#MySQL-&#x6392;&#x5E8F;" class="headerlink" title="MySQL &#x6392;&#x5E8F;"></a>MySQL &#x6392;&#x5E8F;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-GROUP-BY-语句"><span class="nav-number">15.</span> <span class="nav-text"><a href="#MySQL-GROUP-BY-&#x8BED;&#x53E5;" class="headerlink" title="MySQL GROUP BY &#x8BED;&#x53E5;"></a>MySQL GROUP BY &#x8BED;&#x53E5;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql-连接的使用"><span class="nav-number">16.</span> <span class="nav-text"><a href="#Mysql-&#x8FDE;&#x63A5;&#x7684;&#x4F7F;&#x7528;" class="headerlink" title="Mysql &#x8FDE;&#x63A5;&#x7684;&#x4F7F;&#x7528;"></a>Mysql &#x8FDE;&#x63A5;&#x7684;&#x4F7F;&#x7528;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内连接-INNER-JOIN"><span class="nav-number">16.1.</span> <span class="nav-text"><a href="#&#x5185;&#x8FDE;&#x63A5;-INNER-JOIN" class="headerlink" title="&#x5185;&#x8FDE;&#x63A5; INNER JOIN"></a>&#x5185;&#x8FDE;&#x63A5; INNER JOIN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#左连接-LEFT-JOIN"><span class="nav-number">16.2.</span> <span class="nav-text"><a href="#&#x5DE6;&#x8FDE;&#x63A5;-LEFT-JOIN" class="headerlink" title="&#x5DE6;&#x8FDE;&#x63A5; LEFT JOIN"></a>&#x5DE6;&#x8FDE;&#x63A5; LEFT JOIN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#右连接-RIGHT-JOIN"><span class="nav-number">16.3.</span> <span class="nav-text"><a href="#&#x53F3;&#x8FDE;&#x63A5;-RIGHT-JOIN" class="headerlink" title="&#x53F3;&#x8FDE;&#x63A5; RIGHT JOIN"></a>&#x53F3;&#x8FDE;&#x63A5; RIGHT JOIN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-NULL-值处理"><span class="nav-number">17.</span> <span class="nav-text"><a href="#MySQL-NULL-&#x503C;&#x5904;&#x7406;" class="headerlink" title="MySQL NULL &#x503C;&#x5904;&#x7406;"></a>MySQL NULL &#x503C;&#x5904;&#x7406;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-正则表达式-REGEXP"><span class="nav-number">18.</span> <span class="nav-text"><a href="#MySQL-&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;-REGEXP" class="headerlink" title="MySQL &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F; REGEXP"></a>MySQL &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F; REGEXP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-ALTER命令"><span class="nav-number">19.</span> <span class="nav-text"><a href="#MySQL-ALTER&#x547D;&#x4EE4;" class="headerlink" title="MySQL ALTER&#x547D;&#x4EE4;"></a>MySQL ALTER&#x547D;&#x4EE4;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除，添加字段"><span class="nav-number">19.1.</span> <span class="nav-text"><a href="#&#x5220;&#x9664;&#xFF0C;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;" class="headerlink" title="&#x5220;&#x9664;&#xFF0C;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;"></a>&#x5220;&#x9664;&#xFF0C;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改字段类型及名称-在ALTER命令中使用-MODIFY-或-CHANGE-子句-。"><span class="nav-number">19.2.</span> <span class="nav-text"><a href="#&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x53CA;&#x540D;&#x79F0;-&#x5728;ALTER&#x547D;&#x4EE4;&#x4E2D;&#x4F7F;&#x7528;-MODIFY-&#x6216;-CHANGE-&#x5B50;&#x53E5;-&#x3002;" class="headerlink" title="&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x53CA;&#x540D;&#x79F0; &#x5728;ALTER&#x547D;&#x4EE4;&#x4E2D;&#x4F7F;&#x7528; MODIFY &#x6216; CHANGE &#x5B50;&#x53E5; &#x3002;"></a>&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x53CA;&#x540D;&#x79F0; &#x5728;ALTER&#x547D;&#x4EE4;&#x4E2D;&#x4F7F;&#x7528; MODIFY &#x6216; CHANGE &#x5B50;&#x53E5; &#x3002;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改表名"><span class="nav-number">19.3.</span> <span class="nav-text"><a href="#&#x4FEE;&#x6539;&#x8868;&#x540D;" class="headerlink" title="&#x4FEE;&#x6539;&#x8868;&#x540D;"></a>&#x4FEE;&#x6539;&#x8868;&#x540D;</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">菜菜鸟</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+-->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"caicaibrid"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

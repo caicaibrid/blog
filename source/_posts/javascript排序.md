@@ -60,13 +60,13 @@ function selectSort(arr){
 ```
 function insertSort(arr){
   for(var i = 1;i<arr.length;i++){
-  	var curIndex = i-1;
-	  var curValue = arr[i]
-	  while(curIndex >=0 && arr[curIndex]>curValue){
-		arr[curIndex+1] = arr[curIndex]
-		curIndex--;
-	} 
-	arr[curIndex+1] = curValue
+  	  var curIndex = i-1;
+      var curValue = arr[i]
+      while(curIndex >=0 && arr[curIndex]>curValue){
+        arr[curIndex+1] = arr[curIndex]
+        curIndex--;
+	  } 
+	  arr[curIndex+1] = curValue
   }
   return arr
 }
