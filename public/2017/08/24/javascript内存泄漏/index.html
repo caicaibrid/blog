@@ -6,15 +6,15 @@
 
 
 <html class="theme-next mist use-motion">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -29,7 +29,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -63,21 +63,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Javascript," />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="Javascript,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
 
 
 
@@ -116,12 +116,12 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/24/javascript内存泄漏/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/24/javascript内存泄漏/">
 
   <title> javascript内存泄漏 | 菜菜鸟 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -152,12 +152,12 @@
   <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">菜菜鸟</span>
       <span class="logo-line-after"><i></i></span>
@@ -184,7 +184,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -194,7 +194,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -204,7 +204,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -214,7 +214,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -224,7 +224,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
           </a>
@@ -257,7 +257,7 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
 
     
       <header class="post-header">
@@ -286,14 +286,14 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span itemprop="about" itemscope="" itemtype="https://schema.org/Thing">
                   <a href="/categories/Javascript/" itemprop="url" rel="index">
                     <span itemprop="name">Javascript</span>
                   </a>
@@ -341,15 +341,15 @@
 <li>常发性内存泄漏</li>
 </ol>
 <p>发生内存泄漏的代码会被多次执行到，每次被执行时都会导致一块内存泄漏。</p>
-<ol>
+<ol start="2">
 <li>偶发性内存泄漏</li>
 </ol>
 <p>发生内存泄漏的代码只有在某些特定环境或操作过程下才会发生。常发性和偶发性是相对的。对于特定的环境，偶发性的也许就变成了常发性的。所以测试环境和测试方法对检测内存泄漏至关重要。</p>
-<ol>
+<ol start="3">
 <li>一次性内存泄漏</li>
 </ol>
 <p>发生内存泄漏的代码只会被执行一次，或者由于算法上的缺陷，导致总会有一块且仅有一块内存发生泄漏。</p>
-<ol>
+<ol start="4">
 <li>隐式内存泄漏</li>
 </ol>
 <p>程序在运行过程中不停的分配内存，但是直到结束的时候才释放内存。严格的说这里并没有发生内存泄漏，因为最终程序释放了所有申请的内存。但是对于一个服务器程序，需要运行几天，几周甚至几个月，不及时释放内存也可能导致最终耗尽系统的所有内存。所以，我们称这类内存泄漏为隐式内存泄漏。从用户使用程序的角度来看，内存泄漏本身不会产生什么危害，作为一般的用户，根本感觉不到内存泄漏的存在。真正有危害的是内存泄漏的堆积，这会最终耗尽系统所有的内存。从这个角度来说，一次性内存泄漏并没有什么危害，因为它不会堆积，而隐式内存泄漏危害性则非常大，因为较之于常发性和偶发性内存泄漏它更难被检测到。</p>
@@ -377,13 +377,13 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/uploads/wx.jpg" alt="菜菜鸟 WeChat Pay"/>
+          <img id="wechat_qr" src="/uploads/wx.jpg" alt="菜菜鸟 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/uploads/zfb.jpg" alt="菜菜鸟 Alipay"/>
+          <img id="alipay_qr" src="/uploads/zfb.jpg" alt="菜菜鸟 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -407,16 +407,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/24/js高程-第三版-兼容问题和注意事项/" rel="next" title="js高程(第三版)兼容问题和注意事项">
-                <i class="fa fa-chevron-left"></i> js高程(第三版)兼容问题和注意事项
+              <a href="/2017/08/16/javascript数组遍历之间的区别/" rel="next" title="javascript数组遍历之间的区别">
+                <i class="fa fa-chevron-left"></i> javascript数组遍历之间的区别
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/24/vue非父子之间的通信/" rel="prev" title="vue非父子之间的通信">
-                vue非父子之间的通信 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/24/js高程-第三版-兼容问题和注意事项/" rel="prev" title="js高程(第三版)兼容问题和注意事项">
+                js高程(第三版)兼容问题和注意事项 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -446,7 +446,7 @@
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -466,8 +466,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/08/24/javascript内存泄漏/"
-           data-title="javascript内存泄漏" data-url="http://yoursite.com/2017/08/24/javascript内存泄漏/">
+      <div class="ds-thread" data-thread-key="2017/08/24/javascript内存泄漏/" data-title="javascript内存泄漏" data-url="http://yoursite.com/2017/08/24/javascript内存泄漏/">
       </div>
     
   </div>
@@ -492,7 +491,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -502,17 +501,15 @@
       
 
       <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/head.gif"
-               alt="菜菜鸟" />
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/uploads/head.gif" alt="菜菜鸟">
           <p class="site-author-name" itemprop="name">菜菜鸟</p>
-          <p class="site-description motion-element" itemprop="description">前端开发<br/>越努力，越幸运</p>
+          <p class="site-description motion-element" itemprop="description">前端开发<br>越努力，越幸运</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-count">34</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -520,7 +517,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -529,7 +526,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -576,7 +573,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#内存泄漏"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x5185;&#x5B58;&#x6CC4;&#x6F0F;" class="headerlink" title="&#x5185;&#x5B58;&#x6CC4;&#x6F0F;"></a>&#x5185;&#x5B58;&#x6CC4;&#x6F0F;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介-先来堆废话"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#&#x7B80;&#x4ECB;-&#x5148;&#x6765;&#x5806;&#x5E9F;&#x8BDD;" class="headerlink" title="&#x7B80;&#x4ECB;(&#x5148;&#x6765;&#x5806;&#x5E9F;&#x8BDD;)"></a>&#x7B80;&#x4ECB;(&#x5148;&#x6765;&#x5806;&#x5E9F;&#x8BDD;)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#&#x539F;&#x56E0;" class="headerlink" title="&#x539F;&#x56E0;"></a>&#x539F;&#x56E0;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单例子"><span class="nav-number">1.3.</span> <span class="nav-text"><a href="#&#x7B80;&#x5355;&#x4F8B;&#x5B50;" class="headerlink" title="&#x7B80;&#x5355;&#x4F8B;&#x5B50;"></a>&#x7B80;&#x5355;&#x4F8B;&#x5B50;</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#内存泄漏"><span class="nav-number">1.</span> <span class="nav-text">内存泄漏</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介-先来堆废话"><span class="nav-number">1.1.</span> <span class="nav-text">简介(先来堆废话)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">1.2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单例子"><span class="nav-number">1.3.</span> <span class="nav-text">简单例子</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -592,10 +589,10 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

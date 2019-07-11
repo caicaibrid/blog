@@ -1,0 +1,789 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta name="description" content="算法  算法复杂度算法复杂度是指算法在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和内存资源。 同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。算法分析的目的在于选择合适算法和改进算法。一个算法的评价主要从时间复杂度和空间复杂度来考虑。 时间复杂度为什么需要时间复杂度在实际项目开发中,我们理想状态是写出的这段代码是最优的,但是总不能把所有实现方式都写出来,然">
+<meta property="og:type" content="article">
+<meta property="og:title" content="菜菜鸟">
+<meta property="og:url" content="http://yoursite.com/2019/06/20/算法/index.html">
+<meta property="og:site_name" content="菜菜鸟">
+<meta property="og:description" content="算法  算法复杂度算法复杂度是指算法在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和内存资源。 同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。算法分析的目的在于选择合适算法和改进算法。一个算法的评价主要从时间复杂度和空间复杂度来考虑。 时间复杂度为什么需要时间复杂度在实际项目开发中,我们理想状态是写出的这段代码是最优的,但是总不能把所有实现方式都写出来,然">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D46/sign=7c27e5b93f01213fcb334fda54e72d3f/50da81cb39dbb6fda35134460f24ab18972b374c.jpg">
+<meta property="og:image" content="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D134/sign=2a228f561b950a7b71354ac73ed1625c/8644ebf81a4c510fbfd3367a6659252dd42aa5bf.jpg">
+<meta property="og:image" content="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D72/sign=374d40bc0efa513d55aa6edc3c6d9940/e61190ef76c6a7ef68d97d46fbfaaf51f2de66d7.jpg">
+<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D162/sign=c26ae4e5cfea15ce45eee40f84013a25/b8389b504fc2d56244645a8de11190ef76c66c66.jpg">
+<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D49/sign=a933c77dd22a283447a637025ab5f7f1/b03533fa828ba61e61b91f4f4734970a304e597f.jpg">
+<meta property="og:image" content="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D33/sign=5f60285976cf3bc7ec00cbefd0006afd/b999a9014c086e0625fceb1f04087bf40ad1cb0a.jpg">
+<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D58/sign=472bfe85ab6eddc422e7b4f338db7366/503d269759ee3d6d1c2457ab45166d224e4adef4.jpg">
+<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D49/sign=a933c77dd22a283447a637025ab5f7f1/b03533fa828ba61e61b91f4f4734970a304e597f.jpg">
+<meta property="og:image" content="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D33/sign=a7931d8cd700baa1be2c41b8461066ac/1c950a7b02087bf4327f8789f4d3572c11dfcf3b.jpg">
+<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D49/sign=a933c77dd22a283447a637025ab5f7f1/b03533fa828ba61e61b91f4f4734970a304e597f.jpg">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/1023577/201610/1023577-20161011232321687-190186195.png">
+<meta property="og:updated_time" content="2019-06-28T07:02:39.611Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="菜菜鸟">
+<meta name="twitter:description" content="算法  算法复杂度算法复杂度是指算法在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和内存资源。 同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。算法分析的目的在于选择合适算法和改进算法。一个算法的评价主要从时间复杂度和空间复杂度来考虑。 时间复杂度为什么需要时间复杂度在实际项目开发中,我们理想状态是写出的这段代码是最优的,但是总不能把所有实现方式都写出来,然">
+<meta name="twitter:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D46/sign=7c27e5b93f01213fcb334fda54e72d3f/50da81cb39dbb6fda35134460f24ab18972b374c.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6333732715359110000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/20/算法/">
+
+  <title>  | 菜菜鸟 </title>
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f7cde75cb798c6c3214ac4877d7de304";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">菜菜鸟</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">菜菜鸟</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2019-06-20T09:25:07+08:00" content="2019-06-20">
+              2019-06-20
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2019/06/20/算法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/06/20/算法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <center><h1> 算法</h1></center>
+
+<h1 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h1><p>算法复杂度是指算法在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和内存资源。</p>
+<p>同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。算法分析的目的在于选择合适算法和改进算法。一个算法的评价主要从时间复杂度和空间复杂度来考虑。</p>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="为什么需要时间复杂度"><a href="#为什么需要时间复杂度" class="headerlink" title="为什么需要时间复杂度"></a>为什么需要时间复杂度</h3><p>在实际项目开发中,我们理想状态是写出的这段代码是最优的,但是总不能把所有实现方式都写出来,然后去作比较,所以需要一个指标去衡量这段代码的效率,并且直接跑代码一定的局限性:</p>
+<ol>
+<li><p>测试结果受当前运行环境影响</p>
+<p>同样的代码,在不同的平台执行的时间明显不同</p>
+</li>
+<li><p>测试结果受测试数据的影响</p>
+<p>不同的测试数据可能会带来不同的结果,比如我们按顺序查找的方法查找数组的一个元素,如果这个元素刚好在第一位,则执行了一次,但在最后的话,就得执行整个数组</p>
+</li>
+</ol>
+<p>因此,我们就需要一个不受硬件,环境,数据影响的指标来去表示算法的执行效率,那就是算法的复杂度</p>
+<h3 id="时间复杂度表示"><a href="#时间复杂度表示" class="headerlink" title="时间复杂度表示"></a>时间复杂度表示</h3><p>大O时间复杂度表示法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> res = <span class="number">1</span>; <span class="comment">// 执行一次</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; n; i++)&#123; <span class="comment">// 执行n次</span></span><br><span class="line">        res *= i; <span class="comment">// 执行n-1次</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res; <span class="comment">// 执行一次</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码为求n!,我们初略计算下上述代码需要执行的时间,首先为了方便计算,假设执行每一行代码的时间都是相同的,在这里假设,每行代码执行一次的时间为t,代码的总时间为T(n),因此就能得到上述代码的总执行时间:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T(n) = t + nt + (n - <span class="number">1</span>)t + t = (<span class="number">2</span>n+<span class="number">1</span>)t</span><br></pre></td></tr></table></figure>
+<p>我们以n为x轴,T(n)为y轴,因此就能得出结论: 代码总执行时间和每行代码执行的次数成正比,大O表示法就是用来表示这样的趋势,大O表示法<strong>表示代码执行时间随数据规模增长的一种变化趋势</strong>,下面就是大O表示法的公式:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T(n) = O(F(n))</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>n</strong>: 代表数据规模,相当于上面例子中的n</p>
+</li>
+<li><p><strong>F(n)</strong>: 表示代码执行次数的总和,代码执行次数的总和与数据规模有关,所以用F(n)表示,F(n)对应上面例子中的</p>
+<p>( 2n + 1 ) </p>
+</li>
+<li><p><strong>T(n)</strong>: 代表代码的执行时间,对应上面例子中的T(n)</p>
+</li>
+<li><p><strong>O</strong>: 大O用来表示代码执行时间T(n) 与 代码执行次数总和F（n）之间的正比关系。</p>
+</li>
+</ul>
+<p>上面说过大O表示法表示代码执行时间随数据规模增长的一种变化趋势,只代表趋势,不是实际执行的时间,当公司中的n无穷大时,系数和常数就可以忽略不计,所以忽略掉以后,大O表示法就变为:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T(n) = O(n)</span><br></pre></td></tr></table></figure>
+<p>至此,我们就知道了什么是大O表示法以及怎么用大O表示法来表示时间复杂度,在看个例子,分析下代码的时间复杂度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> n = arr.length; <span class="comment">// 执行一次</span></span><br><span class="line"> 	<span class="keyword">let</span> i = <span class="number">0</span>; <span class="comment">// 执行一次</span></span><br><span class="line">    <span class="keyword">for</span>(; i&lt; n - <span class="number">1</span>; i++)&#123; <span class="comment">//执行n次</span></span><br><span class="line">        <span class="keyword">let</span> j = <span class="number">0</span>;<span class="comment">// 执行n次</span></span><br><span class="line">        <span class="keyword">for</span>(; j &lt; n - <span class="number">1</span>; j++)&#123; <span class="comment">// 执行n次</span></span><br><span class="line">            <span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;<span class="comment">// 执行n*n次</span></span><br><span class="line">                <span class="keyword">var</span> temp = arr[j];</span><br><span class="line">            	arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">            	arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码为最差的冒泡排序,先不管算法是否最优,只为分析时间复杂度,执行这段代码的时间复杂度为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T(n) = t + t + nt + nt + nt + (n*n)t + (n*n)t = (2n²+3n+2)t = O(n²)</span><br></pre></td></tr></table></figure>
+<p>因此,我们通过两个例子可以发现时间复杂度大O规律:</p>
+<ol>
+<li>不保留系数</li>
+<li>只保留最高阶</li>
+<li>嵌套代码的复杂度为内外代码复杂度的乘积</li>
+</ol>
+<h3 id="怎么分析一段代码的时间复杂度"><a href="#怎么分析一段代码的时间复杂度" class="headerlink" title="怎么分析一段代码的时间复杂度"></a>怎么分析一段代码的时间复杂度</h3><p>通过上面的规律,可以得到,判断一段代码的时间复杂度,只需要关注这段代码执行次数最多的代码次数,其它都可忽略</p>
+<h3 id="常见的时间复杂度"><a href="#常见的时间复杂度" class="headerlink" title="常见的时间复杂度"></a>常见的时间复杂度</h3><p>最常见的时间复杂度有常数阶O(1),对数阶O(logn),线性阶O(n),线性对数阶O(nlogn),平方阶O(n²)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 O(1) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">arr,key</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> n = arr.length;</span><br><span class="line">    <span class="keyword">let</span> low = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> high = n <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">let</span> mid = <span class="built_in">Math</span>.floor((low + high)/<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">while</span>(low&lt;=high)&#123;</span><br><span class="line">        mid = <span class="built_in">Math</span>.floor((low + high)/<span class="number">2</span>);<span class="comment">// 执行次数</span></span><br><span class="line">    	<span class="keyword">if</span>(key === arr[mid])&#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(key &lt; arr[mid])&#123;</span><br><span class="line">        	high =  mid - <span class="number">1</span>;         </span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            low = mid + <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码为二分查找的代码,二分查找法是一个高效的查找算法,现在分析下上边代码的复杂度,发现执行次数最多为第7行,所以算法复杂度为这句代码的执行次数,分析以上代码,最坏的打算就是一直一半查找,直到只剩一个数,或者数组中不存在要找的元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第一次执行,剩余元素个数n/<span class="number">2</span></span><br><span class="line">第二次执行,剩余元素个数n/<span class="number">2</span>/<span class="number">2</span></span><br><span class="line">... ...</span><br><span class="line">第n次执行,剩余元素个数n/<span class="number">2</span>^T = <span class="number">1</span> &lt;==&gt; <span class="number">2</span>^T = n &lt;=&gt; log2n</span><br></pre></td></tr></table></figure>
+<p>以上代码用大O表示时间复杂度即为O(logn),省略常数</p>
+<h3 id="什么是对数"><a href="#什么是对数" class="headerlink" title="什么是对数?"></a>什么是对数?</h3><h5 id="对数符号"><a href="#对数符号" class="headerlink" title="对数符号"></a>对数符号</h5><p>以a为底N的对数记作<img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D46/sign=7c27e5b93f01213fcb334fda54e72d3f/50da81cb39dbb6fda35134460f24ab18972b374c.jpg" alt="img">,  对数符号log出自拉丁文logarithm，最早由意大利数学家卡瓦列里（Cavalieri）所使用。20世纪初，形成了对数的现代表示。为了使用方便，人们逐渐把以10为底的常用对数及以无理数e为底的自然对数分别记作lgN和lnN。</p>
+<h5 id="对数的定义"><a href="#对数的定义" class="headerlink" title="对数的定义"></a>对数的定义</h5><p>如果 <img src="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D134/sign=2a228f561b950a7b71354ac73ed1625c/8644ebf81a4c510fbfd3367a6659252dd42aa5bf.jpg" alt="img"> ，即a的x次方等于N（a&gt;0，且a≠1），那么数x叫做以a为底N的对数（logarithm），记作  <img src="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D72/sign=374d40bc0efa513d55aa6edc3c6d9940/e61190ef76c6a7ef68d97d46fbfaaf51f2de66d7.jpg" alt="img"> 。其中，a叫做对数的底数，N叫做真数，x叫做“以a为底N的对数”。</p>
+<h5 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h5><p><strong>定义</strong><br>函数 <img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D162/sign=c26ae4e5cfea15ce45eee40f84013a25/b8389b504fc2d56244645a8de11190ef76c66c66.jpg" alt="img">   叫做对数函数（logarithmic function），其中x是自变量。对数函数的定义域是 <img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D49/sign=a933c77dd22a283447a637025ab5f7f1/b03533fa828ba61e61b91f4f4734970a304e597f.jpg" alt="img"> 。</p>
+<p><strong>函数基本性质</strong><br>1、过定点  <img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D33/sign=5f60285976cf3bc7ec00cbefd0006afd/b999a9014c086e0625fceb1f04087bf40ad1cb0a.jpg" alt="img">,即x=1时,y=0。<br>2、当<img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D58/sign=472bfe85ab6eddc422e7b4f338db7366/503d269759ee3d6d1c2457ab45166d224e4adef4.jpg" alt="img">  时,在   <img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D49/sign=a933c77dd22a283447a637025ab5f7f1/b03533fa828ba61e61b91f4f4734970a304e597f.jpg" alt="img"> 上是减函数；当  <img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D33/sign=a7931d8cd700baa1be2c41b8461066ac/1c950a7b02087bf4327f8789f4d3572c11dfcf3b.jpg" alt="img"> 时,在   <img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D49/sign=a933c77dd22a283447a637025ab5f7f1/b03533fa828ba61e61b91f4f4734970a304e597f.jpg" alt="img">上是增函数。</p>
+<h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>空间复杂度是指算法在计算机内执行时所需存储的度量</p>
+<p><strong>算法执行期间所需要的存储空间包括3个部分</strong></p>
+<ul>
+<li>算法程序所占的空间；</li>
+<li>输入的初始数据所占的存储空间；</li>
+<li>算法执行过程中所需要的额外空间。</li>
+</ul>
+<h2 id="JavaScript常见算法"><a href="#JavaScript常见算法" class="headerlink" title="JavaScript常见算法"></a>JavaScript常见算法</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>冒泡排序,是一种最基本的排序算法。它重复地走访要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素列已经排序完成</p>
+<p>思想:</p>
+<ol>
+<li>比较相邻的元素。如果第一个比第二个大，就交换他们两个。</li>
+<li>对每一对相邻元素做同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。</li>
+<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = arr.length, j;</span><br><span class="line">    <span class="keyword">var</span> tempExchangVal;</span><br><span class="line">    <span class="keyword">while</span> (i &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                tempExchangVal = arr[j];</span><br><span class="line">                arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">                arr[j + <span class="number">1</span>] = tempExchangVal;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        i--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">8</span>];</span><br><span class="line"><span class="keyword">var</span> arrSorted = bubbleSort(arr);</span><br></pre></td></tr></table></figure>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>插入排序（Insertion sort）是一种简单直观且稳定的排序算法,插入排序原理就像是打扑克,既在排好的顺序里插入到对应的位置</p>
+<p>思想:</p>
+<p>就是比大小，满足条件交换位置，<strong>一开始会像冒泡排序一样，但会比冒泡多一步就是交换后原位置会继续和前面的数比较满足条件交换</strong>，直到a[i+1]前面的数组是有序的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">5</span>);</span><br><span class="line"><span class="comment">//插入排序</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">InsertionSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (arr == <span class="literal">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; arr[j + <span class="number">1</span>]; j--) &#123;</span><br><span class="line">            <span class="keyword">let</span> temp = arr[j];</span><br><span class="line">            arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">            arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//控制台输出</span></span><br><span class="line">InsertionSort(arr);</span><br></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序（Quicksort）是对冒泡排序的一种改进</p>
+<p><a href="https://www.runoob.com/w3cnote/quick-sort.html" target="_blank" rel="noopener">挖坑填数法</a>+分冶法</p>
+<p>分冶法:</p>
+<ul>
+<li>1．先从数列中取出一个数作为基准数。</li>
+<li>2．分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。</li>
+<li>3．再对左右区间重复第二步，直到各区间只有一个数。</li>
+</ul>
+<p>思想:</p>
+<p>通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">5</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Quicksort</span>(<span class="params">arr,left = <span class="number">0</span>,right = arr.length<span class="number">-1</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (left &gt;= right) &#123; <span class="comment">//如果左边的索引大于等于右边的索引说明整理完毕</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> i = left;</span><br><span class="line">    <span class="keyword">let</span> j = right;</span><br><span class="line">    <span class="keyword">const</span> baseVal = arr[j]; <span class="comment">// 取无序数组最后一个数为基准值</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt; j) &#123; <span class="comment">//把所有比基准值小的数放在左边大的数放在右边</span></span><br><span class="line">        <span class="keyword">while</span> (i &lt; j &amp;&amp; arr[i] &lt;= baseVal) &#123; <span class="comment">//找到一个比基准值大的数交换</span></span><br><span class="line">            i++</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j] = arr[i] <span class="comment">// 将较大的值放在右边如果没有比基准值大的数就是将自己赋值给自己（i 等于 j）</span></span><br><span class="line">        <span class="keyword">while</span> (j &gt; i &amp;&amp; arr[j] &gt;= baseVal) &#123; <span class="comment">//找到一个比基准值小的数交换</span></span><br><span class="line">            j--</span><br><span class="line">        &#125;</span><br><span class="line">        arr[i] = arr[j] <span class="comment">// 将较小的值放在左边如果没有找到比基准值小的数就是将自己赋值给自己（i 等于 j）</span></span><br><span class="line">    &#125;</span><br><span class="line">    arr[j] = baseVal <span class="comment">// 将基准值放至中央位置完成一次循环（这时候 j 等于 i ）</span></span><br><span class="line">    Quicksort(arr, left, j - <span class="number">1</span>) <span class="comment">// 将左边的无序数组重复上面的操作</span></span><br><span class="line">    Quicksort(arr, j + <span class="number">1</span>, right) <span class="comment">// 将右边的无序数组重复上面的操作</span></span><br><span class="line">	<span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line">Quicksort(arr);</span><br></pre></td></tr></table></figure>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p>归并排序（MERGE-SORT）是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并</p>
+<p><img src="https://images2015.cnblogs.com/blog/1023577/201610/1023577-20161011232321687-190186195.png" alt="img"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>　<span class="title">merge</span>(<span class="params">left, right</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(left,right)</span><br><span class="line">    <span class="keyword">var</span>　result=[];</span><br><span class="line">    <span class="keyword">while</span>(left.length&gt;<span class="number">0</span> &amp;&amp; right.length&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(left[<span class="number">0</span>]&lt;right[<span class="number">0</span>])&#123;</span><br><span class="line">            result.push(left.shift());</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            result.push(right.shift());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>　result.concat(left).concat(right);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span>　<span class="title">mergeSort</span>(<span class="params">items</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(items.length == <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span>　items;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span>　middle = <span class="built_in">Math</span>.floor(items.length/<span class="number">2</span>),</span><br><span class="line">    left = items.slice(<span class="number">0</span>, middle),</span><br><span class="line">    right = items.slice(middle);</span><br><span class="line">    <span class="keyword">return</span>　merge(mergeSort(left), mergeSort(right));</span><br><span class="line">&#125;</span><br><span class="line">mergeSort([<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">6</span>])</span><br></pre></td></tr></table></figure>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>选择排序工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到全部待排序的数据元素排完。 选择排序是不稳定的排序方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">5</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SelectionSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (arr == <span class="literal">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">         <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; (arr.length - <span class="number">1</span>); i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> minIndex = i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">            minIndex = arr[j] &lt; arr[minIndex] ? j : minIndex;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> temp = arr[i];</span><br><span class="line">        arr[i] = arr[minIndex];</span><br><span class="line">        arr[minIndex] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line">SelectionSort(arr);</span><br></pre></td></tr></table></figure>
+<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>希尔排序是插入排序的一种又称“缩小增量排序”，是直接插入排序算法的一种更高效的改进版本。希尔排序是非稳定排序算法(<strong>三层for循环+if</strong>)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">9</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">6</span>,<span class="number">0</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr == <span class="literal">null</span> || arr.length &lt;= <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//希尔排序  升序 增量为5 2 1</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> d = <span class="built_in">Math</span>.floor(arr.length / <span class="number">2</span>);d&gt;<span class="number">0</span>;d = <span class="built_in">Math</span>.floor(d/<span class="number">2</span>)) &#123; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = d; i &lt; arr.length; i++)&#123; </span><br><span class="line">            <span class="comment">//i:代表即将插入的元素角标，作为每一组比较数据的最后一个元素角标 </span></span><br><span class="line">            <span class="comment">//j:代表与i同一组的数组元素角标</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> j = i-d; j&gt;=<span class="number">0</span>; j-=d)&#123; <span class="comment">//在此处-d 为了避免下面数组角标越界</span></span><br><span class="line">                <span class="keyword">if</span> (arr[j] &gt; arr[j + d]) &#123;<span class="comment">// j+d 代表即将插入的元素所在的角标</span></span><br><span class="line">                    <span class="comment">//符合条件，插入元素（交换位置）</span></span><br><span class="line">                    <span class="keyword">let</span> temp = arr[j];</span><br><span class="line">                    arr[j] = arr[j + d];</span><br><span class="line">                    arr[j + d] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="built_in">console</span>.log(arr);</span><br><span class="line">        <span class="comment">//[7, 2, 1, 4, 0, 9, 5, 8, 6, 3] </span></span><br><span class="line">        <span class="comment">//[0, 2, 1, 3, 5, 4, 6, 8, 7, 9]</span></span><br><span class="line">        <span class="comment">//[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line">sort(arr);</span><br></pre></td></tr></table></figure>
+<h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><p>堆是基于树抽象数据类型的一种特殊的数据结构,一个常见的例子就是优先队列,还有排序算法之一的堆排序</p>
+<p>最大堆: 父节点大于子节点</p>
+<p>最小堆: 父节点小于子节点</p>
+<h3 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h3><h3 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h3><h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a><span name="erfen">二分查找</span></h3><p>二分查找也称折半查找（Binary Search），它是一种效率较高的查找方法。但是，折半查找要求线性表必须<strong>采用顺序存储结构</strong>，而且表中元素按关键字有序排列</p>
+<p><strong>思想</strong>:</p>
+<p>折半查找法也称为二分查找法，它充分利用了元素间的次序关系，采用分治策略，可在最坏的情况下用O(log n)完成搜索任务。它的基本思想是：（这里假设数组元素呈升序排列）将n个元素分成个数大致相同的两半，取a[n/2]与欲查找的x作比较，如果x=a[n/2]则找到x，算法终止；如 果x &lt;a[n/2]，则我们只要在数组a的左半部继续搜索x；如果x&gt;a[n/2]，则我们只要在数组a的右半部继续搜索x。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Arr = [<span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">12</span>, <span class="number">15</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binary</span>(<span class="params">find, arr, low, high</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (low &lt;= high) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[low] == find) &#123;</span><br><span class="line">            <span class="keyword">return</span> low;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (arr[high] == find) &#123;</span><br><span class="line">            <span class="keyword">return</span> high;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> mid = <span class="built_in">Math</span>.ceil((high + low) / <span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span> (arr[mid] == find) &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &gt; find) &#123;</span><br><span class="line">            <span class="keyword">return</span> binary(find, arr, low, mid - <span class="number">1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> binary(find, arr, mid + <span class="number">1</span>, high);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line">binary(<span class="number">15</span>, Arr, <span class="number">0</span>, Arr.length - <span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作!!!</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wx.jpg" alt="菜菜鸟 WeChat Pay">
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/zfb.jpg" alt="菜菜鸟 Alipay">
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/19/dom-js/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2019/06/20/算法/" data-title="" data-url="http://yoursite.com/2019/06/20/算法/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/uploads/head.gif" alt="菜菜鸟">
+          <p class="site-author-name" itemprop="name">菜菜鸟</p>
+          <p class="site-description motion-element" itemprop="description">前端开发<br>越努力，越幸运</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">34</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://github.com/caicaibrid/" title="Github" target="_blank">Github</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.baidu.com" title="百度" target="_blank">百度</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text"> 算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法复杂度"><span class="nav-number">2.</span> <span class="nav-text">算法复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#时间复杂度"><span class="nav-number">2.1.</span> <span class="nav-text">时间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要时间复杂度"><span class="nav-number">2.1.1.</span> <span class="nav-text">为什么需要时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间复杂度表示"><span class="nav-number">2.1.2.</span> <span class="nav-text">时间复杂度表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么分析一段代码的时间复杂度"><span class="nav-number">2.1.3.</span> <span class="nav-text">怎么分析一段代码的时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的时间复杂度"><span class="nav-number">2.1.4.</span> <span class="nav-text">常见的时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是对数"><span class="nav-number">2.1.5.</span> <span class="nav-text">什么是对数?</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对数符号"><span class="nav-number">2.1.5.0.1.</span> <span class="nav-text">对数符号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对数的定义"><span class="nav-number">2.1.5.0.2.</span> <span class="nav-text">对数的定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对数函数"><span class="nav-number">2.1.5.0.3.</span> <span class="nav-text">对数函数</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#空间复杂度"><span class="nav-number">2.2.</span> <span class="nav-text">空间复杂度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript常见算法"><span class="nav-number">2.3.</span> <span class="nav-text">JavaScript常见算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">2.3.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入排序"><span class="nav-number">2.3.2.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-number">2.3.3.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归并排序"><span class="nav-number">2.3.4.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择排序"><span class="nav-number">2.3.5.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#希尔排序"><span class="nav-number">2.3.6.</span> <span class="nav-text">希尔排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆排序"><span class="nav-number">2.3.7.</span> <span class="nav-text">堆排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计数排序"><span class="nav-number">2.3.8.</span> <span class="nav-text">计数排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#桶排序"><span class="nav-number">2.3.9.</span> <span class="nav-text">桶排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基数排序"><span class="nav-number">2.3.10.</span> <span class="nav-text">基数排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二分查找"><span class="nav-number">2.3.11.</span> <span class="nav-text">二分查找</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">菜菜鸟</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+-->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"caicaibrid"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
