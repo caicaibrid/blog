@@ -1,3 +1,11 @@
+---
+title: dom
+date: 2016-11-20 15:00:33
+categories: Javascript
+tags:
+     - Javascript
+---
+
 # Dom and JavaScript
 
 ### Dom
