@@ -5,107 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b272dead-8320-4c62-be97-325ef4d4b0a5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.deploy_git" beforeDir="false" afterPath="$PROJECT_DIR$/.deploy_git" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/07/23/MVC的理解/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/07/23/MVC的理解/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/07/23/javascript排序/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/07/23/javascript排序/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/07/28/hexo常用命令/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/07/28/hexo常用命令/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/08/01/ubuntu中的命令/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/08/01/ubuntu中的命令/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/08/15/module-exports和exports的区别/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/08/15/module-exports和exports的区别/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/09/05/apply-call-bind用法/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/09/05/apply-call-bind用法/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/11/06/hexo部署出现404找不到js的解决方案/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/11/06/hexo部署出现404找不到js的解决方案/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/11/23/dom/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/11/23/dom/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/11/27/正则表达式/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/11/27/正则表达式/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/12/21/跨域/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/12/21/跨域/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2016/12/28/URL到展现页面的全过程/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/12/28/URL到展现页面的全过程/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/04/13/Django/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/04/13/Django/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/04/15/mysql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/04/15/mysql/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/07/01/sass中的Map/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/07/01/sass中的Map/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/07/01/sass中的规则/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/07/01/sass中的规则/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/07/01/sass函数/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/07/01/sass函数/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/07/01/sass基本用法/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/07/01/sass基本用法/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/07/01/sass控制命令/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/07/01/sass控制命令/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/08/03/es6-async解析/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/08/03/es6-async解析/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/08/03/react总结/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/08/03/react总结/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/08/06/TypeScript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/08/06/TypeScript/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/08/16/javascript数组遍历之间的区别/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/08/16/javascript数组遍历之间的区别/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/08/24/javascript内存泄漏/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/08/24/javascript内存泄漏/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/08/24/js高程-第三版-兼容问题和注意事项/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/08/24/js高程-第三版-兼容问题和注意事项/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/08/24/vue非父子之间的通信/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/08/24/vue非父子之间的通信/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/12/08/Jquery-ready函数的实现/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/12/08/Jquery-ready函数的实现/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/12/11/nodeJS开发指南/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/12/11/nodeJS开发指南/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2017/12/15/mongoDB/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2017/12/15/mongoDB/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2018/03/13/进制转换/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2018/03/13/进制转换/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2018/04/09/axios提交form表单/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2018/04/09/axios提交form表单/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2018/07/20/javascript设计模式/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2018/07/20/javascript设计模式/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2019/06/13/git基本操作/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2019/06/13/git基本操作/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2019/06/19/dom-js/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/11/20/dom-js/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2019/06/20/算法/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/2016/07/23/算法/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2016/07/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2016/07/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2016/08/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2016/08/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2016/09/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2016/09/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2016/11/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2016/11/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2016/12/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2016/12/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2016/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2016/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2016/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2016/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2017/04/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2017/04/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2017/07/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2017/07/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2017/08/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2017/08/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2017/12/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2017/12/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2017/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2017/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2017/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2017/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2018/03/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2018/03/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2018/04/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2018/04/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2018/07/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2018/07/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2018/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2018/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2019/06/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2019/06/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/2019/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/2019/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/page/3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/page/3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/page/4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/page/4/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/ES6/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/ES6/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/Git/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/Git/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/Javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/Javascript/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/Javascript/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/Javascript/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/MVC/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/MVC/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/Mysql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/Mysql/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/NodeJS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/NodeJS/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/Python/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/Python/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/Sass/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/Sass/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/TypeScript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/TypeScript/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/Vue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/Vue/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/hexo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/hexo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/mongoDB/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/mongoDB/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/ubuntu/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/ubuntu/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/fastclick/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/lib/fastclick/README.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/jquery_lazyload/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/lib/jquery_lazyload/README.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/4/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/Django/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/Django/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/ES6/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/ES6/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/Git/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/Git/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/Javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/Javascript/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/Javascript/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/Javascript/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/MVC/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/MVC/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/Mysql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/Mysql/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/NodeJS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/NodeJS/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/Sass/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/Sass/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/TypeScript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/TypeScript/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/Vue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/Vue/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/hexo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/hexo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/mongoDB/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/mongoDB/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/ubuntu/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/ubuntu/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/dom-js.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/dom-js.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/算法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/算法.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/面试宝典.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/面试宝典.md" afterDir="false" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,7 +25,32 @@
     <favorites_list name="blog" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/hexo常用命令.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="18">
+                <caret line="1" selection-start-line="1" selection-end-line="6" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/javascript-Date-对象.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="684">
+                <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="9" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -160,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/themes/next/layout/category.swig" />
         <option value="$PROJECT_DIR$/source/_posts/apply-call-bind用法.md" />
         <option value="$PROJECT_DIR$/source/_posts/ubuntu中的命令.md" />
         <option value="$PROJECT_DIR$/source/_posts/module-exports和exports的区别.md" />
@@ -211,6 +135,7 @@
         <option value="$PROJECT_DIR$/source/_posts/算法.md" />
         <option value="$PROJECT_DIR$/source/_posts/dom-js.md" />
         <option value="$PROJECT_DIR$/source/_posts/面试宝典.md" />
+        <option value="$PROJECT_DIR$/source/_posts/javascript-Date-对象.md" />
       </list>
     </option>
   </component>
@@ -230,6 +155,17 @@
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -243,7 +179,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="D:/chinaventure/tz_capsys_3.0_pc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
@@ -349,14 +285,16 @@
       <workItem from="1544759017652" duration="936000" />
       <workItem from="1563245525784" duration="1171000" />
       <workItem from="1563325491559" duration="609000" />
+      <workItem from="1567481507933" duration="2038000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158348000" />
+    <option name="totallyTimeSpent" value="160386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24920969" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -394,9 +332,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/CNAME">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.deploy_git/categories/ubuntu/index.html" />
     <entry file="file://$PROJECT_DIR$/source/_posts/sass基本用法.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -577,15 +512,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/tags/index.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -728,6 +663,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/apply-call-bind用法.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-1107">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="54">
@@ -736,27 +676,12 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-1107">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/Django.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="54">
             <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/dom.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor>
-            <caret selection-end-line="6" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
@@ -799,7 +724,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/面试宝典.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="126">
+            <caret line="7" selection-start-line="7" selection-end-line="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/hexo常用命令.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="18">
@@ -808,17 +748,22 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="10" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/dom.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="54">
+            <caret line="3" selection-start-line="3" selection-end-line="6" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/面试宝典.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/javascript-Date-对象.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="126">
-            <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="684">
+            <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="9" />
           </first_editor>
           <second_editor />
         </state>
