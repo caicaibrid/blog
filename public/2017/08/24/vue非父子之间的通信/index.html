@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="菜菜鸟">
 <meta property="og:description" content="非父子组件通信如果2个组件不是父子组件那么如何通信呢？这时可以通过eventHub来实现通信.  所谓eventHub就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件. 1.8123456789101112131415161718192021222324252627282930313233343536// 1.在跟实例的data里定义一个基于vue的实例    // 根组件（thi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-16T02:51:18.990Z">
+<meta property="og:updated_time" content="2020-03-23T11:05:23.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue非父子之间的通信">
 <meta name="twitter:description" content="非父子组件通信如果2个组件不是父子组件那么如何通信呢？这时可以通过eventHub来实现通信.  所谓eventHub就是创建一个事件中心，相当于中转站，可以用它来传递事件和接收事件. 1.8123456789101112131415161718192021222324252627282930313233343536// 1.在跟实例的data里定义一个基于vue的实例    // 根组件（thi">
@@ -340,7 +340,7 @@
 <h2 id="父组件传递数据给子组件"><a href="#父组件传递数据给子组件" class="headerlink" title="父组件传递数据给子组件"></a>父组件传递数据给子组件</h2><p>直接通过props传递数据给子组件,然后子组件定义props获取传过来的属性</p>
 <figure class="highlight javascript"><figcaption><span>1.8</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父组件</span></span><br><span class="line">    &lt;Child :msg=<span class="string">"msg"</span>/&gt;</span><br><span class="line"><span class="comment">// 子组件</span></span><br><span class="line">    <span class="comment">// 1.直接获取</span></span><br><span class="line">    props:[<span class="string">"msg"</span>]</span><br><span class="line">    <span class="comment">// 2.指定传入的类型</span></span><br><span class="line">    props: &#123;</span><br><span class="line">        msg: <span class="built_in">String</span> <span class="comment">//这样可以指定传入的类型，如果类型不对，会警告</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 3.指定默认值</span></span><br><span class="line">    props: &#123;</span><br><span class="line">        msg: &#123;</span><br><span class="line">            type: <span class="built_in">String</span>,</span><br><span class="line">            <span class="keyword">default</span>: <span class="string">"hello world"</span> <span class="comment">//这样可以指定默认的值</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <h2 id="子组件与父组件通信"><a href="#子组件与父组件通信" class="headerlink" title="子组件与父组件通信"></a>子组件与父组件通信</h2><p>如果子组件想要改变数据呢？这在vue中是不允许的，因为vue只允许单向数据传递，这时候我们可以通过触发事件来通知父组件改变数据，<br>从而达到改变子组件数据的目的.</p>
-<figure class="highlight javascript"><figcaption><span>1.8</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父组件</span></span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;child @upup=<span class="string">"change"</span> :msg=<span class="string">"msg"</span>&gt;&lt;/child&gt; <span class="comment">//监听子组件触发的upup事件,然后调用change方法</span></span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    methods: &#123;</span></span><br><span class="line"><span class="regexp">        change(msg) &#123;</span></span><br><span class="line"><span class="regexp">            this.msg = msg;</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 子组件</span></span><br><span class="line"><span class="regexp">    &lt;template&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div @click="up"&gt;&lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">    </span></span><br><span class="line"><span class="regexp">    methods: &#123;</span></span><br><span class="line"><span class="regexp">        up() &#123;</span></span><br><span class="line"><span class="regexp">            this.$emit('upup','hehe'); /</span><span class="regexp">/主动触发upup方法，'hehe'为向父组件传递的数据</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>1.8</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父组件</span></span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;child @upup=<span class="string">"change"</span> :msg=<span class="string">"msg"</span>&gt;&lt;<span class="regexp">/child&gt; /</span><span class="regexp">/监听子组件触发的upup事件,然后调用change方法</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">    methods: &#123;</span><br><span class="line">        change(msg) &#123;</span><br><span class="line">            <span class="keyword">this</span>.msg = msg;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">// 子组件</span></span><br><span class="line">    &lt;template&gt;</span><br><span class="line">        &lt;div @click=<span class="string">"up"</span>&gt;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>template&gt;</span><br><span class="line">    </span><br><span class="line">    methods: &#123;</span><br><span class="line">        up() &#123;</span><br><span class="line">            <span class="keyword">this</span>.$emit(<span class="string">'upup'</span>,<span class="string">'hehe'</span>); <span class="comment">//主动触发upup方法，'hehe'为向父组件传递的数据</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -393,16 +393,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/24/js高程-第三版-兼容问题和注意事项/" rel="next" title="js高程(第三版)兼容问题和注意事项">
-                <i class="fa fa-chevron-left"></i> js高程(第三版)兼容问题和注意事项
+              <a href="/2017/08/16/javascript数组遍历之间的区别/" rel="next" title="javascript数组遍历之间的区别">
+                <i class="fa fa-chevron-left"></i> javascript数组遍历之间的区别
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/08/Jquery-ready函数的实现/" rel="prev" title="Jquery ready函数的实现">
-                Jquery ready函数的实现 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/24/js高程-第三版-兼容问题和注意事项/" rel="prev" title="js高程(第三版)兼容问题和注意事项">
+                js高程(第三版)兼容问题和注意事项 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -578,7 +578,7 @@
         <div class="copyright">
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
